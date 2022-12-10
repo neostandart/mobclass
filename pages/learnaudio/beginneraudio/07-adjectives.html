@@ -1,0 +1,2010 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+	<style>
+		.app-page .mat-table-base tr.caption {
+			font-weight: 500;
+			font-size: 1rem;
+		}
+
+		.app-page table mark {
+			color: blue;
+		}
+
+		/* BGN tbl-example */
+		.app-page .tbl-example {
+			width: auto;
+			min-width: 500px;
+			white-space: nowrap;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.app-page .tbl-example td {
+			padding: 0.6rem 0.4rem;
+			border: gray 1px solid;
+		}
+
+		.app-page .tbl-example td .auxtext {
+			font-weight: 500;
+			font-size: 1.2rem;
+		}
+
+		.app-page .tbl-example td.maintext {
+			width: auto;
+		}
+
+		.app-page .tbl-example td.maintext mark {
+			font-weight: 500;
+			font-size: 1.6rem;
+		}
+
+		/* END tbl-example */
+
+
+		.app-page td .auxtext {
+			font-weight: 500;
+			font-size: 1.2rem;
+		}
+
+		.app-page td .trans {
+			font-style: italic;
+			white-space: nowrap;
+		}
+
+		.app-page .mat-table-base td.maintext mark {
+			font-weight: 500;
+			font-size: 1.6rem;
+			/* color: blue; */
+		}
+
+
+		.app-page .tbl-example td div.vertical {
+			-webkit-transform: rotate(-90deg);
+			-moz-transform: rotate(-90deg);
+			-ms-transform: rotate(-90deg);
+			-o-transform: rotate(-90deg);
+			transform: rotate(-90deg);
+		}
+
+		.app-page .tbl-example td.vertical {
+			padding: 0;
+			width: 2em;
+		}
+
+
+		span.bordsel {
+			border: blue 1px solid;
+			padding: 0 1px;
+		}
+
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			/* *** */
+			.app-page .sync-area .sync-context .sync-text {
+				padding-right: 4px;
+			}
+
+			.app-page .mat-table-base td.maintext mark {
+				font-weight: 500;
+				font-size: 1.2rem;
+			}
+
+
+			.app-page td .auxtext {
+				font-weight: 500;
+				font-size: 90%;
+				width: min-content;
+			}
+
+
+
+			/* BGN tbl-example */
+			.app-page .tbl-example {
+				width: 100%;
+				min-width: 100px;
+				white-space: nowrap;
+			}
+
+			.app-page .tbl-example td {
+				padding: 0.3rem 0.4rem;
+			}
+
+			.app-page .tbl-example td.maintext {
+				width: 100%;
+			}
+
+			.app-page .tbl-example td.maintext mark {
+				font-size: 1.2rem;
+			}
+
+			.app-page .tbl-example td.auxtext {
+				font-weight: 500;
+				font-size: 90%;
+				width: min-content;
+			}
+
+			/* END tbl-example */
+
+
+		}
+
+
+		@media screen and (min-width: 576px) {
+			.app-page .mat-table-base tr.caption {
+				font-size: 1rem;
+			}
+
+		}
+
+
+		/* До создания специализированных классов для синх. диалогов, будем временно вот так корректировать */
+		.page-body .sync-area .card-body {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		/* ??? эксперимент */
+		.trans-group {
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			margin-left: 1rem;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h4 class="my-3 page-title">7. ПРИЛАГАТЕЛЬНЫЕ</h4>
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 1 -->
+			<div class="container-fluid">
+				<table class="mat-table-base samewidth3 border-light">
+					<tbody>
+						<tr class="caption">
+							<th class="h5 py-2" colspan="3">Единственное число</th>
+						</tr>
+						<tr class="subcap-bg text-center h6">
+							<td class="" colspan="3">Мужской род (он)</td>
+						</tr>
+						<tr class="text-center">
+							<td class="maintext py-2">Какой?</td>
+							<td class="maintext py-2"><b>-ый</b>, <b>-о́й</b></td>
+							<td class="maintext py-2"><b>-ий</b></td>
+						</tr>
+						<tr class="subcap-bg text-center h6">
+							<td class="" colspan="3">Женский род (она)</td>
+						</tr>
+						<tr class="text-center">
+							<td class="maintext py-2">Какая?</td>
+							<td class="maintext py-2"><b>-ая</b></td>
+							<td class="maintext py-2"><b>-яя</b></td>
+						</tr>
+
+						<tr class="subcap-bg text-center h6">
+							<td class="" colspan="3">Средний род (оно)</td>
+						</tr>
+						<tr class="text-center">
+							<td class="maintext py-2">Какое?</td>
+							<td class="maintext py-2"><b>-ое</b></td>
+							<td class="maintext py-2"><b>-ее</b></td>
+						</tr>
+						<tr class="caption">
+							<th class="h5 py-2" colspan="3">Множественное число (они)</th>
+						</tr>
+						<tr class="text-center">
+							<td class="maintext py-2">Какие?</td>
+							<td class="maintext py-2"><b>-ые</b></td>
+							<td class="maintext py-2"><b>-ие</b></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="py-4 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 2 -->
+			<div class="sync-area">
+				<div id="part01" class="card">
+					<div id="part01_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part01_collapse" aria-expanded="true" aria-controls="part01_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3 dlg-caption">Прилагательные с ос&shy;но&shy;вой на твёр&shy;дый
+								сог&shy;лас&shy;ный и бе&shy;зу&shy;дар&shy;ным окон&shy;ча&shy;нием</h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page07/rus-adj_01.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part01_collapse" class="collapse" aria-labelledby="part01_head" data-parent="#part01">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<div class="mt-1 mb-3 px-3 py-2 caption-bkg">
+										<p>Прилагательные с основой на твёр&shy;дый сог&shy;лас&shy;ный имеют
+											окон&shy;ча&shy;ния: <b>&#8209;ый</b>, <b>&#8209;ая</b>, <b>&#8209;ое</b>,
+											<b>&#8209;ые</b> (если окон&shy;ча&shy;ние безударное).</p>
+									</div>
+									<table class="tbl-example">
+										<tbody>
+											<!-- 1 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">но́вый</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext"><mark>Какой?</mark></td>
+												<td class="maintext"><mark>но́в-ый</mark></td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">new</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext"><mark>Какая?</mark></td>
+												<td class="maintext"><mark>но́в-ая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext"><mark>Какое?</mark></td>
+												<td class="maintext"><mark>но́в-ое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext"><mark>Какие?</mark></td>
+												<td class="maintext"><mark>но́в-ые</mark></td>
+											</tr>
+
+											<!-- 2 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">иностра́нный</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext">Какой? </td>
+												<td class="maintext"><mark>иностра́нн-ый</mark></td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">foreign</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext">Какая?</td>
+												<td class="maintext"><mark>иностра́нн-ая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext">Какое?</td>
+												<td class="maintext"><mark>иностра́нн-ое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext">Какие?</td>
+												<td class="maintext"><mark>иностра́нн-ые</mark></td>
+											</tr>
+
+											<!-- 3 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">изве́стный</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext">Какой? </td>
+												<td class="maintext"><mark>изве́стн-ый</mark></td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">famous</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext">Какая?</td>
+												<td class="maintext"><mark>изве́стн-ая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext">Какое?</td>
+												<td class="maintext"><mark>изве́стн-ое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext">Какие?</td>
+												<td class="maintext"><mark>изве́стн-ые</mark></td>
+											</tr>
+
+										</tbody>
+									</table>
+
+									<div class="py-3 app-separator"></div>
+
+									<table class="mat-table-base samewidth2 border-light">
+										<tbody>
+											<tr class="text-center">
+												<td class="maintext"><mark>ста́рый</mark><br /><span
+														class="auxtext trans">old</span></td>
+												<td class="maintext"><mark>краси́вый</mark><br /><span
+														class="auxtext trans">beautiful</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>у́мный</mark><br /><span
+														class="auxtext trans">smart</span></td>
+												<td class="maintext"><mark>интере́сный</mark><br /><span
+														class="auxtext trans">interesting</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>тру́дный</mark><br /><span
+														class="auxtext trans">difficult </span></td>
+												<td class="maintext"><mark>симпати́чный</mark><br /><span
+														class="auxtext trans">nice</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>тала́нтливый</mark><br /><span
+														class="auxtext trans">talented</span></td>
+												<td class="maintext"><mark>серьёзный</mark><br /><span
+														class="auxtext trans">serious</span></td>
+											</tr>
+
+
+											<tr class="text-center">
+												<td class="maintext"><mark>до́брый</mark><br /><span
+														class="auxtext trans">kind</span></td>
+												<td class="maintext"><mark>трудолюби́вый</mark><br /><span
+														class="auxtext trans">hardworking</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>лени́вый</mark><br /><span
+														class="auxtext trans">lazy </span></td>
+												<td class="maintext"><mark>весёлый</mark><br /><span
+														class="auxtext trans">cheerful</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>гру́стный</mark><br /><span
+														class="auxtext trans">sad</span></td>
+												<td class="maintext"><mark>си́льный</mark><br /><span
+														class="auxtext trans">strong</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>сла́бый</mark><br /><span
+														class="auxtext trans">weak</span></td>
+												<td class="maintext"><mark>бы́стрый</mark><br /><span
+														class="auxtext trans">fast</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>ме́дленный</mark><br /><span
+														class="auxtext trans">slow</span></td>
+												<td class="maintext"><mark>вку́сный</mark><br /><span
+														class="auxtext trans">delicious</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>бе́лый</mark><br /><span
+														class="auxtext trans">white</span></td>
+												<td class="maintext"><mark>чёрный</mark><br /><span
+														class="auxtext trans">black</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>кра́сный</mark><br /><span
+														class="auxtext trans">red</span></td>
+												<td class="maintext"><mark>зелёный</mark><br /><span
+														class="auxtext trans">green</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>жёлтый</mark><br /><span
+														class="auxtext trans">yellow</span></td>
+												<td class="maintext"><mark>се́рый</mark><br /><span
+														class="auxtext trans">gray</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>кори́чневый</mark><br /><span
+														class="auxtext trans">brown</span></td>
+											</tr>
+
+											<tr class="text-center">
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="Какой">
+										<div class="range" data-in="00:00:02.48;00:00:03.37"></div>
+									</div>
+									<div class="sync-entry" data-text="но́в-ый">
+										<div class="range" data-in="00:00:10.02;00:00:10.86"></div>
+									</div>
+									<div class="sync-entry" data-text="Какая">
+										<div class="range" data-in="00:00:04.03;00:00:05.01"></div>
+									</div>
+									<div class="sync-entry" data-text="но́в-ая">
+										<div class="range" data-in="00:00:11.72;00:00:12.73"></div>
+									</div>
+									<div class="sync-entry" data-text="Какое">
+										<div class="range" data-in="00:00:05.85;00:00:06.97"></div>
+									</div>
+									<div class="sync-entry" data-text="но́в-ое">
+										<div class="range" data-in="00:00:13.25;00:00:14.43"></div>
+									</div>
+									<div class="sync-entry" data-text="Какие">
+										<div class="range" data-in="00:00:07.58;00:00:08.59"></div>
+									</div>
+									<div class="sync-entry" data-text="но́в-ые">
+										<div class="range" data-in="00:00:14.98;00:00:16.18"></div>
+									</div>
+									<div class="sync-entry" data-text="иностра́нн-ый">
+										<div class="range" data-in="00:00:17.17;00:00:18.52"></div>
+									</div>
+									<div class="sync-entry" data-text="иностра́нн-ая">
+										<div class="range" data-in="00:00:19.25;00:00:20.90"></div>
+									</div>
+									<div class="sync-entry" data-text="иностра́нн-ое">
+										<div class="range" data-in="00:00:21.57;00:00:23.11"></div>
+									</div>
+									<div class="sync-entry" data-text="иностра́нн-ые">
+										<div class="range" data-in="00:00:23.87;00:00:25.36"></div>
+									</div>
+									<div class="sync-entry" data-text="изве́стн-ый">
+										<div class="range" data-in="00:00:26.35;00:00:27.51"></div>
+									</div>
+									<div class="sync-entry" data-text="изве́стн-ая">
+										<div class="range" data-in="0:00:28.24;00:00:29.69"></div>
+									</div>
+									<div class="sync-entry" data-text="изве́стн-ое">
+										<div class="range" data-in="00:00:30.48;00:00:31.77"></div>
+									</div>
+									<div class="sync-entry" data-text="изве́стн-ые">
+										<div class="range" data-in="00:00:32.47;00:00:33.81"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ста́рый">
+										<div class="range" data-in="00:00:35.04;00:00:35.80"></div>
+									</div>
+									<div class="sync-entry" data-text="краси́вый">
+										<div class="range" data-in="00:00:36.83;00:00:38.04"></div>
+									</div>
+									<div class="sync-entry" data-text="у́мный">
+										<div class="range" data-in="00:00:39.27;00:00:40.20"></div>
+									</div>
+									<div class="sync-entry" data-text="интере́сный">
+										<div class="range" data-in="00:00:41.23;00:00:42.51"></div>
+									</div>
+									<div class="sync-entry" data-text="тру́дный">
+										<div class="range" data-in="00:00:43.42;00:00:44.38"></div>
+									</div>
+									<div class="sync-entry" data-text="симпати́чный">
+										<div class="range" data-in="00:00:45.21;00:00:46.66"></div>
+									</div>
+									<div class="sync-entry" data-text="тала́нтливый">
+										<div class="range" data-in="00:00:47.79;00:00:48.97"></div>
+									</div>
+									<div class="sync-entry" data-text="серьёзный">
+										<div class="range" data-in="00:00:50.13;00:00:51.32"></div>
+									</div>
+									<div class="sync-entry" data-text="до́брый">
+										<div class="range" data-in="00:00:52.39;00:00:53.43"></div>
+									</div>
+									<div class="sync-entry" data-text="трудолюби́вый">
+										<div class="range" data-in="00:00:54.35;00:00:55.67"></div>
+									</div>
+									<div class="sync-entry" data-text="лени́вый">
+										<div class="range" data-in="00:00:56.61;00:00:57.76"></div>
+									</div>
+									<div class="sync-entry" data-text="весёлый">
+										<div class="range" data-in="00:00:58.80;00:01:00.09"></div>
+									</div>
+									<div class="sync-entry" data-text="гру́стный">
+										<div class="range" data-in="00:01:00.95;00:01:02.15"></div>
+									</div>
+									<div class="sync-entry" data-text="си́льный">
+										<div class="range" data-in="00:01:02.94;00:01:04.00"></div>
+									</div>
+									<div class="sync-entry" data-text="сла́бый">
+										<div class="range" data-in="00:01:04.54;00:01:05.57"></div>
+									</div>
+									<div class="sync-entry" data-text="бы́стрый">
+										<div class="range" data-in="00:01:06.34;00:01:07.37"></div>
+									</div>
+									<div class="sync-entry" data-text="ме́дленный">
+										<div class="range" data-in="00:01:08.00;00:01:09.06"></div>
+									</div>
+									<div class="sync-entry" data-text="вку́сный">
+										<div class="range" data-in="00:01:09.88;00:01:10.87"></div>
+									</div>
+									<div class="sync-entry" data-text="бе́лый">
+										<div class="range" data-in="00:01:11.63;00:01:12.60"></div>
+									</div>
+									<div class="sync-entry" data-text="чёрный">
+										<div class="range" data-in="00:01:13.26;00:01:14.28"></div>
+									</div>
+									<div class="sync-entry" data-text="кра́сный">
+										<div class="range" data-in="00:01:14.89;00:01:15.85"></div>
+									</div>
+									<div class="sync-entry" data-text="зелёный">
+										<div class="range" data-in="00:01:16.52;00:01:17.62"></div>
+									</div>
+									<div class="sync-entry" data-text="жёлтый">
+										<div class="range" data-in="00:01:18.26;00:01:19.36"></div>
+									</div>
+									<div class="sync-entry" data-text="се́рый">
+										<div class="range" data-in="00:01:19.97;00:01:20.92"></div>
+									</div>
+									<div class="sync-entry" data-text="кори́чневый">
+										<div class="range" data-in="00:01:22.04;00:01:23.15"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 3 -->
+			<div class="sync-area">
+				<div id="part02" class="card">
+					<div id="part02_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part02_collapse" aria-expanded="true" aria-controls="part02_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3 dlg-caption">Прилагательные с ос&shy;но&shy;вой на твёр&shy;дый
+								сог&shy;лас&shy;ный и удар&shy;ным окон&shy;ча&shy;нием</h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page07/rus-adj_02.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part02_collapse" class="collapse" aria-labelledby="part02_head" data-parent="#part02">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<div class="mx-0 pb-1" style="border-bottom:#007bff 3px solid;margin-top: -10px;">
+										Прилага&shy;тель&shy;ные с ос&shy;но&shy;вой на твёр&shy;дый сог&shy;лас&shy;ный
+										име&shy;ют окон&shy;ча&shy;ния: <b>&#8209;о́й</b>, <b>&#8209;ая</b>,
+										<b>&#8209;ое</b>, <b>&#8209;ые</b> / <b>&#8209;ие</b> (если окон&shy;ча&shy;ние
+										удар&shy;ное).
+									</div>
+
+									<div class="mt-4 mb-3 px-3 py-2 caption-bkg">
+										<p>Прилагательные <i>мужского рода</i> с ос&shy;но&shy;вой на твёр&shy;дый
+											сог&shy;лас&shy;ный име&shy;ют окон&shy;ча&shy;ние <b>&#8209;<span
+													class="bordsel">о́й</span></b> (если окон&shy;ча&shy;ние
+											удар&shy;ное).</p>
+									</div>
+
+									<table class="tbl-example">
+										<tbody>
+											<!-- 1 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">родн<span class="bordsel">о́й</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext"><mark>Какой?</mark></td>
+												<td class="maintext"><mark>родн-<span class="bordsel">о́й</span></mark>
+												</td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">native</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext"><mark>Какая?</mark></td>
+												<td class="maintext"><mark>родн-а́я</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext"><mark>Какое?</mark></td>
+												<td class="maintext"><mark>родн-о́е</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext"><mark>Какие?</mark></td>
+												<td class="maintext"><mark>родн-ы́е</mark></td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="py-2 app-separator"></div>
+
+									<table class="mat-table-base samewidth2 border-light">
+										<tbody>
+											<tr class="text-center">
+												<td class="maintext"><mark>голубо́й</mark><br /><span
+														class="auxtext trans">blue</span></td>
+												<td class="maintext"><mark>злой</mark><br /><span
+														class="auxtext trans">angry</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>просто́й</mark><br /><span
+														class="auxtext trans">simple</span></td>
+												<td class="maintext"><mark>молодо́й</mark><br /><span
+														class="auxtext trans">young</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>худо́й</mark><br /><span
+														class="auxtext trans">slim</span></td>
+												<td class="maintext"><mark>золото́й</mark><br /><span
+														class="auxtext trans">golden</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>дорого́й</mark><br /><span
+														class="auxtext trans">expensive</span></td>
+												<td class="maintext"><mark>пусто́й</mark><br /><span
+														class="auxtext trans">empty </span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>цветно́й</mark><br /><span
+														class="auxtext trans">coloured</span></td>
+												<td class="maintext"><br /><span class="auxtext trans"></span></td>
+											</tr>
+
+										</tbody>
+									</table>
+
+									<div class="py-3 app-separator"></div>
+
+									<div class="mt-1 mb-3 px-3 py-2 caption-bkg">
+										<p>Во множественном числе при&shy;ла&shy;га&shy;тель&shy;ные с ос&shy;но&shy;вой
+											на <b>Г</b>, <b>К</b>, <b>Х</b>, <b>Ж</b>, <b>Ш</b> име&shy;ют
+											окон&shy;чание <b>&#8209;<span class="bordsel">о́й</span></b>,
+											<b>&#8209;а́я</b>, <b>&#8209;о́е</b>, <b>&#8209;<span
+													class="bordsel">и́е</span></b> (если окончание ударное).</p>
+									</div>
+
+									<table class="tbl-example">
+										<tbody>
+											<!-- 1 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">больш<span class="bordsel">о́й</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext">Какой?</td>
+												<td class="maintext"><mark>больш-<span class="bordsel">о́й</span></mark>
+												</td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">big</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext">Какая?</td>
+												<td class="maintext"><mark>больш-а́я</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext">Какое?</td>
+												<td class="maintext"><mark>больш-о́е</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext">Какие?</td>
+												<td class="maintext"><mark>больш-<span class="bordsel">и́е</span></mark>
+												</td>
+											</tr>
+											<!-- 2 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">плох<span class="bordsel">о́й</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext">Какой? </td>
+												<td class="maintext"><mark>плох-<span class="bordsel">о́й</span></mark>
+												</td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">bad</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext">Какая?</td>
+												<td class="maintext"><mark>плох-а́я</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext">Какое?</td>
+												<td class="maintext"><mark>плох-о́е</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext">Какие?</td>
+												<td class="maintext"><mark>плох-<span class="bordsel">и́е</span></mark>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="py-2 app-separator"></div>
+
+									<table class="mat-table-base samewidth2 border-light">
+										<tbody>
+											<tr class="text-center">
+												<td class="maintext"><mark>чужо́й</mark><br /><span
+														class="auxtext trans">alien</span></td>
+												<td class="maintext"><mark>мужско́й</mark><br /><span
+														class="auxtext trans">men’s</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>сухо́й</mark><br /><span
+														class="auxtext trans">dry</span></td>
+												<td class="maintext"><mark>городско́й</mark><br /><span
+														class="auxtext trans">urban</span></td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="Какой?">
+										<div class="range" data-in="00:00:00.50;00:00:01.38"></div>
+									</div>
+									<div class="sync-entry" data-text="родн-о́й">
+										<div class="range" data-in="00:00:08.19;00:00:09.25"></div>
+									</div>
+									<div class="sync-entry" data-text="Какая?">
+										<div class="range" data-in="00:00:02.23;00:00:03.23"></div>
+									</div>
+									<div class="sync-entry" data-text="родн-а́я">
+										<div class="range" data-in="00:00:10.14;00:00:11.43"></div>
+									</div>
+									<div class="sync-entry" data-text="Какое?">
+										<div class="range" data-in="00:00:04.25;00:00:05.37"></div>
+									</div>
+									<div class="sync-entry" data-text="родн-о́е">
+										<div class="range" data-in="00:00:12.27;00:00:13.56"></div>
+									</div>
+									<div class="sync-entry" data-text="Какие?">
+										<div class="range" data-in="00:00:06.17;00:00:07.17"></div>
+									</div>
+									<div class="sync-entry" data-text="родн-ы́е">
+										<div class="range" data-in="00:00:14.49;00:00:15.58"></div>
+									</div>
+									<div class="sync-entry" data-text="голубо́й">
+										<div class="range" data-in="00:00:16.54;00:00:17.64"></div>
+									</div>
+									<div class="sync-entry" data-text="злой">
+										<div class="range" data-in="00:00:18.43;00:00:19.43"></div>
+									</div>
+									<div class="sync-entry" data-text="просто́й">
+										<div class="range" data-in="00:00:20.23;00:00:21.28"></div>
+									</div>
+									<div class="sync-entry" data-text="молодо́й">
+										<div class="range" data-in="00:00:22.15;00:00:23.26"></div>
+									</div>
+									<div class="sync-entry" data-text="худо́й">
+										<div class="range" data-in="00:00:24.40;00:00:25.44"></div>
+									</div>
+									<div class="sync-entry" data-text="золото́й">
+										<div class="range" data-in="00:00:26.53;00:00:27.75"></div>
+									</div>
+									<div class="sync-entry" data-text="дорого́й">
+										<div class="range" data-in="00:00:28.80;00:00:29.93"></div>
+									</div>
+									<div class="sync-entry" data-text="пусто́й">
+										<div class="range" data-in="00:00:30.99;00:00:32.16"></div>
+									</div>
+									<div class="sync-entry" data-text="цветно́й">
+										<div class="range" data-in="00:00:33.13;00:00:34.05"></div>
+									</div>
+
+									<div class="sync-entry" data-text="больш-о́й">
+										<div class="range" data-in="00:00:35.39;00:00:36.46"></div>
+									</div>
+									<div class="sync-entry" data-text="больш-а́я">
+										<div class="range" data-in="00:00:37.49;00:00:38.72"></div>
+									</div>
+									<div class="sync-entry" data-text="больш-о́е">
+										<div class="range" data-in="00:00:39.59;00:00:40.86"></div>
+									</div>
+									<div class="sync-entry" data-text="больш-и́е">
+										<div class="range" data-in="00:00:41.87;00:00:43.08"></div>
+									</div>
+									<div class="sync-entry" data-text="плох-о́й">
+										<div class="range" data-in="00:00:44.48;00:00:45.48"></div>
+									</div>
+									<div class="sync-entry" data-text="плох-а́я">
+										<div class="range" data-in="00:00:46.47;00:00:47.73"></div>
+									</div>
+									<div class="sync-entry" data-text="плох-о́е">
+										<div class="range" data-in="00:00:48.53;00:00:49.74"></div>
+									</div>
+									<div class="sync-entry" data-text="плох-и́е">
+										<div class="range" data-in="00:00:50.67;00:00:51.66"></div>
+									</div>
+									<div class="sync-entry" data-text="чужо́й">
+										<div class="range" data-in="00:00:52.72;00:00:53.71"></div>
+									</div>
+									<div class="sync-entry" data-text="мужско́й">
+										<div class="range" data-in="00:00:54.60;00:00:55.73"></div>
+									</div>
+									<div class="sync-entry" data-text="сухо́й">
+										<div class="range" data-in="00:00:56.72;00:00:57.80"></div>
+									</div>
+									<div class="sync-entry" data-text="городско́й">
+										<div class="range" data-in="00:00:58.75;00:00:59.94"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 4 -->
+			<div class="sync-area">
+				<div id="part03" class="card">
+					<div id="part03_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part03_collapse" aria-expanded="true" aria-controls="part03_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3 dlg-caption">Прилагательные с основой на <span
+									class="signbox">Г</span>, <span class="signbox">К</span>, <span
+									class="signbox">Х</span> и безударным окончанием</h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page07/rus-adj_03.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part03_collapse" class="collapse" aria-labelledby="part03_head" data-parent="#part03">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<div class="mt-1 mb-3 px-3 py-2 caption-bkg">
+										<p>Прилагательные с основой на <b>Г</b>, <b>К</b>, <b>Х</b> имеют окончания:
+											<b>&#8209;<span class="bordsel">ий</span></b>, <b>&#8209;ая</b>,
+											<b>&#8209;ое</b>, <b>&#8209;<span class="bordsel">ие</span></b> (если
+											окончание безударное).</p>
+									</div>
+
+									<table class="tbl-example">
+										<tbody>
+											<!-- 1 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">мленьк<span class="bordsel">ий</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext"><mark>Какой?</mark></td>
+												<td class="maintext"><mark>ма́леньк-<span
+															class="bordsel">ий</span></mark></td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">small</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext"><mark>Какая?</mark></td>
+												<td class="maintext"><mark>ма́леньк-ая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext"><mark>Какое?</mark></td>
+												<td class="maintext"><mark>ма́леньк-ое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext"><mark>Какие?</mark></td>
+												<td class="maintext"><mark>ма́леньк-<span
+															class="bordsel">ие</span></mark></td>
+											</tr>
+											<!-- 2 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">русск<span class="bordsel">ий</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext">Какой? </td>
+												<td class="maintext"><mark>ру́сск-<span class="bordsel">ий</span></mark>
+												</td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">Russian</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext">Какая?</td>
+												<td class="maintext"><mark>ру́сск-ая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext">Какое?</td>
+												<td class="maintext"><mark>ру́сск-ое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext">Какие?</td>
+												<td class="maintext"><mark>ру́сск-<span class="bordsel">ие</span></mark>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="py-2 app-separator"></div>
+
+									<table class="mat-table-base samewidth2 border-light">
+										<tbody>
+											<tr class="text-center">
+												<td class="maintext"><mark>англи́йский</mark><br /><span
+														class="auxtext trans">English</span></td>
+												<td class="maintext"><mark>францу́зский</mark><br /><span
+														class="auxtext trans">French</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>испа́нский</mark><br /><span
+														class="auxtext trans">Spanish</span></td>
+												<td class="maintext"><mark>неме́цкий</mark><br /><span
+														class="auxtext trans">German</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>ара́бский</mark><br /><span
+														class="auxtext trans">Arabian</span></td>
+												<td class="maintext"><mark>кита́йский</mark><br /><span
+														class="auxtext trans">Chinese</span></td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="py-1 app-separator"></div>
+
+									<table class="mat-table-base samewidth2 border-light">
+										<tbody>
+											<tr class="text-center">
+												<td class="maintext"><mark>высо́кий</mark><br /><span
+														class="auxtext trans">tall</span></td>
+												<td class="maintext"><mark>ни́зкий</mark><br /><span
+														class="auxtext trans">low</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>широ́кий</mark><br /><span
+														class="auxtext trans">wide</span></td>
+												<td class="maintext"><mark>узкий</mark><br /><span
+														class="auxtext trans">narrow</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>ти́хий</mark><br /><span
+														class="auxtext trans">calm</span></td>
+												<td class="maintext"><mark>гро́мкий</mark><br /><span
+														class="auxtext trans">loud</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>де́тский</mark><br /><span
+														class="auxtext trans">childlike</span></td>
+												<td class="maintext"><mark>вели́кий</mark><br /><span
+														class="auxtext trans">great</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>лёгкий</mark><br /><span
+														class="auxtext trans">light, easy</span></td>
+												<td class="maintext"><br /><span class="auxtext trans"></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="Какой?">
+										<div class="range" data-in="00:00:00.40;00:00:01.30"></div>
+									</div>
+									<div class="sync-entry" data-text="ма́леньк-ий">
+										<div class="range" data-in="00:00:07.35;00:00:08.37"></div>
+									</div>
+									<div class="sync-entry" data-text="Какая?">
+										<div class="range" data-in="00:00:01.96;00:00:02.96"></div>
+									</div>
+									<div class="sync-entry" data-text="ма́леньк-а́я">
+										<div class="range" data-in="00:00:09.04;00:00:10.25"></div>
+									</div>
+									<div class="sync-entry" data-text="Какое?">
+										<div class="range" data-in="00:00:03.79;00:00:04.85"></div>
+									</div>
+									<div class="sync-entry" data-text="ма́леньк-ое">
+										<div class="range" data-in="00:00:10.85;00:00:12.13"></div>
+									</div>
+									<div class="sync-entry" data-text="Какие?">
+										<div class="range" data-in="00:00:05.53;00:00:06.57"></div>
+									</div>
+									<div class="sync-entry" data-text="ма́леньк-ие">
+										<div class="range" data-in="00:00:12.70;00:00:13.95"></div>
+									</div>
+									<div class="sync-entry" data-text="ру́сск-ий">
+										<div class="range" data-in="00:00:14.60;00:00:15.55"></div>
+									</div>
+									<div class="sync-entry" data-text="ру́сск-а́я">
+										<div class="range" data-in="00:00:16.30;00:00:17.26"></div>
+									</div>
+									<div class="sync-entry" data-text="ру́сск-ое">
+										<div class="range" data-in="00:00:17.96;00:00:19.04"></div>
+									</div>
+									<div class="sync-entry" data-text="ру́сск-ие">
+										<div class="range" data-in="00:00:19.53;00:00:20.48"></div>
+									</div>
+
+									<div class="sync-entry" data-text="англи́йский">
+										<div class="range" data-in="00:00:21.26;00:00:22.41"></div>
+									</div>
+									<div class="sync-entry" data-text="францу́зский">
+										<div class="range" data-in="00:00:23.23;00:00:24.48"></div>
+									</div>
+									<div class="sync-entry" data-text="испа́нский">
+										<div class="range" data-in="00:00:25.41;00:00:26.62"></div>
+									</div>
+									<div class="sync-entry" data-text="неме́цкий">
+										<div class="range" data-in="00:00:27.50;00:00:28.75"></div>
+									</div>
+									<div class="sync-entry" data-text="ара́бский">
+										<div class="range" data-in="00:00:29.59;00:00:30.74"></div>
+									</div>
+									<div class="sync-entry" data-text="кита́йский">
+										<div class="range" data-in="00:00:31.61;00:00:32.90"></div>
+									</div>
+									<div class="sync-entry" data-text="высо́кий">
+										<div class="range" data-in="00:00:33.77;00:00:35.03"></div>
+									</div>
+									<div class="sync-entry" data-text="ни́зкий">
+										<div class="range" data-in="00:00:35.89;00:00:36.92"></div>
+									</div>
+									<div class="sync-entry" data-text="широ́кий">
+										<div class="range" data-in="00:00:37.62;00:00:38.76"></div>
+									</div>
+									<div class="sync-entry" data-text="узкий">
+										<div class="range" data-in="00:00:39.51;00:00:40.48"></div>
+									</div>
+									<div class="sync-entry" data-text="ти́хий">
+										<div class="range" data-in="00:00:41.42;00:00:42.50"></div>
+									</div>
+									<div class="sync-entry" data-text="гро́мкий">
+										<div class="range" data-in="00:00:43.37;00:00:44.44"></div>
+									</div>
+									<div class="sync-entry" data-text="де́тский">
+										<div class="range" data-in="00:00:45.36;00:00:46.52"></div>
+									</div>
+									<div class="sync-entry" data-text="вели́кий">
+										<div class="range" data-in="00:00:47.29;00:00:48.38"></div>
+									</div>
+									<div class="sync-entry" data-text="лёгкий">
+										<div class="range" data-in="00:00:49.43;00:00:50.38"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 5 -->
+			<div class="sync-area">
+				<div id="part04" class="card">
+					<div id="part04_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part04_collapse" aria-expanded="true" aria-controls="part04_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3 dlg-caption">Прилагательные с осно&shy;вой на <span
+									class="signbox">Ж</span>, <span class="signbox">Ш</span>, <span
+									class="signbox">Ч</span>, <span class="signbox">Щ</span> и безу&shy;дар&shy;ным
+								окон&shy;ча&shy;ни&shy;ем</h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page07/rus-adj_04.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part04_collapse" class="collapse" aria-labelledby="part04_head" data-parent="#part04">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<div class="mt-1 mb-3 px-3 py-2 caption-bkg">
+										<p>Прилагательные с осно&shy;вой на <b>Ж</b>, <b>Ш</b>, <b>Ч</b>, <b>Щ</b>
+											име&shy;ют окон&shy;ча&shy;ния: <b>&#8209;<span
+													class="bordsel">ий</span></b>, <b>&#8209;ая</b>, <b>&#8209;<span
+													class="bordsel">ее</span></b>, <b>&#8209;<span
+													class="bordsel">ие</span></b> (если окон&shy;ча&shy;ние
+											безу&shy;дар&shy;ное).</p>
+									</div>
+									<!-- ЗДЕСЬ	-->
+
+									<table class="tbl-example">
+										<tbody>
+											<!-- 1 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">хорош<span class="bordsel">ий</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext"><mark>Какой?</mark></td>
+												<td class="maintext"><mark>хоро́ш-<span class="bordsel">ий</span></mark>
+												</td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">good</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext"><mark>Какая?</mark></td>
+												<td class="maintext"><mark>хоро́ш-ая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext"><mark>Какое?</mark></td>
+												<td class="maintext"><mark>хоро́ш-<span class="bordsel">ее</span><mark>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext"><mark>Какие?</mark></td>
+												<td class="maintext"><mark>хоро́ш-<span class="bordsel">ие</span></mark>
+												</td>
+											</tr>
+											<!-- 2 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">будущ<span class="bordsel">ий</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext">Какой? </td>
+												<td class="maintext"><mark>бу́дущ-<span class="bordsel">ий</span></mark>
+												</td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">future</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext">Какая?</td>
+												<td class="maintext"><mark>бу́дущ-ая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext">Какое?</td>
+												<td class="maintext"><mark>бу́дущ-<span class="bordsel">ее</span></mark>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext">Какие?</td>
+												<td class="maintext"><mark>бу́дущ-<span class="bordsel">ие</span></mark>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="py-2 app-separator"></div>
+
+									<table class="mat-table-base samewidth2 border-light">
+										<tbody>
+											<tr class="text-center">
+												<td class="maintext"><mark>cта́рший</mark><br /><span
+														class="auxtext trans">older</span></td>
+												<td class="maintext"><mark>мла́дший</mark><br /><span
+														class="auxtext trans">younger</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>лу́чший</mark><br /><span
+														class="auxtext trans">best</span></td>
+												<td class="maintext"><mark>сле́дующий</mark><br /><span
+														class="auxtext trans">next</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>све́жий</mark><br /><span
+														class="auxtext trans">fresh</span></td>
+												<td class="maintext"><mark>горя́чий</mark><br /><span
+														class="auxtext trans">hot</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="какой">
+										<div class="range" data-in="00:00:00.41;00:00:01.24"></div>
+									</div>
+									<div class="sync-entry" data-text="хоро́ш-ий">
+										<div class="range" data-in="00:00:07.56;00:00:08.62"></div>
+									</div>
+									<div class="sync-entry" data-text="какая">
+										<div class="range" data-in="00:00:01.97;00:00:02.93"></div>
+									</div>
+									<div class="sync-entry" data-text="хоро́ш-ая">
+										<div class="range" data-in="00:00:09.32;00:00:10.52"></div>
+									</div>
+									<div class="sync-entry" data-text="какое">
+										<div class="range" data-in="00:00:03.79;00:00:04.86"></div>
+									</div>
+									<div class="sync-entry" data-text="хоро́ш-ее">
+										<div class="range" data-in="00:00:11.30;00:00:12.69"></div>
+									</div>
+									<div class="sync-entry" data-text="какие">
+										<div class="range" data-in="00:00:05.51;00:00:06.52"></div>
+									</div>
+									<div class="sync-entry" data-text="хоро́ш-ие">
+										<div class="range" data-in="00:00:13.28;00:00:14.33"></div>
+									</div>
+									<div class="sync-entry" data-text="бу́дущ-ий">
+										<div class="range" data-in="00:00:15.13;00:00:16.23"></div>
+									</div>
+									<div class="sync-entry" data-text="бу́дущ-ая">
+										<div class="range" data-in="00:00:16.92;00:00:18.18"></div>
+									</div>
+									<div class="sync-entry" data-text="бу́дущ-ее">
+										<div class="range" data-in="00:00:18.93;00:00:20.25"></div>
+									</div>
+									<div class="sync-entry" data-text="бу́дущ-ие">
+										<div class="range" data-in="00:00:20.94;00:00:22.11"></div>
+									</div>
+									<!---->
+									<div class="sync-entry" data-text="cта́рший">
+										<div class="range" data-in="00:00:23.00;00:00:23.87"></div>
+									</div>
+									<div class="sync-entry" data-text="мла́дший">
+										<div class="range" data-in="00:00:24.81;00:00:25.92"></div>
+									</div>
+									<div class="sync-entry" data-text="све́жий">
+										<div class="range" data-in="00:00:26.94;00:00:28.04"></div>
+									</div>
+									<div class="sync-entry" data-text="горя́чий">
+										<div class="range" data-in="00:00:28.98;00:00:30.00"></div>
+									</div>
+									<div class="sync-entry" data-text="лу́чший">
+										<div class="range" data-in="00:00:30.91;00:00:31.97"></div>
+									</div>
+									<div class="sync-entry" data-text="сле́дующий">
+										<div class="range" data-in="00:00:32.92;00:00:34.11"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 6 -->
+			<div class="sync-area">
+				<div id="part05" class="card">
+					<div id="part05_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part05_collapse" aria-expanded="true" aria-controls="part05_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3 dlg-caption">Прилагательные на <span
+									class="signbox">&#8209;НИЙ</span></h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page07/rus-adj_05.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part05_collapse" class="collapse" aria-labelledby="part05_head" data-parent="#part05">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<div class="mt-1 mb-3 px-3 py-2 caption-bkg">
+										<p>Прилагательные на <b>&#8209;НИЙ</b> имеют мяг&shy;кий вари&shy;ант
+											окон&shy;ча&shy;ния: <b>&#8209;<span class="bordsel">ий</span></b>,
+											<b>&#8209;<span class="bordsel">яя</span></b>, <b>&#8209;<span
+													class="bordsel">ее</span></b>, <b>&#8209;<span
+													class="bordsel">ие</span></b>.</p>
+									</div>
+
+									<table class="tbl-example">
+										<tbody>
+											<!-- 1 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">син<span class="bordsel">ий</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext"><mark>Какой?</mark></td>
+												<td class="maintext"><mark>си́н-<span class="bordsel">ий</span></mark>
+												</td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">blue</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext"><mark>Какая?</mark></td>
+												<td class="maintext"><mark>си́н-<span class="bordsel">яя</span></mark>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext"><mark>Какое?</mark></td>
+												<td class="maintext"><mark>си́н-<span class="bordsel">ее</span></mark>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext"><mark>Какие?</mark></td>
+												<td class="maintext"><mark>си́н-<span class="bordsel">ие</span></mark>
+												</td>
+											</tr>
+											<!-- 2 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">домашн<span class="bordsel">ий</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext">Какой? </td>
+												<td class="maintext"><mark>дома́шн-<span
+															class="bordsel">ий</span></mark></td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">home</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext">Какая?</td>
+												<td class="maintext"><mark>дома́шн-<span
+															class="bordsel">яя</span></mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext">Какое?</td>
+												<td class="maintext"><mark>дома́шн-<span
+															class="bordsel">ее</span></mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext">Какие?</td>
+												<td class="maintext"><mark>дома́шн-<span
+															class="bordsel">ие</span></mark></td>
+											</tr>
+											<!-- 3 -->
+											<tr class="subcap-bg text-left font-weight-bold h6">
+												<td class="p-2" colspan="4">последн<span class="bordsel">ий</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он)</td>
+												<td class="auxtext">Какой? </td>
+												<td class="maintext"><mark>после́дн-<span
+															class="bordsel">ий</span></mark></td>
+												<td class="auxtext font-italic vertical" rowspan="4">
+													<div class="vertical">last</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она)</td>
+												<td class="auxtext">Какая?</td>
+												<td class="maintext"><mark>после́дн-<span
+															class="bordsel">яя</span></mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно)</td>
+												<td class="auxtext">Какое?</td>
+												<td class="maintext"><mark>после́дн-<span
+															class="bordsel">ее</span></mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они)</td>
+												<td class="auxtext">Какие?</td>
+												<td class="maintext"><mark>после́дн-<span
+															class="bordsel">ие</span></mark></td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div class="py-2 app-separator"></div>
+
+									<table class="mat-table-base samewidth2 border-light">
+										<tbody>
+											<tr class="text-center">
+												<td class="maintext"><mark>ле́тний</mark><br /><span
+														class="auxtext trans">summer</span></td>
+												<td class="maintext"><mark>зи́мний</mark><br /><span
+														class="auxtext trans">winter</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>весе́нний</mark><br /><span
+														class="auxtext trans">spring</span></td>
+												<td class="maintext"><mark>осе́нний</mark><br /><span
+														class="auxtext trans">autumn</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>у́тренний</mark><br /><span
+														class="auxtext trans">morning</span></td>
+												<td class="maintext"><mark>вече́рний</mark><br /><span
+														class="auxtext trans">evening</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>сего́дняшний</mark><br /><span
+														class="auxtext trans">today</span></td>
+												<td class="maintext"><mark>вчера́шний</mark><br /><span
+														class="auxtext trans">yesterday</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>ве́рхний</mark><br /><span
+														class="auxtext trans">upper</span></td>
+												<td class="maintext"><mark>ни́жний</mark><br /><span
+														class="auxtext trans">lower</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>сре́дний</mark><br /><span
+														class="auxtext trans">middle</span></td>
+												<td class="maintext"><mark>сосе́дний</mark><br /><span
+														class="auxtext trans">nearby</span></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>ли́шний</mark><br /><span
+														class="auxtext trans">extra</span></td>
+												<td class="maintext"><mark>дре́вний</mark><br /><span
+														class="auxtext trans">ancient</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="какой">
+										<div class="range" data-in="00:00:00.42;00:00:01.26"></div>
+									</div>
+									<div class="sync-entry" data-text="си́н-ий">
+										<div class="range" data-in="00:00:07.43;00:00:08.34"></div>
+									</div>
+									<div class="sync-entry" data-text="какая">
+										<div class="range" data-in="00:00:01.96;00:00:02.94"></div>
+									</div>
+									<div class="sync-entry" data-text="си́н-яя">
+										<div class="range" data-in="00:00:09.01;00:00:10.12"></div>
+									</div>
+									<div class="sync-entry" data-text="какое">
+										<div class="range" data-in="00:00:03.79;00:00:04.87"></div>
+									</div>
+									<div class="sync-entry" data-text="си́н-ее">
+										<div class="range" data-in="00:00:10.80;00:00:12.07"></div>
+									</div>
+									<div class="sync-entry" data-text="какие">
+										<div class="range" data-in="00:00:05.53;00:00:06.54"></div>
+									</div>
+									<div class="sync-entry" data-text="си́н-ие">
+										<div class="range" data-in="00:00:12.77;00:00:13.96"></div>
+									</div>
+
+									<div class="sync-entry" data-text="домашний">
+										<div class="range" data-in="00:00:14.73;00:00:15.81"></div>
+									</div>
+									<div class="sync-entry" data-text="домашняя">
+										<div class="range" data-in="00:00:16.58;00:00:17.76"></div>
+									</div>
+									<div class="sync-entry" data-text="домашнее">
+										<div class="range" data-in="00:00:18.44;00:00:19.75"></div>
+									</div>
+									<div class="sync-entry" data-text="домашние">
+										<div class="range" data-in="00:00:20.50;00:00:21.67"></div>
+									</div>
+
+									<div class="sync-entry" data-text="последний">
+										<div class="range" data-in="00:00:22.58;00:00:23.80"></div>
+									</div>
+									<div class="sync-entry" data-text="последняя">
+										<div class="range" data-in="00:00:24.51;00:00:25.88"></div>
+									</div>
+									<div class="sync-entry" data-text="последнее">
+										<div class="range" data-in="00:00:26.69;00:00:28.02"></div>
+									</div>
+									<div class="sync-entry" data-text="последние">
+										<div class="range" data-in="00:00:28.91;00:00:30.15"></div>
+									</div>
+									<!---->
+									<div class="sync-entry" data-text="ле́тний">
+										<div class="range" data-in="00:00:31.16;00:00:32.09"></div>
+									</div>
+									<div class="sync-entry" data-text="зи́мний">
+										<div class="range" data-in="00:00:32.92;00:00:34.01"></div>
+									</div>
+									<div class="sync-entry" data-text="весе́нний">
+										<div class="range" data-in="00:00:34.87;00:00:36.15"></div>
+									</div>
+									<div class="sync-entry" data-text="осе́нний">
+										<div class="range" data-in="00:00:36.93;00:00:38.12"></div>
+									</div>
+									<div class="sync-entry" data-text="у́тренний">
+										<div class="range" data-in="00:00:38.99;00:00:40.07"></div>
+									</div>
+									<div class="sync-entry" data-text="вече́рний">
+										<div class="range" data-in="00:00:41.03;00:00:42.27"></div>
+									</div>
+									<div class="sync-entry" data-text="сего́дняшний">
+										<div class="range" data-in="00:00:43.18;00:00:44.58"></div>
+									</div>
+									<div class="sync-entry" data-text="вчера́шний">
+										<div class="range" data-in="00:00:45.68;00:00:46.89"></div>
+									</div>
+									<div class="sync-entry" data-text="ве́рхний">
+										<div class="range" data-in="00:00:48.06;00:00:49.05"></div>
+									</div>
+									<div class="sync-entry" data-text="ни́жний">
+										<div class="range" data-in="00:00:50.15;00:00:51.14"></div>
+									</div>
+									<div class="sync-entry" data-text="сре́дний">
+										<div class="range" data-in="00:00:52.01;00:00:52.94"></div>
+									</div>
+									<div class="sync-entry" data-text="сосе́дний">
+										<div class="range" data-in="00:00:54.03;00:00:55.15"></div>
+									</div>
+									<div class="sync-entry" data-text="ли́шний">
+										<div class="range" data-in="00:00:56.17;00:00:57.16"></div>
+									</div>
+									<div class="sync-entry" data-text="дре́вний">
+										<div class="range" data-in="00:00:58.16;00:00:59.07"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="py-2 app-separator"></div> -->
+
+			<div class="mx-auto my-3 px-3 py-2 text-center caption-bkg">
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 7 -->
+			<div class="sync-area">
+				<div id="part06" class="card">
+					<div id="part06_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part06_collapse" aria-expanded="true" aria-controls="part06_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3 dlg-caption">Прилагательные-антонимы</h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page07/rus-adj-ant.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part06_collapse" class="collapse" aria-labelledby="part06_head" data-parent="#part06">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+
+									<div class="py-2 app-separator"></div>
+
+									<table class="mat-table-base border-light">
+										<tbody>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>большо́й ≠
+															ма́ленький</mark><span class="auxtext trans">big -
+															small</span></span></td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>хоро́ший ≠
+															плохо́й</mark><span class="auxtext trans">good -
+															bad</span></span></td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>ста́рый ≠
+															но́вый</mark><span class="auxtext trans">old -
+															new</span></span> (слова́рь)</td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>ста́рый ≠
+															молодо́й</mark><span class="auxtext trans">old -
+															young</span></span> (челове́к) </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>ста́рший ≠
+															мла́дший</mark><span class="auxtext trans">older -
+															younger</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>у́мный ≠
+															глу́пый</mark><span class="auxtext trans">smart -
+															stupid</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>до́брый ≠
+															злой</mark><span class="auxtext trans">kind –
+															angry</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>весёлый ≠
+															гру́стный</mark><span class="auxtext trans">cheerful -
+															sad</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>си́льный ≠
+															сла́бый</mark><span class="auxtext trans">strong -
+															weаk</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>трудолюби́вый ≠
+															лени́вый</mark><span class="auxtext trans">hardworking -
+															lazy</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>бога́тый ≠
+															бе́дный</mark><span class="auxtext trans">rich -
+															poor</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>здоро́вый ≠
+															больно́й</mark><span class="auxtext trans">healthy -
+															ill</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>ве́жливый ≠
+															гру́бый</mark><span class="auxtext trans">polite -
+															rude</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>высо́кий ≠
+															ни́зкий</mark><span class="auxtext trans">high, tall -
+															low</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>то́лстый ≠
+															то́нкий</mark><span class="auxtext trans">thick -
+															thin</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>дли́нный ≠
+															коро́ткий</mark><span class="auxtext trans">long -
+															short</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>широ́кий ≠
+															у́зкий</mark><span class="auxtext trans">wide -
+															narrow</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>по́лный ≠
+															пусто́й</mark><span class="auxtext trans">full -
+															empty</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>гро́мкий ≠
+															ти́хий</mark><span class="auxtext trans">loud -
+															calm</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>бы́стрый ≠
+															ме́дленный</mark><span class="auxtext trans">fast -
+															slow</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>просто́й ≠
+															сло́жный</mark><span class="auxtext trans">simple –
+															complex</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>лёгкий ≠
+															тру́дный</mark><span class="auxtext trans">easy –
+															difficult</span></span> (текст) </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>лёгкий ≠
+															тяжёлый</mark><span class="auxtext trans">light -
+															heavy</span></span> (чемода́н) </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>горя́чий (тёплый) ≠
+															холо́дный</mark><span class="auxtext trans">hot -
+															cold</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>дорого́й ≠
+															дешёвый</mark><span class="auxtext trans">expensive -
+															cheep</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>одинаковый ≠
+															ра́зный</mark><span class="auxtext trans">same -
+															different</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>белый ≠
+															чёрный</mark><span class="auxtext trans">black -
+															white</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>све́тлый ≠
+															тёмный</mark><span class="auxtext trans">light -
+															dark</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>чи́стый ≠
+															гря́зный</mark><span class="auxtext trans">clean -
+															durty</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>мо́крый ≠
+															сухо́й</mark><span class="auxtext trans">wet -
+															dry</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>бли́зкий ≠
+															далёкий</mark><span class="auxtext trans">close -
+															far</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>совреме́нный ≠
+															стари́нный</mark><span class="auxtext trans">morden -
+															ancient</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>бу́дущий ≠
+															про́шлый</mark><span class="auxtext trans">future -
+															past</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>ча́стый ≠
+															ре́дкий</mark><span class="auxtext trans">frequent -
+															rare</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>ле́тний ≠
+															зи́мний</mark><span class="auxtext trans">summer -
+															winter</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>весе́нний ≠
+															осе́нний</mark><span class="auxtext trans">spring –
+															autumn</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>у́тренний ≠
+															вече́рний</mark><span class="auxtext trans">morning -
+															evening</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>ве́рхний ≠
+															ни́жний</mark><span class="auxtext trans">upper -
+															lower</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>мужско́й ≠
+															же́нский</mark><span class="auxtext trans">male -
+															female</span></span> </td>
+											</tr>
+											<tr class="text-left">
+												<td class="maintext"><span class="trans-group"><mark>твёрдый ≠
+															мя́гкий</mark><span class="auxtext trans">hard -
+															soft</span></span> </td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="большо́й ≠ ма́ленький">
+										<div class="range" data-in="00:00:03.66;00:00:06.31"></div>
+									</div>
+									<div class="sync-entry" data-text="хоро́ший ≠ плохо́й">
+										<div class="range" data-in="00:00:07.46;00:00:10.06"></div>
+									</div>
+									<div class="sync-entry" data-text="ста́рый ≠ но́вый">
+										<div class="range" data-in="00:00:11.39;00:00:13.53"></div>
+									</div>
+									<div class="sync-entry" data-text="ста́рый ≠ молодо́й">
+										<div class="range" data-in="00:00:14.74;00:00:16.99"></div>
+									</div>
+									<div class="sync-entry" data-text="ста́рший ≠ мла́дший">
+										<div class="range" data-in="00:00:18.24;00:00:20.74"></div>
+									</div>
+
+									<div class="sync-entry" data-text="́мный ≠ глу́пый">
+										<div class="range" data-in="00:00:21.92;00:00:24.35"></div>
+									</div>
+									<div class="sync-entry" data-text="до́брый ≠ злой">
+										<div class="range" data-in="00:00:25.53;00:00:27.76"></div>
+									</div>
+									<div class="sync-entry" data-text="весёлый ≠ гру́стный">
+										<div class="range" data-in="00:00:29.06;00:00:31.52"></div>
+									</div>
+									<div class="sync-entry" data-text="си́льный ≠ сла́бый">
+										<div class="range" data-in="00:00:32.76;00:00:35.09"></div>
+									</div>
+									<div class="sync-entry" data-text="трудолюби́вый ≠ лени́вый">
+										<div class="range" data-in="00:00:36.38;00:00:39.24"></div>
+									</div>
+									<div class="sync-entry" data-text="бога́тый ≠ бе́дный">
+										<div class="range" data-in="00:00:40.64;00:00:43.12"></div>
+									</div>
+									<div class="sync-entry" data-text="здоро́вый ≠ больно́й">
+										<div class="range" data-in="00:00:44.23;00:00:46.78"></div>
+									</div>
+									<div class="sync-entry" data-text="ве́жливый ≠ гру́бый">
+										<div class="range" data-in="00:00:47.90;00:00:50.38"></div>
+									</div>
+									<div class="sync-entry" data-text="высо́кий ≠ ни́зкий">
+										<div class="range" data-in="00:00:51.81;00:00:54.58"></div>
+									</div>
+									<div class="sync-entry" data-text="то́лстый ≠ то́нкий">
+										<div class="range" data-in="00:00:55.84;00:00:58.45"></div>
+									</div>
+									<div class="sync-entry" data-text="дли́нный ≠ коро́ткий">
+										<div class="range" data-in="00:00:59.60;00:01:02.29"></div>
+									</div>
+									<div class="sync-entry" data-text="широ́кий ≠ у́зкий">
+										<div class="range" data-in="00:01:03.15;00:01:05.84"></div>
+									</div>
+									<div class="sync-entry" data-text="по́лный ≠ пусто́й">
+										<div class="range" data-in="00:01:07.20;00:01:09.39"></div>
+									</div>
+									<div class="sync-entry" data-text="гро́мкий ≠ ти́хий">
+										<div class="range" data-in="00:01:10.68;00:01:13.11"></div>
+									</div>
+									<div class="sync-entry" data-text="бы́стрый ≠ ме́дленный">
+										<div class="range" data-in="00:01:13.99;00:01:16.66"></div>
+									</div>
+									<div class="sync-entry" data-text="просто́й ≠ сло́жный">
+										<div class="range" data-in="00:01:18.26;00:01:20.66"></div>
+									</div>
+									<div class="sync-entry" data-text="лёгкий ≠ тру́дный (текст)">
+										<div class="range" data-in="00:01:21.72;00:01:23.86"></div>
+									</div>
+									<div class="sync-entry" data-text="лёгкий ≠ тяжёлый (чемода́н)">
+										<div class="range" data-in="00:01:24.78;00:01:26.80"></div>
+									</div>
+									<div class="sync-entry" data-text="горя́чий (тёплый) ≠ холо́дный">
+										<div class="range" data-in="00:01:27.96;00:01:31.82"></div>
+									</div>
+									<div class="sync-entry" data-text="дорого́й ≠ дешёвый">
+										<div class="range" data-in="00:01:32.54;00:01:35.50"></div>
+									</div>
+									<div class="sync-entry" data-text="одинаковый ≠ ра́зный">
+										<div class="range" data-in="00:01:36.20;00:01:38.94"></div>
+									</div>
+									<div class="sync-entry" data-text="белый ≠ чёрный">
+										<div class="range" data-in="00:01:40.16;00:01:42.59"></div>
+									</div>
+									<div class="sync-entry" data-text="све́тлый ≠ тёмный">
+										<div class="range" data-in="00:01:43.77;00:01:46.32"></div>
+									</div>
+									<div class="sync-entry" data-text="чи́стый ≠ гря́зный">
+										<div class="range" data-in="00:01:47.58;00:01:50.21"></div>
+									</div>
+									<div class="sync-entry" data-text="мо́крый ≠ сухо́й">
+										<div class="range" data-in="00:01:51.44;00:01:53.81"></div>
+									</div>
+									<div class="sync-entry" data-text="бли́зкий ≠ далёкий">
+										<div class="range" data-in="00:01:55.04;00:01:57.85"></div>
+									</div>
+									<div class="sync-entry" data-text="совреме́нный ≠ стари́нный">
+										<div class="range" data-in="00:01:59.09;00:02:01.93"></div>
+									</div>
+									<div class="sync-entry" data-text="бу́дущий ≠ про́шлый">
+										<div class="range" data-in="00:02:03.17;00:02:05.48"></div>
+									</div>
+									<div class="sync-entry" data-text="ча́стый ≠ ре́дкий">
+										<div class="range" data-in="00:02:06.57;00:02:08.96"></div>
+									</div>
+									<div class="sync-entry" data-text="ле́тний ≠ зи́мний">
+										<div class="range" data-in="00:02:10.00;00:02:12.43"></div>
+									</div>
+									<div class="sync-entry" data-text="весе́нний ≠ осе́нний">
+										<div class="range" data-in="00:02:13.52;00:02:16.39"></div>
+									</div>
+									<div class="sync-entry" data-text="у́тренний ≠ вече́рний">
+										<div class="range" data-in="00:02:17.54;00:02:20.02"></div>
+									</div>
+									<div class="sync-entry" data-text="ве́рхний ≠ ни́жний">
+										<div class="range" data-in="00:02:20.74;00:02:23.23"></div>
+									</div>
+									<div class="sync-entry" data-text="мужско́й ≠ же́нский">
+										<div class="range" data-in="00:02:24.50;00:02:27.02"></div>
+									</div>
+									<div class="sync-entry" data-text="твёрдый ≠ мя́гкий">
+										<div class="range" data-in="00:02:27.99;00:02:30.33"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

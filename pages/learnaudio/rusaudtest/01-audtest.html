@@ -1,0 +1,847 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<style>
+		#pageAudTest .theme-caption {
+			font-size: 1.2rem;
+		}
+
+
+		#pageAudTest .deftaskbox {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 1rem 1rem;
+		}
+
+		.deftaskbox>img {
+			max-height: 96px;
+		}
+
+
+		#pageAudTest table.resultsample {
+			margin-left: 0.5rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:first-child {
+			font-style: italic;
+			font-weight: 500;
+			font-size: 1rem;
+			padding-right: 1rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:nth-child(2) {
+			background-color: wheat;
+			border-left: gray 3px solid;
+			padding: 1rem;
+			font-size: 1.25rem;
+			font-weight: 500;
+		}
+
+		#pageAudTest .card-body>ol {
+			padding-left: 1rem;
+		}
+
+		#pageAudTest .card-body>ol>li>mark {
+			font-weight: 500;
+			background-color: unset;
+		}
+
+		#pageAudTest .card-body>ol>li>ul {
+			list-style-type: none;
+			padding-left: 1.1rem;
+		}
+
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="pageAudTest" class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h3 class="my-3 page-title">Выбор профессии</h3>
+
+			<div class="deftaskbox caption-bkg">
+				<img src="./res/images/mats/writeinnotebook.png" />
+				<div>
+					<h6>Прослушайте тексты и выполните задания в тетради</h6>
+					<hr class="mt-2">
+				</div>
+			</div>
+
+			<div class="py-2 app-separator"></div>
+
+			<table class="resultsample">
+				<tr>
+					<td>
+						Образец:
+					</td>
+					<td>
+						<p>Текст 1.</p>
+						<p>1. А, 2. Б, 3. А, 4. В, 5. А.</p>
+					</td>
+				</tr>
+			</table>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 1 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 1</div>
+			<div id="text01" class="card mt-0">
+				<div id="text01_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text01_collapse" aria-expanded="true" aria-controls="text01_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст о выборе будущей профессии и
+							выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-01/text-01.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text01_collapse" class="collapse" aria-labelledby="text01_head" data-parent="#text01">
+					<div class="card-body">
+						<!-- <h6>Задания к тексту</h6> -->
+						<ol>
+							<li>
+								<mark>
+									Родители и родственники часто спрашивают:
+								</mark>
+								<ul>
+									<li>(А) «Кем ты хочешь стать, когда вырастешь?»</li>
+									<li>(Б) «Где ты хочешь работать?»</li>
+									<li>(В) «Какие у тебя интересы?»</li>
+								</ul>
+							</li>
+							<li>
+								<mark>
+									Чтобы выбрать профессию, необходимо решить, …
+								</mark>
+								<ul>
+									<li>
+										(А) что вы можете хорошо делать
+									</li>
+									<li>
+										(Б) что вы хотите и какие у вас мечты
+									</li>
+									<li>
+										(В) кем вы хотите стать и где работать
+									</li>
+								</ul>
+							</li>
+							<li>
+								<mark>
+									Люди любят делать …
+								</mark>
+								<ul>
+									<li>
+										(А) то, за что платят деньги
+									</li>
+									<li>
+										(Б) то, что у них хорошо получается
+									</li>
+									<li>
+										(В) то, что нужно делать
+									</li>
+								</ul>
+							</li>
+							<li>
+								<mark>
+									Сделать правильный выбор будущей профессии вам также помогут разные …
+								</mark>
+								<ul>
+									<li>
+										(А) профессиональные тесты
+									</li>
+									<li>
+										(Б) преподаватели вуза
+									</li>
+									<li>
+										(В) советы родителей
+									</li>
+								</ul>
+							</li>
+							<li>
+								<mark>
+									Человеку необходимо сделать правильный выбор профессии, потому что …
+								</mark>
+								<ul>
+									<li>
+										(А) жизнь идёт очень быстро
+									</li>
+									<li>
+										(Б) от этого будет зависеть его жизнь
+									</li>
+									<li>
+										(В) потом нельзя будет изменить свою профессию
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 2 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 2</div>
+			<div id="text02" class="card mt-0">
+				<div id="text02_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text02_collapse" aria-expanded="true" aria-controls="text02_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст «Рассказ Марии» и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-01/text-02.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text02_collapse" class="collapse" aria-labelledby="text02_head" data-parent="#text02">
+					<div class="card-body">
+						<!-- <h6>Задания к тексту</h6> -->
+						<ol>
+							<li>
+								<mark>
+									Профессия Марии – …
+								</mark>
+								<ul>
+									<li>
+										(А) учитель
+									</li>
+									<li>
+										(Б) преподаватель
+									</li>
+									<li>
+										(В) журналист
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Мария считает, что работа должна приносить …
+								</mark>
+								<ul>
+									<li>
+										(А) известность и радость
+									</li>
+									<li>
+										(Б) удовольствие и радость
+									</li>
+									<li>
+										(В) деньги и известность
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Журналист должен уметь …
+								</mark>
+								<ul>
+									<li>
+										(А) хорошо фотографировать
+									</li>
+									<li>
+										(Б) находить и анализировать информацию
+									</li>
+									<li>
+										(В) красиво писать
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В школе Мария часто брала интервью …
+								</mark>
+								<ul>
+									<li>
+										(А) у известных путешественников
+									</li>
+									<li>
+										(Б) у своих родителей и известных людей
+									</li>
+									<li>
+										(В) у своих друзей и учителей
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Профессия Марии даёт ей возможность …
+								</mark>
+								<ul>
+									<li>
+										(А) правильно и красиво говорить
+									</li>
+									<li>
+										(Б) путешествовать и встречаться с людьми
+									</li>
+									<li>
+										(В) заниматься хобби
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 3 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 3</div>
+			<div id="text03" class="card mt-0">
+				<div id="text03_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text03_collapse" aria-expanded="true" aria-controls="text03_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст о Евгении Дятлове и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-01/text-03.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text03_collapse" class="collapse" aria-labelledby="text03_head" data-parent="#text03">
+					<div class="card-body">
+						<!-- <h6>Задания к тексту</h6> -->
+						<ol>
+							<li>
+								<mark>
+									Евгений Дятлов – …
+								</mark>
+								<ul>
+									<li>
+										(А) известный певец
+									</li>
+									<li>
+										(Б) известный журналист
+									</li>
+									<li>
+										(В) известный режиссёр
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В детстве Женя занимался …
+								</mark>
+								<ul>
+									<li>
+										(А) в спортивной школе
+									</li>
+									<li>
+										(Б) в музыкальной школе
+									</li>
+									<li>
+										(В) в актёрской школе
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Женя долго думал, что он любит больше:
+								</mark>
+								<ul>
+									<li>
+										(А) заниматься музыкой или спортом
+									</li>
+									<li>
+										(Б) играть в театре или в кино
+									</li>
+									<li>
+										(В) петь или играть на сцене
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Евгений Дятлов продолжал жить в Санкт-Петербурге, потому что ему предложили …
+								</mark>
+								<ul>
+									<li>
+										(А) играть в театре
+									</li>
+									<li>
+										(Б) сниматься в кино
+									</li>
+									<li>
+										(В) выступать на концертах
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Для Евгения Дятлова главное в жизни – это …
+								</mark>
+								<ul>
+									<li>
+										(А) семья
+									</li>
+									<li>
+										(Б) деньги
+									</li>
+									<li>
+										(В) работа
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 4 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 4</div>
+			<div id="text04" class="card mt-0">
+				<div id="text04_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text04_collapse" aria-expanded="true" aria-controls="text04_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Марины и Сергея Ивановича и
+							выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-01/text-04.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text04_collapse" class="collapse" aria-labelledby="text04_head" data-parent="#text04">
+					<div class="card-body">
+						<!-- <h6>Задания к тексту</h6> -->
+						<ol>
+							<li>
+								<mark>
+									Сергей Иванович работает …
+								</mark>
+								<ul>
+									<li>
+										(А) на курсах
+									</li>
+									<li>
+										(Б) в школе
+									</li>
+									<li>
+										(В) в университете
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Сергей Иванович победил на конкурсе, потому что он …
+								</mark>
+								<ul>
+									<li>
+										(А) много работает
+									</li>
+									<li>
+										(Б) любит свою профессию
+									</li>
+									<li>
+										(В) любит историю Древнего мира
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									На курсах «Юный историк» занимались …
+								</mark>
+								<ul>
+									<li>
+										(А) школьники
+									</li>
+									<li>
+										(Б) студенты
+									</li>
+									<li>
+										(В) все, кто интересуется историей
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В университете Сергей Иванович Василенко интересовался …
+								</mark>
+								<ul>
+									<li>
+										(А) всемирной историей
+									</li>
+									<li>
+										(Б) историей Древнего мира
+									</li>
+									<li>
+										(В) историей России
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Сергей Иванович решил стать учителем истории, …
+								</mark>
+								<ul>
+									<li>
+										(А) когда учился в 8–ом классе
+									</li>
+									<li>
+										(Б) когда занимался на курсах
+									</li>
+									<li>
+										(В) когда учился на 4–ом курсе университета
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Сергей Иванович хочет научить детей …
+								</mark>
+								<ul>
+									<li>
+										(А) знать и понимать историю Древнего мира
+									</li>
+									<li>
+										(Б) думать и иметь своё мнение о событиях в мире
+									</li>
+									<li>
+										(В) читать и понимать книги о том, что происходит в мире
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 5 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 5</div>
+			<div id="text05" class="card mt-0">
+				<div id="text05_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text05_collapse" aria-expanded="true" aria-controls="text05_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Оли и Тани и выполните задания
+						</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-01/text-05.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text05_collapse" class="collapse" aria-labelledby="text05_head" data-parent="#text05">
+					<div class="card-body">
+						<!-- <h6>Задания к тексту</h6> -->
+						<ol>
+							<li>
+								<mark>
+									Таня учится …
+								</mark>
+								<ul>
+									<li>
+										(А) на химическом факультете
+									</li>
+									<li>
+										(Б) на филологическом факультете
+									</li>
+									<li>
+										(В) на физическом факультете
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Оле нравятся …
+								</mark>
+								<ul>
+									<li>
+										(А) литература и химия
+									</li>
+									<li>
+										(Б) химические эксперименты
+									</li>
+									<li>
+										(В) литература и физика
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Дедушка Тани работает …
+								</mark>
+								<ul>
+									<li>
+										(А) директором химической лаборатории
+									</li>
+									<li>
+										(Б) учителем химии в школе
+									</li>
+									<li>
+										(В) директором химического завода
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Работа химика влияет на …
+								</mark>
+								<ul>
+									<li>
+										(А) жизнь и здоровье других людей
+									</li>
+									<li>
+										(Б) жизнь и счастье других людей
+									</li>
+									<li>
+										(В) природу и жизнь других людей
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В апреле на химическом факультете будет проходить …
+								</mark>
+								<ul>
+									<li>
+										(А) фестиваль техники
+									</li>
+									<li>
+										(Б) фестиваль науки
+									</li>
+									<li>
+										(В) фестиваль здоровья
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Гости фестиваля смогут увидеть …
+								</mark>
+								<ul>
+									<li>
+										(А) химическую лабораторию
+									</li>
+									<li>
+										(Б) химические эксперименты
+									</li>
+									<li>
+										(В) химический завод
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 6 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 6</div>
+			<div id="text06" class="card mt-0">
+				<div id="text06_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text06_collapse" aria-expanded="true" aria-controls="text06_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Наташи и Даши и выполните задания
+						</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-01/text-06.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text06_collapse" class="collapse" aria-labelledby="text06_head" data-parent="#text06">
+					<div class="card-body">
+						<!-- <h6>Задания к тексту</h6> -->
+						<ol>
+							<li>
+								<mark>
+									«Кидбург» – это …
+								</mark>
+								<ul>
+									<li>
+										(А) детский парк профессий
+									</li>
+									<li>
+										(Б) детский город профессий
+									</li>
+									<li>
+										(В) детская школа искусств
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Кирилл – это брат …
+								</mark>
+								<ul>
+									<li>
+										(А) Наташи
+									</li>
+									<li>
+										(Б) Даши
+									</li>
+									<li>
+										(В) Кати
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Кирилл любит …
+								</mark>
+								<ul>
+									<li>
+										(А) рассказывать о профессиях
+									</li>
+									<li>
+										(Б) помогать людям
+									</li>
+									<li>
+										(В) учить Катю читать и писать
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Наташе выбрать профессию помогла …
+								</mark>
+								<ul>
+									<li>
+										(А) школьная учительница
+									</li>
+									<li>
+										(Б) младшая сестра
+									</li>
+									<li>
+										(В) старшая сестра
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Наташа счастлива, потому что работает …
+								</mark>
+								<ul>
+									<li>
+										(А) в медицинском университете
+									</li>
+									<li>
+										(Б) в «Кидбурге»
+									</li>
+									<li>
+										(В) в школе
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <h6 class="text-secondary mt-4">(Раздел находится в разработке)</h6> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

@@ -1,0 +1,1472 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+
+	<!--
+	Для реализации аудиоплеера решил использовать:
+	Responsive & Touch-Friendly Audio Player 
+	https://tympanus.net/codrops/2012/12/04/responsive-touch-friendly-audio-player/
+-->
+
+	<style>
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.card .dlg-caption {
+				font-size: 1.8rem;
+			}
+		}
+
+
+		/* До создания специализированных классов для синх. диалогов, будем временно вот так корректировать */
+		.page-body .sync-area .card-body {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+
+			<h4 class="my-3 page-title">Часть III. Раздел 1. «Давайте послушаем и почитаем диалоги»</h4>
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 1 (В деканате) -->
+			<div class="sync-area">
+				<div id="dlg01" class="card">
+					<div id="dlg01_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg01_collapse" aria-expanded="true" aria-controls="dlg01_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">В деканате</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-01.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg01_collapse" class="collapse" aria-labelledby="dlg01_head" data-parent="#dlg01">
+						<div class="card-body">
+							<div class="sync-context">
+								<div class="sync-text">
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Здра́вствуйте!</mark> <mark>Мне ну́жен Влади́мир Валенти́нович.</mark>
+									</p>
+
+									<h6 class="actor-label">Секретарь</h6>
+									<p><mark>– До́брый день!</mark> <mark>Влади́мира Валенти́новича нет.</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– А когда́ он бу́дет?</mark></p>
+
+									<h6 class="actor-label">Секретарь</h6>
+									<p><mark>– За́втра</mark> <mark>в 11 часо́в.</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Спаси́бо.</mark></p>
+
+									<h6 class="actor-label">Секретарь</h6>
+									<p><mark>– Не́ за что!</mark> <mark>До свида́ния.</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:02.15;00:00:03.5"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Мне ну́жен Влади́мир Валенти́нович.">
+										<div class="range" data-in="00:00:03.52;00:00:06.10"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– До́брый день!">
+										<div class="range" data-in="00:00:06.15;00:00:07.50"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Влади́мира Валенти́новича нет.">
+										<div class="range" data-in="00:00:07.65;00:00:10.20"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– А когда́ он бу́дет?">
+										<div class="range" data-in="00:00:10.30;00:00:11.80"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– За́втра">
+										<div class="range" data-in="00:00:11.95;00:00:13.22"></div>
+									</div>
+
+									<div class="sync-entry" data-text="в 11 часо́в.">
+										<div class="range" data-in="00:00:13.32;00:00:14.90"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– Спаси́бо.">
+										<div class="range" data-in="00:00:15.05;00:00:16.1"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– Не́ за что!">
+										<div class="range" data-in="00:00:16.35;00:00:17.4"></div>
+									</div>
+
+									<div class="sync-entry" data-text="До свида́ния.">
+										<div class="range" data-in="00:00:17.45;00:00:18.8"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 2 (В театральной кассе) -->
+			<div class="sync-area">
+				<div id="dlg02" class="card">
+					<div id="dlg02_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg02_collapse" aria-expanded="true" aria-controls="dlg02_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">В театральной кассе</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-02.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg02_collapse" class="collapse" aria-labelledby="dlg02_head" data-parent="#dlg02">
+						<div class="card-body">
+							<div class="sync-context">
+								<div class="sync-text">
+									<h6 class="actor-label">Зритель</h6>
+									<p><mark>– Скажи́те, пожа́луйста,</mark> <mark>когда́ бу́дет бале́т «Лебеди́ное
+											о́зеро»?</mark></p>
+
+									<h6 class="actor-label">Кассир</h6>
+									<p><mark>– Двадца́того ма́я.</mark></p>
+
+									<h6 class="actor-label">Зритель</h6>
+									<p><mark>– У вас есть биле́ты на э́тот спекта́кль?</mark></p>
+
+									<h6 class="actor-label">Кассир</h6>
+									<p><mark>– Да, есть.</mark></p>
+
+									<h6 class="actor-label">Зритель</h6>
+									<p><mark>– Да́йте, пожа́луйста, два биле́та в парте́р.</mark></p>
+
+									<h6 class="actor-label">Кассир</h6>
+									<p><mark>– Хорошо́.</mark> <mark>Восьмо́й ряд, места́ 12 и 13.</mark></p>
+
+									<h6 class="actor-label">Зритель</h6>
+									<p><mark>– Спаси́бо.</mark></p>
+								</div>
+
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Скажи́те, пожа́луйста">
+										<div class="range" data-in="00:00:3.65;00:00:5.15"></div>
+									</div>
+									<div class="sync-entry" data-text="когда́ бу́дет бале́т «Лебеди́ное о́зеро»?">
+										<div class="range" data-in="00:00:5.2;00:00:8.35"></div>
+									</div>
+									<div class="sync-entry" data-text="– Двадца́того ма́я.">
+										<div class="range" data-in="00:00:8.4;00:00:10.05"></div>
+									</div>
+									<div class="sync-entry" data-text="– У вас есть биле́ты на э́тот спекта́кль?">
+										<div class="range" data-in="00:00:10.34;00:00:12.4"></div>
+									</div>
+									<div class="sync-entry" data-text="– Да, есть.">
+										<div class="range" data-in="00:00:12.45;00:00:14.15"></div>
+									</div>
+									<div class="sync-entry" data-text="– Да́йте, пожа́луйста, два биле́та в парте́р.">
+										<div class="range" data-in="00:00:14.3;00:00:17.1"></div>
+									</div>
+									<div class="sync-entry" data-text="– Хорошо́.">
+										<div class="range" data-in="00:00:17.2;00:00:18.57"></div>
+									</div>
+									<div class="sync-entry" data-text="Восьмо́й ряд, места́ 12 и 13.">
+										<div class="range" data-in="00:00:18.85;00:00:22.15"></div>
+									</div>
+									<div class="sync-entry" data-text="– Спаси́бо">
+										<div class="range" data-in="00:00:22.2;00:00:23.5"></div>
+									</div>
+								</div>
+							</div>
+							<!-- END sync-context-->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 3 (Планы на лето) -->
+			<div class="sync-area">
+				<div id="dlg03" class="card">
+					<div id="dlg03_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg03_collapse" aria-expanded="true" aria-controls="dlg03_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Планы на лето</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-03.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg03_collapse" class="collapse" aria-labelledby="dlg03_head" data-parent="#dlg03">
+						<div class="card-body">
+							<div class="sync-context">
+								<div class="sync-text">
+									<h6 class="actor-label">Подруга 1</h6>
+									<p><mark>– Куда́ ты пое́дешь ле́том?</mark></p>
+
+									<h6 class="actor-label">Подруга 2</h6>
+									<p><mark>– Ле́том я пое́ду на экску́рсию в Петербу́рг.</mark></p>
+
+									<h6 class="actor-label">Подруга 1</h6>
+									<p><mark>– А что ты плани́руешь посмотре́ть?</mark></p>
+
+									<h6 class="actor-label">Подруга 2</h6>
+									<p><mark>– Я собира́юсь посмотре́ть Петропа́вловскую кре́пость, Эрмита́ж, Зи́мний
+											дворе́ц.</mark></p>
+
+									<h6 class="actor-label">Подруга 1</h6>
+									<p><mark>– Ско́лько сто́ит э́та экску́рсия?</mark></p>
+
+									<h6 class="actor-label">Подруга 2</h6>
+									<p>
+										<mark>– 15 000 рубле́й.</mark> <mark>Хо́чешь пое́хать с на́ми?</mark> <mark>Ещё
+											есть свобо́дные места́.</mark>
+									</p>
+
+									<h6 class="actor-label">Подруга 1</h6>
+									<p><mark>– С удово́льствием.</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Куда́ ты пое́дешь ле́том?">
+										<div class="range" data-in="00:00:03.82;00:00:05.48"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– Ле́том я пое́ду на экску́рсию в Петербу́рг.">
+										<div class="range" data-in="00:00:05.80;00:00:09.57"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– А что ты плани́руешь посмотре́ть?">
+										<div class="range" data-in="00:00:09.72;00:00:12.1"></div>
+									</div>
+
+									<div class="sync-entry"
+										data-text="– Я собира́юсь посмотре́ть Петропа́вловскую кре́пость, Эрмита́ж, Зи́мний дворе́ц.">
+										<div class="range" data-in="00:00:12.80;00:00:19.62"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– Ско́лько сто́ит э́та экску́рсия?">
+										<div class="range" data-in="00:00:19.92;00:00:22.27"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– 15 000 рубле́й.">
+										<div class="range" data-in="00:00:22.75;00:00:25.18"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Хо́чешь пое́хать с на́ми?">
+										<div class="range" data-in="00:00:25.33;00:00:27.11"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ещё есть свобо́дные места́.">
+										<div class="range" data-in="00:00:27.51;00:00:29.54"></div>
+									</div>
+
+									<div class="sync-entry" data-text="– С удово́льствием.">
+										<div class="range" data-in="00:00:29.62;00:00:30.87"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 4 (В музее) -->
+			<div class="sync-area">
+				<div id="dlg04" class="card">
+					<div id="dlg04_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg04_collapse" aria-expanded="true" aria-controls="dlg04_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">В музее</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-04.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg04_collapse" class="collapse" aria-labelledby="dlg04_head" data-parent="#dlg04">
+						<div class="card-body">
+							<div class="sync-context">
+								<div class="sync-text">
+									<h6 class="actor-label">Посетитель</h6>
+									<p><mark>– Здра́вствуйте!</mark> <mark>Скажи́те, пожа́луйста, в каки́е дни рабо́тает
+											музе́й?</mark></p>
+
+									<h6 class="actor-label">Кассир</h6>
+									<p><mark>– Наш музе́й рабо́тает ка́ждый день, кро́ме понеде́льника, с 10 до 19
+											часо́в.</mark></p>
+
+									<h6 class="actor-label">Посетитель</h6>
+									<p><mark>– Ско́лько сто́ит биле́т?</mark></p>
+
+									<h6 class="actor-label">Кассир</h6>
+									<p><mark>– 250 рубле́й.</mark></p>
+
+									<h6 class="actor-label">Посетитель</h6>
+									<p><mark>– Спаси́бо.</mark> <mark>Мы обяза́тельно придём.</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:03.12;00:00:04.16"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="Скажи́те, пожа́луйста, в каки́е дни рабо́тает музе́й?">
+										<div class="range" data-in="00:00:04.17;00:00:08.00"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="– Наш музе́й рабо́тает ка́ждый день, кро́ме понеде́льника, с 10 до 19 часо́в.">
+										<div class="range" data-in="00:00:08.10;00:00:14.16"></div>
+									</div>
+									<div class="sync-entry" data-text="– Ско́лько сто́ит биле́т?">
+										<div class="range" data-in="00:00:14.20;00:00:16.19"></div>
+									</div>
+									<div class="sync-entry" data-text="– 250 рубле́й.">
+										<div class="range" data-in="00:00:16.30;00:00:18.18"></div>
+									</div>
+									<div class="sync-entry" data-text="– Спаси́бо.">
+										<div class="range" data-in="00:00:18.60;00:00:19.70"></div>
+									</div>
+									<div class="sync-entry" data-text="Мы обяза́тельно придём.">
+										<div class="range" data-in="00:00:19.72;00:00:21.80"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 5 (В библиотеке) -->
+			<div class="sync-area">
+				<div id="dlg05" class="card">
+					<div id="dlg05_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg05_collapse" aria-expanded="true" aria-controls="dlg05_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">В библиотеке</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-05.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg05_collapse" class="collapse" aria-labelledby="dlg05_head" data-parent="#dlg05">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Здра́вствуйте!</mark></p>
+
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– До́брый день!</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– У вас есть журна́л «А́зия и А́фрика»?</mark></p>
+
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– Да, есть.</mark> <mark>Како́й но́мер Вам ну́жен?</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– После́дний.</mark></p>
+
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– Подожди́те мину́точку.</mark> <mark>Сейча́с принесу́…</mark> <mark>Вот
+											журна́л.</mark> <mark>Распиши́тесь, пожа́луйста.</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Когда́ я до́лжен верну́ть э́тот журна́л?</mark></p>
+
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– Через две неде́ли.</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Хорошо́.</mark></p>
+
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– Не забу́дьте чита́тельский биле́т.</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>Спаси́бо!</mark> <mark>До свида́ния.</mark></p>
+
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– Всего́ до́брого!</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:03.90;00:00:04.94"></div>
+									</div>
+									<div class="sync-entry" data-text="– До́брый день!">
+										<div class="range" data-in="00:00:05.41;00:00:06.39"></div>
+									</div>
+									<div class="sync-entry" data-text="– У вас есть журна́л «А́зия и А́фрика»?">
+										<div class="range" data-in="00:00:06.90;00:00:08.91"></div>
+									</div>
+									<div class="sync-entry" data-text="– Да, есть.">
+										<div class="range" data-in="00:00:09.45;00:00:10.28"></div>
+									</div>
+									<div class="sync-entry" data-text="Како́й но́мер Вам ну́жен?">
+										<div class="range" data-in="00:00:10.69;00:00:12.28"></div>
+									</div>
+									<div class="sync-entry" data-text="– После́дний.">
+										<div class="range" data-in="00:00:12.50;00:00:13.40"></div>
+									</div>
+									<div class="sync-entry" data-text="– Подожди́те мину́точку.">
+										<div class="range" data-in="00:00:13.67;00:00:15.15"></div>
+									</div>
+									<div class="sync-entry" data-text="Сейча́с принесу́…">
+										<div class="range" data-in="00:00:15.34;00:00:16.68"></div>
+									</div>
+									<div class="sync-entry" data-text="Вот журна́л.">
+										<div class="range" data-in="00:00:16.90;00:00:18.05"></div>
+									</div>
+									<div class="sync-entry" data-text="Распиши́тесь, пожа́луйста.">
+										<div class="range" data-in="00:00:18.27;00:00:19.71"></div>
+									</div>
+									<div class="sync-entry" data-text="– Когда́ я до́лжен верну́ть э́тот журна́л?">
+										<div class="range" data-in="00:00:19.98;00:00:22.02"></div>
+									</div>
+									<div class="sync-entry" data-text="– Через две неде́ли.">
+										<div class="range" data-in="00:00:22.69;00:00:24.05"></div>
+									</div>
+									<div class="sync-entry" data-text="– Хорошо́.">
+										<div class="range" data-in="00:00:24.28;00:00:25.05"></div>
+									</div>
+									<div class="sync-entry" data-text="– Не забу́дьте чита́тельский биле́т.">
+										<div class="range" data-in="00:00:25.28;00:00:27.26"></div>
+									</div>
+									<div class="sync-entry" data-text="Спаси́бо!">
+										<div class="range" data-in="00:00:27.54;00:00:28.46"></div>
+									</div>
+									<div class="sync-entry" data-text="До свида́ния.">
+										<div class="range" data-in="00:00:28.49;00:00:29.37"></div>
+									</div>
+									<div class="sync-entry" data-text="– Всего́ до́брого!">
+										<div class="range" data-in="00:00:29.54;00:00:30.73"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 6 (Заказ номера в гостинице) -->
+			<div class="sync-area">
+				<div id="dlg06" class="card">
+					<div id="dlg06_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg06_collapse" aria-expanded="true" aria-controls="dlg06_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Заказ номера в гостинице</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-06.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg06_collapse" class="collapse" aria-labelledby="dlg06_head" data-parent="#dlg06">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+
+									<h6 class="actor-label">Администратор</h6>
+									<p><mark>– Гости́ница «Москва́».</mark> <mark>Слу́шаю Вас.</mark></p>
+
+									<h6 class="actor-label">Гость</h6>
+									<p><mark>– Здра́вствуйте!</mark> <mark>Я могу́ заказа́ть но́мер на три дня с 31
+											декабря́ по второ́е января́?</mark></p>
+
+									<h6 class="actor-label">Администратор</h6>
+									<p><mark>– Вы хоти́те одноме́стный или двухме́стный?</mark></p>
+
+									<h6 class="actor-label">Гость</h6>
+									<p><mark>– Одноме́стный.</mark></p>
+
+									<h6 class="actor-label">Администратор</h6>
+									<p><mark>– Мину́точку!</mark> <mark>Сейча́с посмотрю́.</mark> <mark>К сожале́нию,
+											свобо́дных одноме́стных номеро́в на Но́вый год уже нет.</mark></p>
+
+									<h6 class="actor-label">Гость</h6>
+									<p><mark>– О́чень жаль!</mark> <mark>До свида́ния.</mark></p>
+
+									<h6 class="actor-label">Администратор</h6>
+									<p><mark>– До свида́ния.</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Гости́ница «Москва́».">
+										<div class="range" data-in="00:00:04.37;00:00:05.89"></div>
+									</div>
+									<div class="sync-entry" data-text="Слу́шаю Вас.">
+										<div class="range" data-in="00:00:06.13;00:00:07.22"></div>
+									</div>
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:07.51;00:00:08.49"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="Я могу́ заказа́ть но́мер на три дня с 31 декабря́ по второ́е января́?">
+										<div class="range" data-in="00:00:08.730;00:00:14.63"></div>
+									</div>
+									<div class="sync-entry" data-text="– Вы хоти́те одноме́стный или двухме́стный?">
+										<div class="range" data-in="00:00:15.01;00:00:18.04"></div>
+									</div>
+									<div class="sync-entry" data-text="– Одноме́стный.">
+										<div class="range" data-in="00:00:18.43;00:00:19.40"></div>
+									</div>
+									<div class="sync-entry" data-text="– Мину́точку!">
+										<div class="range" data-in="00:00:19.82;00:00:20.85"></div>
+									</div>
+									<div class="sync-entry" data-text="Сейча́с посмотрю́.">
+										<div class="range" data-in="00:00:21.21;00:00:22.52"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="К сожале́нию, свобо́дных одноме́стных номеро́в на Но́вый год уже нет.">
+										<div class="range" data-in="00:00:23.27;00:00:27.53"></div>
+									</div>
+									<div class="sync-entry" data-text="– О́чень жаль!">
+										<div class="range" data-in="00:00:27.88;00:00:28.79"></div>
+									</div>
+									<div class="sync-entry" data-text="До свида́ния.">
+										<div class="range" data-in="00:00:28.97;00:00:29.82"></div>
+									</div>
+									<div class="sync-entry" data-text="– До свида́ния.">
+										<div class="range" data-in="00:00:29.96;00:00:30.96"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 7 (В банке) -->
+			<div class="sync-area">
+				<div id="dlg07" class="card">
+					<div id="dlg07_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg07_collapse" aria-expanded="true" aria-controls="dlg07_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">В банке</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-07.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg07_collapse" class="collapse" aria-labelledby="dlg07_head" data-parent="#dlg07">
+						<div class="card-body">
+							<!-- BEGIN SyncContext -->
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+									<h6 class="actor-label">Консультант</h6>
+									<p><mark>– До́брый день!</mark> <mark>Чем могу́ помо́чь?</mark></p>
+
+									<h6 class="actor-label">Клиент</h6>
+									<p><mark>– Здра́вствуйте!</mark> <mark>Скажи́те, пожа́луйста, как снять де́ньги с
+											ка́рты?</mark></p>
+
+									<h6 class="actor-label">Консультант</h6>
+									<p><mark>– Пойдёмте к банкома́ту.</mark> <mark>Вста́вьте свою́ ка́рту, набери́те
+											пин-ко́д, вы́берите валю́ту, кото́рая вам нужна́.</mark> <mark>А тепе́рь –
+											су́мму, кото́рую Вы хоти́те снять.</mark></p>
+
+									<h6 class="actor-label">Клиент</h6>
+									<p><mark>– Спаси́бо за по́мощь!</mark></p>
+
+									<h6 class="actor-label">Консультант</h6>
+									<p><mark>– Не́ за что!</mark> <mark>Приходи́те ещё!</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– До́брый день!">
+										<div class="range" data-in="00:00:02.54;00:00:03.51"></div>
+									</div>
+									<div class="sync-entry" data-text="Чем могу́ помо́чь?">
+										<div class="range" data-in="00:00:03.68;00:00:05.13"></div>
+									</div>
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:05.68;00:00:06.61"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="Скажи́те, пожа́луйста, как снять де́ньги с ка́рты?">
+										<div class="range" data-in="00:00:06.92;00:00:10.63"></div>
+									</div>
+									<div class="sync-entry" data-text="– Пойдёмте к банкома́ту.">
+										<div class="range" data-in="00:00:10.99;00:00:12.96"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="Вста́вьте свою́ ка́рту, набери́те пин-ко́д, вы́берите валю́ту, кото́рая вам нужна́.">
+										<div class="range" data-in="00:00:13.49;00:00:21.21"></div>
+									</div>
+									<div class="sync-entry" data-text="А тепе́рь – су́мму, кото́рую Вы хоти́те снять.">
+										<div class="range" data-in="00:00:21.68;00:00:25.60"></div>
+									</div>
+									<div class="sync-entry" data-text="– Спаси́бо за по́мощь!">
+										<div class="range" data-in="00:00:26.09;00:00:27.76"></div>
+									</div>
+									<div class="sync-entry" data-text="– Не́ за что!">
+										<div class="range" data-in="00:00:27.95;00:00:28.86"></div>
+									</div>
+									<div class="sync-entry" data-text="Приходи́те ещё!">
+										<div class="range" data-in="00:00:28.98;00:00:30.88"></div>
+									</div>
+								</div>
+							</div>
+							<!-- END SyncContext -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 8 (На улице) -->
+
+			<div class="sync-area">
+				<div id="dlg08" class="card">
+					<div id="dlg08_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg08_collapse" aria-expanded="true" aria-controls="dlg08_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">На улице</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-08.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg08_collapse" class="collapse" aria-labelledby="dlg08_head" data-parent="#dlg08">
+						<div class="card-body">
+							<!-- BEGIN SyncContext -->
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+									<h6 class="actor-label">Прохожий 1</h6>
+									<p><mark>– Скажи́те, пожа́луйста, где нахо́дится ку́кольный теа́тр?</mark></p>
+
+									<h6 class="actor-label">Прохожий 2</h6>
+									<p><mark>– На проспе́кте Револю́ции.</mark></p>
+
+									<h6 class="actor-label">Прохожий 1</h6>
+									<p><mark>– А как туда́ дое́хать?</mark></p>
+
+									<h6 class="actor-label">Прохожий 2</h6>
+									<p><mark>– Туда́ идёт авто́бус № 9.</mark></p>
+
+									<h6 class="actor-label">Прохожий 1</h6>
+									<p><mark>– Скажи́те, а как называ́ется остано́вка, на кото́рой я до́лжен
+											вы́йти?</mark></p>
+
+									<h6 class="actor-label">Прохожий 2</h6>
+									<p><mark>– Она́ так и называ́ется «Ку́кольный теа́тр».</mark></p>
+
+									<h6 class="actor-label">Прохожий 1</h6>
+									<p><mark>– Благодарю́ вас.</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry"
+										data-text="– Скажи́те, пожа́луйста, где нахо́дится ку́кольный теа́тр?">
+										<div class="range" data-in="00:00:03.21;00:00:06.58"></div>
+									</div>
+									<div class="sync-entry" data-text="– На проспе́кте Револю́ции.">
+										<div class="range" data-in="00:00:06.95;00:00:09.10"></div>
+									</div>
+									<div class="sync-entry" data-text="– А как туда́ дое́хать?">
+										<div class="range" data-in="00:00:09.43;00:00:10.90"></div>
+									</div>
+									<div class="sync-entry" data-text="– Туда́ идёт авто́бус № 9.">
+										<div class="range" data-in="00:00:11.31;00:00:13.73"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="– Скажи́те, а как называ́ется остано́вка, на кото́рой я до́лжен вы́йти?">
+										<div class="range" data-in="00:00:14.12;00:00:18.06"></div>
+									</div>
+									<div class="sync-entry" data-text="– Она́ так и называ́ется «Ку́кольный теа́тр».">
+										<div class="range" data-in="00:00:18.49;00:00:21.67"></div>
+									</div>
+									<div class="sync-entry" data-text="– Благодарю́ вас.">
+										<div class="range" data-in="00:00:22.03;00:00:24.03"></div>
+									</div>
+								</div>
+							</div>
+							<!-- END SyncContext -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 9 (В поликлинике) -->
+			<div class="sync-area">
+				<div id="dlg09" class="card">
+					<div id="dlg09_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg09_collapse" aria-expanded="true" aria-controls="dlg09_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">В поликлинике</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-09.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg09_collapse" class="collapse" aria-labelledby="dlg09_head" data-parent="#dlg09">
+						<div class="card-body">
+							<!-- BEGIN SyncContext -->
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+									<h6 class="actor-label">Пациент</h6>
+									<p><mark>– Здра́вствуйте, до́ктор!</mark></p>
+
+									<h6 class="actor-label">Врач</h6>
+									<p><mark>– Здра́вствуйте!</mark> <mark>На что жа́луетесь?</mark></p>
+
+									<h6 class="actor-label">Пациент</h6>
+									<p><mark>– Что?</mark></p>
+
+									<h6 class="actor-label">Врач</h6>
+									<p><mark>– Что у Вас боли́т?</mark></p>
+
+									<h6 class="actor-label">Пациент</h6>
+									<p><mark>– У меня́ боли́т го́рло.</mark> <mark>И вчера́ была́ высо́кая
+											температу́ра.</mark></p>
+
+									<h6 class="actor-label">Врач</h6>
+									<p><mark>– Дава́йте я посмотрю́ ва́ше го́рло.</mark> <mark>Откро́йте рот и скажи́те
+											«а-а-а».</mark> <mark>У Вас анги́на.</mark> <mark>Вам на́до сде́лать
+											ана́лизы.</mark></p>
+
+									<h6 class="actor-label">Пациент</h6>
+									<p><mark>– Обяза́тельно?</mark></p>
+
+									<h6 class="actor-label">Врач</h6>
+									<p><mark>– Коне́чно.</mark> <mark>Медсестра́ даст Вам направле́ние на ана́лизы, а я
+											вы́пишу Вам лека́рство.</mark></p>
+
+									<h6 class="actor-label">Пациент</h6>
+									<p><mark>– Спаси́бо, до́ктор.</mark></p>
+
+									<h6 class="actor-label">Врач</h6>
+									<p><mark>– Я жду Вас через три дня.</mark> <mark>До свида́ния.</mark></p>
+
+									<h6 class="actor-label">Пациент</h6>
+									<p><mark>– До свида́ния.</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Здра́вствуйте, до́ктор!">
+										<div class="range" data-in="00:00:03.85;00:00:05.09"></div>
+									</div>
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:05.21;00:00:06.16"></div>
+									</div>
+									<div class="sync-entry" data-text="На что жа́луетесь?">
+										<div class="range" data-in="00:00:06.44;00:00:07.60"></div>
+									</div>
+									<div class="sync-entry" data-text="– Что?">
+										<div class="range" data-in="00:00:07.65;00:00:08.29"></div>
+									</div>
+									<div class="sync-entry" data-text="– Что у Вас боли́т?">
+										<div class="range" data-in="00:00:08.69;00:00:10.05"></div>
+									</div>
+									<div class="sync-entry" data-text="– У меня́ боли́т го́рло.">
+										<div class="range" data-in="00:00:10.54;00:00:12.10"></div>
+									</div>
+									<div class="sync-entry" data-text="И вчера́ была́ высо́кая температу́ра.">
+										<div class="range" data-in="00:00:12.19;00:00:14.53"></div>
+									</div>
+									<div class="sync-entry" data-text="– Дава́йте я посмотрю́ ва́ше го́рло.">
+										<div class="range" data-in="00:00:14.98;00:00:17.08"></div>
+									</div>
+									<div class="sync-entry" data-text="Откро́йте рот и скажи́те «а-а-а».">
+										<div class="range" data-in="00:00:17.47;00:00:21.10"></div>
+									</div>
+									<div class="sync-entry" data-text="У Вас анги́на.">
+										<div class="range" data-in="00:00:22.07;00:00:23.30"></div>
+									</div>
+									<div class="sync-entry" data-text="Вам на́до сде́лать ана́лизы.">
+										<div class="range" data-in="00:00:23.63;00:00:25.51"></div>
+									</div>
+									<div class="sync-entry" data-text="– Обяза́тельно?">
+										<div class="range" data-in="00:00:25.70;00:00:26.75"></div>
+									</div>
+									<div class="sync-entry" data-text="– Коне́чно.">
+										<div class="range" data-in="00:00:26.98;00:00:27.82"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="Медсестра́ даст Вам направле́ние на ана́лизы, а я вы́пишу Вам лека́рство.">
+										<div class="range" data-in="00:00:28.24;00:00:34.03"></div>
+									</div>
+									<div class="sync-entry" data-text="– Спаси́бо, до́ктор.">
+										<div class="range" data-in="00:00:34.24;00:00:35.41"></div>
+									</div>
+									<div class="sync-entry" data-text="– Я жду Вас через три дня.">
+										<div class="range" data-in="00:00:35.87;00:00:37.70"></div>
+									</div>
+									<div class="sync-entry" data-text="До свида́ния.">
+										<div class="range" data-in="00:00:37.84;00:00:38.85"></div>
+									</div>
+									<div class="sync-entry" data-text="– До свида́ния.">
+										<div class="range" data-in="00:00:39.04;00:00:39.84"></div>
+									</div>
+								</div>
+							</div>
+							<!-- END SyncContext -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 10 (В магазине) -->
+			<div class="sync-area">
+				<div id="dlg10" class="card">
+					<div id="dlg10_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg10_collapse" aria-expanded="true" aria-controls="dlg10_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">В магазине</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-10.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg10_collapse" class="collapse" aria-labelledby="dlg10_head" data-parent="#dlg10">
+						<div class="card-body">
+							<!-- BEGIN SyncContext -->
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+									<h6 class="actor-label">Продавец</h6>
+									<p><mark>– Де́вушка, Вам помо́чь?</mark></p>
+
+									<h6 class="actor-label">Покупатель</h6>
+									<p><mark>– Да. Мне нужны́ сапоги́.</mark></p>
+
+									<h6 class="actor-label">Продавец</h6>
+									<p><mark>– Каки́е?</mark></p>
+
+									<h6 class="actor-label">Покупатель</h6>
+									<p><mark>– Мне нужны́ тёплые и удо́бные зи́мние сапоги́.</mark></p>
+
+									<h6 class="actor-label">Продавец</h6>
+									<p><mark>– А како́й у Вас разме́р?</mark></p>
+
+									<h6 class="actor-label">Покупатель</h6>
+									<p><mark>– Три́дцать седьмо́й.</mark></p>
+
+									<h6 class="actor-label">Продавец</h6>
+									<p><mark>– Идёмте.</mark> <mark>Я покажу́ Вам моде́ли Ва́шего разме́ра.</mark></p>
+
+									<h6 class="actor-label">Покупатель</h6>
+									<p><mark>– Спаси́бо.</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Де́вушка, Вам помо́чь?">
+										<div class="range" data-in="00:00:03.49;00:00:05.05"></div>
+									</div>
+									<div class="sync-entry" data-text="– Да. Мне нужны́ сапоги́.">
+										<div class="range" data-in="00:00:05.43;00:00:07.21"></div>
+									</div>
+									<div class="sync-entry" data-text="– Каки́е?">
+										<div class="range" data-in="00:00:07.55;00:00:08.29"></div>
+									</div>
+									<div class="sync-entry" data-text="– Мне нужны́ тёплые и удо́бные зи́мние сапоги́.">
+										<div class="range" data-in="00:00:08.71;00:00:11.20"></div>
+									</div>
+									<div class="sync-entry" data-text="– А како́й у Вас разме́р?">
+										<div class="range" data-in="00:00:11.62;00:00:13.11"></div>
+									</div>
+									<div class="sync-entry" data-text="– Три́дцать седьмо́й.">
+										<div class="range" data-in="00:00:13.52;00:00:14.67"></div>
+									</div>
+									<div class="sync-entry" data-text="– Идёмте.">
+										<div class="range" data-in="00:00:15.00;00:00:15.75"></div>
+									</div>
+									<div class="sync-entry" data-text="Я покажу́ Вам моде́ли Ва́шего разме́ра.">
+										<div class="range" data-in="00:00:15.96;00:00:18.53"></div>
+									</div>
+									<div class="sync-entry" data-text="– Спаси́бо.">
+										<div class="range" data-in="00:00:18.91;00:00:19.73"></div>
+									</div>
+								</div>
+							</div>
+							<!-- END SyncContext -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 11 (Разговор по телефону 1) -->
+			<div class="sync-area">
+				<div id="dlg11" class="card">
+					<div id="dlg11_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg11_collapse" aria-expanded="true" aria-controls="dlg11_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Разговор по телефону 1</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-11.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg11_collapse" class="collapse" aria-labelledby="dlg11_head" data-parent="#dlg11">
+						<div class="card-body">
+							<!-- BEGIN SyncContext -->
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+									<h6 class="actor-label">Мама Татьяны</h6>
+									<p><mark>– Алло́!</mark></p>
+
+									<h6 class="actor-label">Андреас</h6>
+									<p><mark>– Здра́вствуйте!</mark> <mark>Пригласи́те, пожа́луйста, Татья́ну!</mark>
+									</p>
+
+									<h6 class="actor-label">Мама Татьяны</h6>
+									<p><mark>– До́брый день!</mark> <mark>Её нет, она́ бу́дет ве́чером.</mark> <mark>Что
+											ей переда́ть?</mark></p>
+
+									<h6 class="actor-label">Андреас</h6>
+									<p><mark>– Скажи́те ей, пожа́луйста, что звони́л Андре́ас.</mark> <mark>Я позвоню́
+											ве́чером, когда́ она́ вернётся.</mark></p>
+
+									<h6 class="actor-label">Мама Татьяны</h6>
+									<p><mark>– Хорошо́, переда́м.</mark> <mark>Всего́ до́брого!</mark></p>
+
+									<h6 class="actor-label">Андреас</h6>
+									<p><mark>– Спаси́бо!</mark> <mark>До свида́ния!</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Алло́!">
+										<div class="range" data-in="00:00:04.59;00:00:05.53"></div>
+									</div>
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:05.79;00:00:06.68"></div>
+									</div>
+									<div class="sync-entry" data-text="Пригласи́те, пожа́луйста, Татья́ну!">
+										<div class="range" data-in="00:00:06.73;00:00:08.70"></div>
+									</div>
+									<div class="sync-entry" data-text="– До́брый день!">
+										<div class="range" data-in="00:00:09.13;00:00:10.12"></div>
+									</div>
+									<div class="sync-entry" data-text="Её нет, она́ бу́дет ве́чером.">
+										<div class="range" data-in="00:00:10.43;00:00:12.99"></div>
+									</div>
+									<div class="sync-entry" data-text="Что ей переда́ть?">
+										<div class="range" data-in="00:00:13.17;00:00:14.39"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="– Скажи́те ей, пожа́луйста, что звони́л Андре́ас.">
+										<div class="range" data-in="00:00:14.79;00:00:17.91"></div>
+									</div>
+									<div class="sync-entry" data-text="Я позвоню́ ве́чером, когда́ она́ вернётся.">
+										<div class="range" data-in="00:00:18.34;00:00:20.92"></div>
+									</div>
+									<div class="sync-entry" data-text="– Хорошо́, переда́м.">
+										<div class="range" data-in="00:00:21.32;00:00:22.69"></div>
+									</div>
+									<div class="sync-entry" data-text="Всего́ до́брого!">
+										<div class="range" data-in="00:00:22.86;00:00:23.90"></div>
+									</div>
+									<div class="sync-entry" data-text="– Спаси́бо!">
+										<div class="range" data-in="00:00:24.29;00:00:25.11"></div>
+									</div>
+									<div class="sync-entry" data-text="До свида́ния!">
+										<div class="range" data-in="00:00:25.14;00:00:26.04"></div>
+									</div>
+								</div>
+							</div>
+							<!-- END SyncContext -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 12 (Разговор по телефону 2) -->
+			<div class="sync-area">
+				<div id="dlg12" class="card">
+					<div id="dlg12_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg12_collapse" aria-expanded="true" aria-controls="dlg12_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Разговор по телефону 2</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-12.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg12_collapse" class="collapse" aria-labelledby="dlg12_head" data-parent="#dlg12">
+						<div class="card-body">
+							<!-- BEGIN SyncContext -->
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+									<h6 class="actor-label">Секретарь</h6>
+									<p><mark>– Алло́!</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Здра́вствуйте!</mark> <mark>Э́то факульте́т журнали́стики?</mark></p>
+
+									<h6 class="actor-label">Секретарь</h6>
+									<p><mark>– Да.</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Мне ну́жно поговори́ть с дека́ном.</mark></p>
+
+									<h6 class="actor-label">Секретарь</h6>
+									<p><mark>– Он сейча́с за́нят.</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Прости́те, а с кем я говорю́?</mark></p>
+
+									<h6 class="actor-label">Секретарь</h6>
+									<p><mark>– С секретарём.</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Поня́тно.</mark> <mark>Спаси́бо!</mark> <mark>Скажи́те, пожа́луйста, а
+											когда́ мо́жно позвони́ть?</mark></p>
+
+									<h6 class="actor-label">Секретарь</h6>
+									<p><mark>– Позвони́те, пожа́луйста, через полтора́-два часа́.</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Спаси́бо!</mark> <mark>Я обяза́тельно позвоню́!</mark> <mark>Всего́
+											до́брого!</mark></p>
+
+									<h6 class="actor-label">Секретарь</h6>
+									<p><mark>– До свида́ния!</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Алло́!">
+										<div class="range" data-in="00:00:02.58;00:00:03.10"></div>
+									</div>
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:03.48;00:00:04.45"></div>
+									</div>
+									<div class="sync-entry" data-text="Э́то факульте́т журнали́стики?">
+										<div class="range" data-in="00:00:04.69;00:00:06.51"></div>
+									</div>
+									<div class="sync-entry" data-text="– Да.">
+										<div class="range" data-in="00:00:07.00;00:00:07.53"></div>
+									</div>
+									<div class="sync-entry" data-text="– Мне ну́жно поговори́ть с дека́ном.">
+										<div class="range" data-in="00:00:07.87;00:00:09.99"></div>
+									</div>
+									<div class="sync-entry" data-text="– Он сейча́с за́нят.">
+										<div class="range" data-in="00:00:10.29;00:00:11.56"></div>
+									</div>
+									<div class="sync-entry" data-text="– Прости́те, а с кем я говорю́?">
+										<div class="range" data-in="00:00:11.87;00:00:13.98"></div>
+									</div>
+									<div class="sync-entry" data-text="– С секретарём.">
+										<div class="range" data-in="00:00:14.31;00:00:15.52"></div>
+									</div>
+									<div class="sync-entry" data-text="– Поня́тно.">
+										<div class="range" data-in="00:00:15.81;00:00:16.34"></div>
+									</div>
+									<div class="sync-entry" data-text="Спаси́бо!">
+										<div class="range" data-in="00:00:16.37;00:00:17.24"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="Скажи́те, пожа́луйста, а когда́ мо́жно позвони́ть?">
+										<div class="range" data-in="00:00:17.41;00:00:20.41"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="– Позвони́те, пожа́луйста, через полтора́-два часа́.">
+										<div class="range" data-in="00:00:20.71;00:00:24.12"></div>
+									</div>
+									<div class="sync-entry" data-text="– Спаси́бо!">
+										<div class="range" data-in="00:00:24.57;00:00:25.42"></div>
+									</div>
+									<div class="sync-entry" data-text="Я обяза́тельно позвоню́!">
+										<div class="range" data-in="00:00:25.44;00:00:26.80"></div>
+									</div>
+									<div class="sync-entry" data-text="Всего́ до́брого!">
+										<div class="range" data-in="00:00:26.82;00:00:27.74"></div>
+									</div>
+									<div class="sync-entry" data-text="– До свида́ния!">
+										<div class="range" data-in="00:00:27.77;00:00:28.68"></div>
+									</div>
+								</div>
+							</div>
+							<!-- END SyncContext -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 13 (Разговор по телефону 3) -->
+			<div class="sync-area">
+				<div id="dlg13" class="card">
+					<div id="dlg13_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg13_collapse" aria-expanded="true" aria-controls="dlg13_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Разговор по телефону 3</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-13.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg13_collapse" class="collapse" aria-labelledby="dlg13_head" data-parent="#dlg13">
+						<div class="card-body">
+							<!-- BEGIN SyncContext -->
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– Алло́! Алло́!</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Здра́вствуйте!</mark></p>
+
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– Алло́! Вас пло́хо слы́шно!</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Здра́вствуйте! Э́то библиоте́ка?</mark></p>
+
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– Алло́!</mark> <mark>Вас не слы́шно!</mark> <mark>Говори́те
+											гро́мче!</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Э́то библиоте́ка?</mark></p>
+
+									<h6 class="actor-label">Библиотекарь</h6>
+									<p><mark>– Извини́те!</mark> <mark>Вас о́чень пло́хо слы́шно!</mark>
+										<mark>Перезвони́те, пожа́луйста, ещё раз!</mark></p>
+
+									<h6 class="actor-label">Студент</h6>
+									<p><mark>– Хорошо́.</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Алло́! Алло́!">
+										<div class="range" data-in="00:00:02.947;00:00:04.59"></div>
+									</div>
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:05.14;00:00:06.19"></div>
+									</div>
+									<div class="sync-entry" data-text="– Алло́! Вас пло́хо слы́шно!">
+										<div class="range" data-in="00:00:06.82;00:00:08.81"></div>
+									</div>
+									<div class="sync-entry" data-text="– Здра́вствуйте! Э́то библиоте́ка?">
+										<div class="range" data-in="00:00:09.25;00:00:11.46"></div>
+									</div>
+									<div class="sync-entry" data-text="– Алло́!">
+										<div class="range" data-in="00:00:12.14;00:00:12.76"></div>
+									</div>
+									<div class="sync-entry" data-text="Вас не слы́шно!">
+										<div class="range" data-in="00:00:12.84;00:00:14.23"></div>
+									</div>
+									<div class="sync-entry" data-text="Говори́те гро́мче!">
+										<div class="range" data-in="00:00:14.51;00:00:15.97"></div>
+									</div>
+									<div class="sync-entry" data-text="– Э́то библиоте́ка?">
+										<div class="range" data-in="00:00:16.43;00:00:17.81"></div>
+									</div>
+									<div class="sync-entry" data-text="– Извини́те!">
+										<div class="range" data-in="00:00:18.26;00:00:19.14"></div>
+									</div>
+									<div class="sync-entry" data-text="Вас о́чень пло́хо слы́шно!">
+										<div class="range" data-in="00:00:19.18;00:00:21.27"></div>
+									</div>
+									<div class="sync-entry" data-text="Перезвони́те, пожа́луйста, ещё раз!">
+										<div class="range" data-in="00:00:21.48;00:00:23.60"></div>
+									</div>
+									<div class="sync-entry" data-text="– Хорошо́.">
+										<div class="range" data-in="00:00:24.01;00:00:24.83"></div>
+									</div>
+								</div>
+							</div>
+							<!-- END SyncContext -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Dialog 14 (Разговор по телефону 4) -->
+			<div class="sync-area">
+				<div id="dlg14" class="card">
+					<div id="dlg14_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#dlg14_collapse" aria-expanded="true" aria-controls="dlg14_collapse">
+								<span>Текст</span><br />
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Разговор по телефону 4</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/ruscasein/dlgs-01/dlg-14.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="dlg14_collapse" class="collapse" aria-labelledby="dlg14_head" data-parent="#dlg14">
+						<div class="card-body">
+							<!-- BEGIN SyncContext -->
+							<div class="sync-context" data-factor-in="0.3">
+								<div class="sync-text">
+									<h6 class="actor-label">Оператор</h6>
+									<p><mark>– Такси́ «Тро́йка». Слу́шаем Вас!</mark></p>
+
+									<h6 class="actor-label">Клиент</h6>
+									<p><mark>– Здра́вствуйте!</mark> <mark>Мне нужна́ маши́на.</mark></p>
+
+									<h6 class="actor-label">Оператор</h6>
+									<p><mark>– На како́е вре́мя?</mark></p>
+
+									<h6 class="actor-label">Клиент</h6>
+									<p><mark>– Сейча́с.</mark></p>
+
+									<h6 class="actor-label">Оператор</h6>
+									<p><mark>– Поня́тно: на ближа́йшее вре́мя.</mark> <mark>По како́му а́дресу присла́ть
+											маши́ну?</mark></p>
+
+									<h6 class="actor-label">Клиент</h6>
+									<p><mark>– Хользуно́ва, 40а, общежи́тие но́мер семь.</mark></p>
+
+									<h6 class="actor-label">Оператор</h6>
+									<p><mark>– На како́й но́мер сообщи́ть о прие́зде маши́ны?</mark> <mark>На
+											э́тот?</mark></p>
+
+									<h6 class="actor-label">Клиент</h6>
+									<p><mark>– Извини́те, не по́нял!</mark></p>
+
+									<h6 class="actor-label">Оператор</h6>
+									<p><mark>– Я спра́шиваю: на како́й но́мер телефо́на отпра́вить СМС, когда́ подъе́дет
+											маши́на?</mark> <mark>На тот, с кото́рого Вы звони́те?</mark></p>
+
+									<h6 class="actor-label">Клиент</h6>
+									<p><mark>– Да, на э́тот.</mark></p>
+
+									<h6 class="actor-label">Оператор</h6>
+									<p><mark>– Хорошо́, мы Вас по́няли.</mark> <mark>Жди́те!</mark></p>
+
+									<h6 class="actor-label">Клиент</h6>
+									<p><mark>– Спаси́бо!</mark> <mark>До свида́ния!</mark></p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="– Такси́ «Тро́йка». Слу́шаем Вас!">
+										<div class="range" data-in="00:00:02.27;00:00:04.41"></div>
+									</div>
+									<div class="sync-entry" data-text="– Здра́вствуйте!">
+										<div class="range" data-in="00:00:04.59;00:00:05.46"></div>
+									</div>
+									<div class="sync-entry" data-text="Мне нужна́ маши́на.">
+										<div class="range" data-in="00:00:05.55;00:00:06.81"></div>
+									</div>
+									<div class="sync-entry" data-text="– На како́е вре́мя?">
+										<div class="range" data-in="00:00:07.23;00:00:08.35"></div>
+									</div>
+									<div class="sync-entry" data-text="– Сейча́с.">
+										<div class="range" data-in="00:00:08.42;00:00:09.26"></div>
+									</div>
+									<div class="sync-entry" data-text="– Поня́тно: на ближа́йшее вре́мя.">
+										<div class="range" data-in="00:00:09.45;00:00:11.89"></div>
+									</div>
+									<div class="sync-entry" data-text="По како́му а́дресу присла́ть маши́ну?">
+										<div class="range" data-in="00:00:12.21;00:00:14.55"></div>
+									</div>
+									<div class="sync-entry" data-text="– Хользуно́ва, 40а, общежи́тие но́мер семь.">
+										<div class="range" data-in="00:00:14.83;00:00:18.14"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="– На како́й но́мер сообщи́ть о прие́зде маши́ны?">
+										<div class="range" data-in="00:00:18.38;00:00:22.00"></div>
+									</div>
+									<div class="sync-entry" data-text="На э́тот?">
+										<div class="range" data-in="00:00:22.20;00:00:23.02"></div>
+									</div>
+									<div class="sync-entry" data-text="– Извини́те, не по́нял!">
+										<div class="range" data-in="00:00:23.19;00:00:24.64"></div>
+									</div>
+									<div class="sync-entry"
+										data-text="– Я спра́шиваю: на како́й но́мер телефо́на отпра́вить СМС, когда́ подъе́дет маши́на?">
+										<div class="range" data-in="00:00:24.88;00:00:32.03"></div>
+									</div>
+									<div class="sync-entry" data-text="На тот, с кото́рого Вы звони́те?">
+										<div class="range" data-in="00:00:32.12;00:00:34.63"></div>
+									</div>
+									<div class="sync-entry" data-text="– Да, на э́тот.">
+										<div class="range" data-in="00:00:34.81;00:00:36.09"></div>
+									</div>
+									<div class="sync-entry" data-text="– Хорошо́, мы Вас по́няли.">
+										<div class="range" data-in="00:00:36.27;00:00:38.49"></div>
+									</div>
+									<div class="sync-entry" data-text="Жди́те!">
+										<div class="range" data-in="00:00:38.58;00:00:39.44"></div>
+									</div>
+									<div class="sync-entry" data-text="– Спаси́бо!">
+										<div class="range" data-in="00:00:39.67;00:00:40.53"></div>
+									</div>
+									<div class="sync-entry" data-text="До свида́ния!">
+										<div class="range" data-in="00:00:40.56;00:00:41.46"></div>
+									</div>
+								</div>
+							</div>
+							<!-- END SyncContext -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <div class="bk-brick" data-type="PromptOnce">
+				<button id="close" type="button" class="btn btn-outline-primary btn-sm" style="position: absolute;left:auto;top:4px;right:5px;">&times;</button>				
+				<img src="./res/images/double-tap.svg" style="width:96px;height:96px;" />
+				<div class="h5 mt-1" style="max-width:450px;text-align: justify;">Выде&shy;ле&shy;ние и прос&shy;лу&shy;ши&shy;ва&shy;ние
+					фраг&shy;мен&shy;тов тек&shy;ста вы&shy;пол&shy;ня&shy;ет&shy;ся по двой&shy;но&shy;му кли&shy;ку</div>
+			</div> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

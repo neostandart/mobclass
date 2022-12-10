@@ -1,0 +1,312 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>РКИ класс</title>
+</head>
+
+<body>
+	<div class="container-fluid pb-2 master-content">
+		<header class="text-center py-1">
+			<img id="logo" src="./res/images/logo.png" />
+			<div id="title" class="my-1">
+				<h1 class="my-0">РКИ</h1>
+				<h5 class="text-uppercase my-0">мобильный класс</h5>
+			</div>
+			<button id="btnScreenToggle" class="btn btn-light mt-1"></button>
+		</header>
+
+
+		<div class="bk-brick" style="position: relative;padding: 1rem;background-color: #dee2e6;max-width: 576px;"
+			data-type="PromptOnce" data-mode="static">
+			<div style="display:flex;flex-direction: row;align-items: center;justify-content:space-between">
+				<h4 class="text-info w-100" style="cursor: pointer;" data-toggle="collapse" href="#PromptCollapse">
+					Внимание!</h4>
+				<button id="close" type="button" class="btn btn-outline-info btn-sm">&times;</button>
+			</div>
+
+			<div class="collapse" id="PromptCollapse">
+				<img src="./res/images/single-tap.svg?ver=101" style="width:80px;height:80px;" />
+				<div class="h6 mt-1 text-dark" style="text-align: justify;">Выде&shy;ле&shy;ние и
+					про&shy;с&shy;лу&shy;ши&shy;ва&shy;ние
+					фраг&shy;мен&shy;тов син&shy;х&shy;ро&shy;ни&shy;зи&shy;ро&shy;ван&shy;ного тек&shy;ста
+					вы&shy;пол&shy;ня&shy;ет&shy;ся одним кли&shy;ком (нажатием).</div>
+			</div>
+		</div>
+
+
+		<!-- Main Contents -->
+
+		<div id="accordion" class="container mt-3 partbox">
+
+			<!-- *** CARD of Русский язык. Аудиоматериалы *** -->
+			<div class="card">
+				<div id="partAudioHeader" class="card-header">
+					<h5 class="mb-0">
+						<button class="btn app-part-toggle text-left w-100 collapsed" data-toggle="collapse"
+							data-target=".card #partAudioBody" aria-expanded="false" aria-controls="partAudioBody">
+							<img class="mr-2" src="./res/images/master/audio.svg" />Русский язык. Аудиоматериалы
+						</button>
+					</h5>
+				</div>
+				<div id="partAudioBody" class="collapse show" aria-labelledby="partAudioHeader"
+					data-parent="#accordion">
+					<div class="card-body" style="text-align: center">
+						<!-- BEGIN АУДИОМАТЕРИАЛЫ ДЛЯ НАЧИНАЮЩИХ (Пособие) -->
+						<a class="btn btn-secondary py-1 sect-caption" data-toggle="collapse" href="#sectBeginnerAudio"
+							role="button" aria-expanded="false" aria-controls="sectBeginnerAudio">
+							<small>Учебное пособие</small>
+							<span>«АУДИОМАТЕРИАЛЫ ДЛЯ НАЧИНАЮЩИХ»</span>
+						</a>
+						<div id="sectBeginnerAudio" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/beginneraudio/01-phonetics.html?ver=124">1. ФОНЕТИКА<i
+										class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/beginneraudio/02-numerals.html?ver=110">2.
+									ЧИСЛИТЕЛЬНЫЕ<i class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/beginneraudio/03-pronouns.html?ver=104">3.
+									МЕСТОИМЕНИЯ<i class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/beginneraudio/04-timeexpression.html?ver=104">4.
+									ВЫРАЖЕНИЕ ВРЕМЕНИ<i class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/beginneraudio/05-pairs.html?ver=103">5. ПАРНЫЕ СЛОВА<i
+										class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/beginneraudio/06-irrplurals.html?ver=103">6. Особые
+									случаи образования множественного числа существительных<i
+										class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/beginneraudio/07-adjectives.html?ver=112">7.
+									ПРИЛАГАТЕЛЬНЫЕ<i class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/beginneraudio/08-adverbs.html?ver=105">8. НАРЕЧИЯ<i
+										class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/beginneraudio/09-verbs.html?ver=107">9. ГЛАГОЛЫ<i
+										class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+						<!-- END АУДИОМАТЕРИАЛЫ ДЛЯ НАЧИНАЮЩИХ -->
+
+
+						<!-- BEGIN Аудиоприложение -->
+						<a class="btn btn-secondary mt-3 py-1 sect-caption" data-toggle="collapse"
+							href="#sectRustimeaudio" role="button" aria-expanded="false"
+							aria-controls="sectRustimeaudio">
+							<small>Аудиоприложение</small>
+							<span>к учебнику «ВРЕМЯ УЧИТЬ <span style="white-space: nowrap;">РУССКИЙ – 1</span>»</span>
+						</a>
+						<div id="sectRustimeaudio" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/rustime/rustime-audio1.html?ver=109"><span
+										style="margin-left:auto;">Часть 1</span><i class="fa fa-file-text-o"></i></div>
+							</div>
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/rustime/rustime-audio2.html?ver=109"><span
+										style="margin-left:auto;">Часть 2</span><i class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+						<!-- END Аудиоприложение -->
+
+
+						<!-- BEGIN Русские падежи в текстах и таблицах -->
+						<a class="btn btn-secondary mt-3 py-1 sect-caption" data-toggle="collapse" href="#sectRuscasein"
+							role="button" aria-expanded="false" aria-controls="sectRuscasein">
+							<small>Аудиоматериалы к учебному пособию</small>
+							<span>«Русские падежи в текстах и таблицах»</span>
+						</a>
+						<div id="sectRuscasein" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/ruscasetbl/ruscasein-dialogs-10.html?ver=105">Часть
+									III. Раздел 1. «Давайте послушаем и почитаем диалоги»<i
+										class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/ruscasetbl/ruscasein-dialogs-20.html?ver=100">Часть
+									III. Раздел 4. «Давайте послушаем диалоги»<i class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+						<!-- END Русские падежи в текстах и таблицах -->
+
+
+						<!-- BEGIN Подготовка к устному экзамену -->
+						<a class="btn btn-secondary mt-3 py-1 sect-caption" data-toggle="collapse"
+							href="#sectOralexamprep" role="button" aria-expanded="false"
+							aria-controls="sectOralexamprep">
+							<!-- <small>материалы</small><br /> -->
+							<span>Материалы для подготовки к устному экзамену</span>
+						</a>
+						<div id="sectOralexamprep" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/oralexamprep/01-part.html?ver=103">Раздел 1. Высшее
+									образование в России. Выбор профессии<i class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+
+						<div id="sectOralexamprep" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/oralexamprep/02-part.html?ver=102">Раздел 2. Россия<i
+										class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+
+						<div id="sectOralexamprep" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/oralexamprep/03-part.html?ver=101">Раздел 3. Города
+									России<i class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+
+						<div id="sectOralexamprep" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/oralexamprep/04-part.html?ver=102">Раздел 4. Наука в
+									России<i class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+
+						<div id="sectOralexamprep" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/oralexamprep/05-part.html?ver=102">Раздел 5. Культура
+									России<i class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+
+						<div id="sectOralexamprep" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/oralexamprep/06-part.html?ver=102">Раздел 6. Земля –
+									наш общий дом<i class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+						<!-- END Подготовка к устному экзамену -->
+
+
+						<!-- BEGIN РУССКИЙ ЯЗЫК. АУДИРОВАНИЕ -->
+						<a class="btn btn-secondary mt-3 py-1 sect-caption" data-toggle="collapse"
+							href="#sectRusAudTest" role="button" aria-expanded="false" aria-controls="sectRusAudTest">
+							<span>АУДИРОВАНИЕ</span>
+							<!-- <small>(раздел находится в разработке)</small> -->
+						</a>
+						<div id="sectRusAudTest" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/rusaudtest/01-audtest.html?ver=109">Выбор профессии<i
+										class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/rusaudtest/02-audtest.html?ver=109">Вузы России<i
+										class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/rusaudtest/03-audtest.html?ver=103">Россия<i
+										class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/rusaudtest/04-audtest.html?ver=102">Наука в России<i
+										class="fa fa-file-text-o"></i></div>
+								<div class="detail-link mt-3"
+									data-uri="./pages/learnaudio/rusaudtest/05-audtest.html?ver=101">Земля – наш общий
+									дом<i class="fa fa-file-text-o"></i></div>
+							</div>
+						</div>
+						<!-- END РУССКИЙ ЯЗЫК. АУДИРОВАНИЕ -->
+
+
+					</div>
+				</div>
+			</div>
+
+			<!-- *** CARD of Русский язык. Интерактивные задания *** -->
+			<div class="card">
+				<div id="partTasksHeader" class="card-header">
+					<h5 class="mb-0">
+						<button class="btn app-part-toggle text-left w-100 collapsed" data-toggle="collapse"
+							data-target=".card #partTasksBody" aria-expanded="false" aria-controls="partTasksBody">
+							<img class="mr-2" src="./res/images/master/tasks.svg" />Русский язык. Интерактивные задания
+						</button>
+					</h5>
+				</div>
+				<div id="partTasksBody" class="collapse" aria-labelledby="partTasksHeader" data-parent="#accordion">
+					<div class="card-body" style="text-align: center">
+
+						<!-- BEGIN Русский Грамматика H5P -->
+						<a class="btn btn-secondary mt-3 py-1 sect-caption" data-toggle="collapse"
+							href="#sectRusGrammPrep" role="button">
+							<span>Грамматика к ВУР-2</span>
+						</a>
+						<div id="sectRusGrammPrep" class="collapse">
+							<div class="card card-body py-0 h5 text-left"
+								style="background-color:transparent;border: 0px;">
+								<div class="detail-link mt-3" data-life="Held"
+									data-uri="./pages/rustasks/rusgramm/01-prepos.html?ver=110">Пространственные
+									отношения.
+									Предлоги<i class="fa fa-file-text-o"></i></div>
+
+								<div class="detail-link mt-3" data-life="Held"
+									data-uri="./pages/rustasks/rusgramm/02-verbmovnopref.html?ver=102">Глаголы движения
+									без префиксов<i class="fa fa-file-text-o"></i></div>
+
+								<div class="detail-link mt-3" data-life="Held"
+									data-uri="./pages/rustasks/rusgramm/03-verbmovwithpref.html?ver=101">Глаголы
+									движения с префиксами<i class="fa fa-file-text-o"></i></div>
+
+							</div>
+						</div>
+						<!-- END Русский Грамматика H5P -->
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="my-3" style="height: 20px; background-color: lightgray;"></div>
+
+
+			<!-- *** CARD of Other *** -->
+			<div class="card">
+				<div class="card-header">
+					<h5 class="mb-0">
+						<button class="btn app-part-toggle text-left w-100 collapsed" data-toggle="collapse"
+							data-target="#collapse" aria-expanded="false">
+							<img class="mr-2" src="./res/images/master/other.svg" /> Дополнительно
+						</button>
+					</h5>
+				</div>
+				<div id="collapse" class="collapse" data-parent="#accordion">
+					<div class="card-body" style="text-align: center">
+
+
+
+					</div>
+				</div>
+			</div>
+
+
+		</div><!-- END id="accordion" -->
+
+	</div><!-- END master-content -->
+</body>
+
+</html>

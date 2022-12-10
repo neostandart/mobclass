@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+	<title>Мобильный класс</title>
+	<link rel="icon" href="./res/favicon.ico" type="image/x-icon">
+
+	<!-- Bootstrap styles -->
+	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+	<!-- Application styles -->
+	<link rel="stylesheet" href="./css/app.css?ver=120">
+	<link rel="stylesheet" href="./css/book.css?ver=122">
+	<link rel="stylesheet" href="./css/adaptive.css?ver=119">
+</head>
+
+<body role="application">
+
+	<div class="app-frame">
+		<div class="app-splashscreen bg-light">
+			<div>
+				<img src="./res/images/logo.png" />
+				<i class="fa fa-spinner fa-spin fa-5x mt-3 text-primary"></i>
+			</div>
+		</div>
+
+		<div class="app-mainview"></div>
+	</div>
+
+	<!-- Icon library (Awesome) -->
+	<link rel="stylesheet" href="./res/fonts/awesome/css/font-awesome.min.css">
+	<!-- JQuery and Bootstrap code -->
+	<script src="./lib/jquery/jquery.min.js"></script>
+	<script src="./lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- Modernizr code -->
+	<script src="./lib/modernizr/modernizr.js"></script>
+	<!-- Application code -->
+	<script src="./js/master-detail.js?ver=123"></script>
+	<!-- Start Application -->
+	<script>
+		(() => {
+			document.addEventListener("DOMContentLoaded", () => { VSect.MainView.launch("./pages/master.html?ver=303"); });
+		})();
+	</script>
+
+	<!-- Audioplayer -->
+	<link rel="stylesheet" href="./lib/audioplayer/css/audioplayer.css?ver=101">
+	<script async src="./lib/audioplayer/js/audioplayer.js?ver=101"></script>
+
+	<!-- H5P -->
+	<script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js?ver=100" charset="UTF-8"></script>
+</body>
+
+</html>

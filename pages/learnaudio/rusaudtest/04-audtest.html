@@ -1,0 +1,866 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<style>
+		#pageAudTest .theme-caption {
+			font-size: 1.2rem;
+		}
+
+
+		#pageAudTest .deftaskbox {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 1rem 1rem;
+		}
+
+		.deftaskbox>img {
+			max-height: 96px;
+		}
+
+
+		#pageAudTest table.resultsample {
+			margin-left: 0.5rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:first-child {
+			font-style: italic;
+			font-weight: 500;
+			font-size: 1rem;
+			padding-right: 1rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:nth-child(2) {
+			background-color: wheat;
+			border-left: gray 3px solid;
+			padding: 1rem;
+			font-size: 1.25rem;
+			font-weight: 500;
+		}
+
+
+		#pageAudTest .card-body>ol {
+			padding-left: 1rem;
+		}
+
+		#pageAudTest .card-body>ol>li>mark {
+			font-weight: 500;
+			background-color: unset;
+		}
+
+		#pageAudTest .card-body>ol>li>ul {
+			list-style-type: none;
+			padding-left: 1.1rem;
+		}
+
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="pageAudTest" class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h3 class="my-3 page-title">Наука в России</h3>
+
+			<div class="deftaskbox caption-bkg">
+				<img src="./res/images/mats/writeinnotebook.png" />
+				<div>
+					<h6>Прослушайте тексты и выполните задания в тетради</h6>
+					<hr class="mt-2">
+				</div>
+			</div>
+
+			<div class="py-2 app-separator"></div>
+
+			<table class="resultsample">
+				<tr>
+					<td>
+						Образец:
+					</td>
+					<td>
+						<p>Текст 1.</p>
+						<p>1. А, 2. Б, 3. А, 4. В, 5. А.</p>
+					</td>
+				</tr>
+			</table>
+
+			<!-- <h6 class="text-secondary mt-4">(Раздел находится в разработке)</h6> -->
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 1 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 1</div>
+			<div id="text01" class="card mt-0">
+				<div id="text01_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text01_collapse" aria-expanded="true" aria-controls="text01_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст и выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-04/text-01.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text01_collapse" class="collapse" aria-labelledby="text01_head" data-parent="#text01">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Марина родилась …
+								</mark>
+								<ul>
+									<li>
+										(А) в городе Королёве
+									</li>
+									<li>
+										(Б) в Москве
+									</li>
+									<li>
+										(В) в Санкт-Петербурге
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Главным конструктором космических кораблей был …
+								</mark>
+								<ul>
+									<li>
+										(А) Д. И. Менделеев
+									</li>
+									<li>
+										(Б) К. Э. Циолковский
+									</li>
+									<li>
+										(В) С. П. Королёв
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Родители Марины – …
+								</mark>
+								<ul>
+									<li>
+										(А) врачи
+									</li>
+									<li>
+										(Б) инженеры
+									</li>
+									<li>
+										(В) химики
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Недавно они побывали …
+								</mark>
+								<ul>
+									<li>
+										(А) в Историческом музее
+									</li>
+									<li>
+										(Б) на ВДНХ в павильоне «Космос»
+									</li>
+									<li>
+										(В) в музее Ю. А. Гагарина
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В павильоне «Космос» можно увидеть …
+								</mark>
+								<ul>
+									<li>
+										(А) сувениры
+									</li>
+									<li>
+										(Б) книги по истории России
+									</li>
+									<li>
+										(В) экспонаты, которые рассказывают об истории космонавтики
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Они хотят пойти на Красную площадь и в Исторический музей …
+								</mark>
+								<ul>
+									<li>
+										(А) в следующую субботу
+									</li>
+									<li>
+										(Б) в следующее воскресенье
+									</li>
+									<li>
+										(В) в следующую среду
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 2 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 2</div>
+			<div id="text02" class="card mt-0">
+				<div id="text02_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text02_collapse" aria-expanded="true" aria-controls="text02_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст об академике Вавилове Н. И. и
+							выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-04/text-02.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text02_collapse" class="collapse" aria-labelledby="text02_head" data-parent="#text02">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Н. И. Вавилов был …
+								</mark>
+								<ul>
+									<li>
+										(А) только крупнейшим ботаником
+									</li>
+									<li>
+										(Б) известным филологом
+									</li>
+									<li>
+										(В) ботаником, экологом, путешественником
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Н. И. Вавилов знал …
+								</mark>
+								<ul>
+									<li>
+										(А) 10 языков
+									</li>
+									<li>
+										(Б) более 20 языков
+									</li>
+									<li>
+										(В) более 25 языков
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Учёный был избран президентом русского географического общества …
+								</mark>
+								<ul>
+									<li>
+										(А) в 1931 году
+									</li>
+									<li>
+										(Б) в 1930 году
+									</li>
+									<li>
+										(В) в 1934 году
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Он написал книгу о растительности …
+								</mark>
+								<ul>
+									<li>
+										(А) Ганы
+									</li>
+									<li>
+										(Б) Алжира
+									</li>
+									<li>
+										(В) Афганистана
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Н. И. Вавилов хотел …
+								</mark>
+								<ul>
+									<li>
+										(А) собрать коллекцию растений разных стран
+									</li>
+									<li>
+										(Б) написать книги о природе
+									</li>
+									<li>
+										(В) преподавать в университете
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 3 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 3</div>
+			<div id="text03" class="card mt-0">
+				<div id="text03_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text03_collapse" aria-expanded="true" aria-controls="text03_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст о Н. В. Склифосовском и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-04/text-03.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text03_collapse" class="collapse" aria-labelledby="text03_head" data-parent="#text03">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Основная тема текста – …
+								</mark>
+								<ul>
+									<li>
+										(А) детство и юность Н. В. Склифосовского
+									</li>
+									<li>
+										(Б) жизнь и деятельность Н. В. Склифосовского
+									</li>
+									<li>
+										(В) учёба Н. В. Склифосовского в МГУ
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Н. В. Склифосовскому принадлежит большая заслуга …
+								</mark>
+								<ul>
+									<li>
+										(А) по внедрению антибиотиков
+									</li>
+									<li>
+										(Б) по внедрению новых лекарств
+									</li>
+									<li>
+										(В) по внедрению в хирургию принципов антисептики
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В России он работал …
+								</mark>
+								<ul>
+									<li>
+										(А) в клиниках разных городов
+									</li>
+									<li>
+										(Б) в клинике Санкт-Петербурга
+									</li>
+									<li>
+										(В) в клинике Москвы
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Н. В. Склифосовский ездил на фронт во время войн, чтобы …
+								</mark>
+								<ul>
+									<li>
+										(А) написать статьи
+									</li>
+									<li>
+										(Б) иметь практику в военно-полевой хирургии
+									</li>
+									<li>
+										(В) познакомиться с солдатами
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Имя Н. В. Склифосовского носит …
+								</mark>
+								<ul>
+									<li>
+										(А) университет
+									</li>
+									<li>
+										(Б) город
+									</li>
+									<li>
+										(В) больница и Институт скорой помощи
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 4 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 4</div>
+			<div id="text04" class="card mt-0">
+				<div id="text04_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text04_collapse" aria-expanded="true" aria-controls="text04_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Ахмеда и Марты и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-04/text-04.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text04_collapse" class="collapse" aria-labelledby="text04_head" data-parent="#text04">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Ахмед хочет пригласить Марту …
+								</mark>
+								<ul>
+									<li>
+										(А) в музей
+									</li>
+									<li>
+										(Б) в магазин
+									</li>
+									<li>
+										(В) в библиотеку
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В научной библиотеке будет …
+								</mark>
+								<ul>
+									<li>
+										(А) выставка новых книг
+									</li>
+									<li>
+										(Б) выставка «Известные учёные России»
+									</li>
+									<li>
+										(В) выставка «Библиотеки мира»
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В библиотеке будет …
+								</mark>
+								<ul>
+									<li>
+										(А) выставка научных работ, экспонатов и фотографий
+									</li>
+									<li>
+										(Б) выставка работ учёных
+									</li>
+									<li>
+										(В) выставка фотографий учёных
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Ахмеду интересно будет узнать …
+								</mark>
+								<ul>
+									<li>
+										(А) о С. П. Королёве
+									</li>
+									<li>
+										(Б) о К. Э. Циолковском
+									</li>
+									<li>
+										(В) о Софье Ковалевской
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Софья Ковалевская преподавала в Швеции, потому что …
+								</mark>
+								<ul>
+									<li>
+										(А) уехала туда с семьёй
+									</li>
+									<li>
+										(Б) в 1883 году в России женщины не могли преподавать
+									</li>
+									<li>
+										(В) любила Швецию
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 5 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 5</div>
+			<div id="text05" class="card mt-0">
+				<div id="text05_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text05_collapse" aria-expanded="true" aria-controls="text05_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Антона и Андрея и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-04/text-05.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text05_collapse" class="collapse" aria-labelledby="text05_head" data-parent="#text05">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Андрей ездил …
+								</mark>
+								<ul>
+									<li>
+										(А) в Калугу
+									</li>
+									<li>
+										(Б) в Курск
+									</li>
+									<li>
+										(В) в Новосибирск
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В Калуге есть …
+								</mark>
+								<ul>
+									<li>
+										(А) музей истории
+									</li>
+									<li>
+										(Б) музей космонавтики
+									</li>
+									<li>
+										(В) музей искусства
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В Калуге жил и работал …
+								</mark>
+								<ul>
+									<li>
+										(А) композитор Д. Д. Шостакович
+									</li>
+									<li>
+										(Б) поэт И. С. Никитин
+									</li>
+									<li>
+										(В) учёный К. Э. Циолковский
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В музее космонавтики была выставка рисунков космонавта …
+								</mark>
+								<ul>
+									<li>
+										(А) Ю. Гагарина
+									</li>
+									<li>
+										(Б) А. Леонова
+									</li>
+									<li>
+										(В) Г. Титова
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									А. Леонов первым в мире вышел в открытый космос …
+								</mark>
+								<ul>
+									<li>
+										(А) в 1963 году
+									</li>
+									<li>
+										(Б) в 1965 году
+									</li>
+									<li>
+										(В) в 1964 году
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 6 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 6</div>
+			<div id="text06" class="card mt-0">
+				<div id="text06_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text06_collapse" aria-expanded="true" aria-controls="text06_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Анны и Бориса и выполните задания
+						</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-04/text-06.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text06_collapse" class="collapse" aria-labelledby="text06_head" data-parent="#text06">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Борис пригласил Анну …
+								</mark>
+								<ul>
+									<li>
+										(А) в театр
+									</li>
+									<li>
+										(Б) в кино
+									</li>
+									<li>
+										(В) в музей
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Анна не может пойти, потому что ей нужно …
+								</mark>
+								<ul>
+									<li>
+										(А) готовиться к контрольной работе
+									</li>
+									<li>
+										(Б) писать доклад
+									</li>
+									<li>
+										(В) готовиться к экзамену
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Анна хочет написать доклад …
+								</mark>
+								<ul>
+									<li>
+										(А) о математике Н. И. Лобачевском
+									</li>
+									<li>
+										(Б) о композиторе П. И. Чайковском
+									</li>
+									<li>
+										(В) о писателе Ф. М. Достоевском
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Н. И. Лобачевский написал новую часть …
+								</mark>
+								<ul>
+									<li>
+										(А) биологии
+									</li>
+									<li>
+										(Б) геометрии
+									</li>
+									<li>
+										(В) физики
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Современники Н. И. Лобачевского …
+								</mark>
+								<ul>
+									<li>
+										(А) поняли его работу
+									</li>
+									<li>
+										(Б) высоко оценили его работу
+									</li>
+									<li>
+										(В) не поняли его идей
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Н. И. Лобачевский работал даже тогда, когда …
+								</mark>
+								<ul>
+									<li>
+										(А) ничего не слышал
+									</li>
+									<li>
+										(Б) ничего не видел
+									</li>
+									<li>
+										(В) не мог ходить
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <h6 class="text-secondary mt-4">(Раздел находится в разработке)</h6> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

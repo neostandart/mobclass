@@ -1,0 +1,980 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+
+	<!--
+	Для реализации аудиоплеера решил использовать:
+	Responsive & Touch-Friendly Audio Player 
+	https://tympanus.net/codrops/2012/12/04/responsive-touch-friendly-audio-player/
+-->
+
+	<style>
+		.app-page .tbl-num {
+			width: auto;
+			min-width: 500px;
+			white-space: nowrap;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.app-page .tbl-num td {
+			padding: 0.6rem 0.8rem;
+			border: #343a40 1px solid;
+		}
+
+		.app-page .tbl-num td .secnum {
+			font-weight: 500;
+			font-size: 1rem;
+			padding: 0px;
+			color: blue;
+			font-weight: bold;
+			text-align: center;
+			border-radius: 50%;
+			background-color: white;
+			width: 1.5rem;
+			height: 1.5rem;
+			line-height: 1.5rem;
+			margin: 0.2rem auto;
+		}
+
+
+
+		.app-page .tbl-num td.auxtext {
+			font-weight: 500;
+			font-size: 1.2rem;
+		}
+
+		.app-page .tbl-num td.auxtext-l {
+			font-weight: 500;
+			font-size: 1.4rem;
+		}
+
+
+		.app-page .tbl-num td.maintext {
+			width: auto;
+		}
+
+		.app-page .tbl-num td.maintext mark {
+			font-weight: 500;
+			font-size: 1.8rem;
+			color: blue;
+		}
+
+
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.card .dlg-caption {
+				font-size: 1.5rem;
+			}
+
+			/* *** */
+			.app-page .sync-area .sync-context .sync-text {
+				padding-right: 4px;
+			}
+
+			.app-page .tbl-num {
+				width: 100%;
+				min-width: 100px;
+				white-space: nowrap;
+			}
+
+			.app-page .tbl-num td {
+				padding: 0.3rem 0.4rem;
+			}
+
+			.app-page .tbl-num td.maintext {
+				width: 100%;
+			}
+
+			.app-page .tbl-num td.maintext mark {
+				font-size: 1.4rem;
+			}
+
+			.app-page .tbl-num td.auxtext {
+				font-weight: 500;
+				font-size: 90%;
+				width: min-content;
+			}
+		}
+
+
+		/* До создания специализированных классов для синх. диалогов, будем временно вот так корректировать */
+		.page-body .sync-area .card-body {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+
+
+			<!--  ????????????????!!!!!!!!!!!!!!!!!!!! +++++++++++++++-->
+			<!-- Это эксперимет для реализ. появл. кнопки остановки прослушивания -->
+			<!-- <button style="position:fixed;z-index: 100;right: 16px;">Стоп</button> -->
+			<!--  -->
+
+
+
+			<h4 class="my-3 page-title">2. ЧИСЛИТЕЛЬНЫЕ</h4>
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 1 -->
+			<div class="sync-area">
+				<div id="part01" class="card">
+					<div id="part01_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part01_collapse" aria-expanded="true" aria-controls="part01_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Коли́чественные чис&shy;ли́&shy;те&shy;ль&shy;ные
+							</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page02/rus-chislit-01.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part01_collapse" class="collapse" aria-labelledby="part01_head" data-parent="#part01">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.1">
+								<div class="sync-text">
+									<table class="mat-table-base tbl-num border-light">
+										<tbody>
+											<tr class="text-center">
+												<td class="auxtext-l">0</td>
+												<td class="maintext"><mark>ноль</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">1</td>
+												<td class="maintext"><mark>оди́н</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">2</td>
+												<td class="maintext"><mark>два</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">3</td>
+												<td class="maintext"><mark>три</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">4</td>
+												<td class="maintext"><mark>четы́ре</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">5</td>
+												<td class="maintext"><mark>пять</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">6</td>
+												<td class="maintext"><mark>шесть</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">7</td>
+												<td class="maintext"><mark>семь</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">8</td>
+												<td class="maintext"><mark>во́семь</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">9</td>
+												<td class="maintext"><mark>де́вять</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">10</td>
+												<td class="maintext"><mark>де́сять</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">11</td>
+												<td class="maintext"><mark>оди́ннадцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">12</td>
+												<td class="maintext"><mark>двена́дцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">13</td>
+												<td class="maintext"><mark>трина́дцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">14</td>
+												<td class="maintext"><mark>четы́рнадцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">15</td>
+												<td class="maintext"><mark>пятна́дцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">16</td>
+												<td class="maintext"><mark>шестна́дцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">17</td>
+												<td class="maintext"><mark>семна́дцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">18</td>
+												<td class="maintext"><mark>восемна́дцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">19</td>
+												<td class="maintext"><mark>девятна́дцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">20</td>
+												<td class="maintext"><mark>два́дцать</mark></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="auxtext-l">30</td>
+												<td class="maintext"><mark>три́дцать</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">40</td>
+												<td class="maintext"><mark>со́рок</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">50</td>
+												<td class="maintext"><mark>пятьдеся́т</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">60</td>
+												<td class="maintext"><mark>шестьдеся́т</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">70</td>
+												<td class="maintext"><mark>се́мьдесят</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">80</td>
+												<td class="maintext"><mark>во́семьдесят</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">90</td>
+												<td class="maintext"><mark>девяно́сто</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">100</td>
+												<td class="maintext"><mark>сто</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">200</td>
+												<td class="maintext"><mark>две́сти</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">300</td>
+												<td class="maintext"><mark>три́ста</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">400</td>
+												<td class="maintext"><mark>четы́реста</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">500</td>
+												<td class="maintext"><mark>пятьсо́т</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">600</td>
+												<td class="maintext"><mark>шестьсо́т</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">700</td>
+												<td class="maintext"><mark>семьсо́т</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">800</td>
+												<td class="maintext"><mark>восемьсо́т</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">900</td>
+												<td class="maintext"><mark>девятьсо́т</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">1000</td>
+												<td class="maintext"><mark>ты́сяча</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">2000</td>
+												<td class="maintext"><mark>две ты́сячи</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">3000</td>
+												<td class="maintext"><mark>три ты́сячи</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">4000</td>
+												<td class="maintext"><mark>черты́ре ты́сячи</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">5000</td>
+												<td class="maintext"><mark>пять ты́сяч</mark></td>
+											</tr>
+
+											<tr class="text-center">
+												<td class="auxtext-l">10 000</td>
+												<td class="maintext"><mark>де́сять ты́сяч</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">100 000</td>
+												<td class="maintext"><mark>сто ты́сяч</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext-l">1 000 000</td>
+												<td class="maintext"><mark>миллио́н</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:04.71;00:00:05.42"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:06.32;00:00:07.09"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:07.88;00:00:08.67"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:09.77;00:00:10.45"></div>
+									</div>
+									<div class="sync-entry" data-text="5">
+										<div class="range" data-in="00:00:11.22;00:00:12.21"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:13.10;00:00:13.73"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:14.63;00:00:15.41"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:16.31;00:00:17.04"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:17.94;00:00:18.97"></div>
+									</div>
+									<div class="sync-entry" data-text="10">
+										<div class="range" data-in="00:00:19.66;00:00:20.70"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:21.59;00:00:22.72"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:23.58;00:00:24.80"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:25.57;00:00:26.77"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:27.75;00:00:28.82"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:29.60;00:00:30.82"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:31.65;00:00:32.72"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:33.43;00:00:34.63"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:35.35;00:00:36.60"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:37.50;00:00:38.79"></div>
+									</div>
+									<div class="sync-entry" data-text="20">
+										<div class="range" data-in="00:00:39.49;00:00:40.79"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:41.65;00:00:42.63"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:44.39;00:00:45.15"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:45.82;00:00:46.62"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:47.44;00:00:48.43"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:49.16;00:00:50.21"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:51.02;00:00:52.16"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:52.87;00:00:54.09"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:54.92;00:00:56.04"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:00:56.92;00:00:57.63"></div>
+									</div>
+									<div class="sync-entry" data-text="30">
+										<div class="range" data-in="00:00:58.51;00:00:59.55"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:00.43;00:01:01.41"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:02.08;00:01:03.29"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:04.18;00:01:05.10"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:06.06;00:01:07.03"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:07.84;00:01:08.91"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:09.84;00:01:10.94"></div>
+									</div>
+
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:11.95;00:01:13.05"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:14.35;00:01:15.18"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:16.25;00:01:17.48"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:18.68;00:01:20.00"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:21.05;00:01:22.76"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:23.66;00:01:24.94"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:26.05;00:01:27.53"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:28.61;00:01:29.99"></div>
+									</div>
+									<div class="sync-entry" data-text="">
+										<div class="range" data-in="00:01:31.08;00:01:31.84"></div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 2 -->
+			<div class="sync-area">
+				<div id="part02" class="card">
+					<div id="part02_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part02_collapse" aria-expanded="true" aria-controls="part02_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Поря́дковые чис&shy;ли́&shy;те&shy;ль&shy;ные в
+								име&shy;ни́&shy;те&shy;ль&shy;ном па&shy;деже́</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page02/rus-chislit-02.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part02_collapse" class="collapse" aria-labelledby="part02_head" data-parent="#part02">
+						<div class="card-body">
+							<div class="sync-context">
+								<div class="sync-text">
+									<div class="mt-1 mb-3 px-3 py-2 caption-bkg">
+										<table class="mx-auto" style="width: fit-content;">
+											<tbody>
+												<tr>
+													<td>
+														мужской род
+													</td>
+													<td class="px-3">
+														(он)
+													</td>
+													<td>
+														<b>Какой?</b>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														женский род
+													</td>
+													<td class="px-3">
+														(она)
+													</td>
+													<td>
+														<b>Какая?</b>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														средний род
+													</td>
+													<td class="px-3">
+														(оно)
+													</td>
+													<td>
+														<b>Какое?</b>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														множественное число
+													</td>
+													<td class="px-3">
+														(они)
+													</td>
+													<td>
+														<b>Какие?</b>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<table class="tbl-num border-light">
+										<tbody>
+											<!-- 1 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">1</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>пе́рвый</mark></td>
+												<td class="auxtext font-italic" rowspan="4">first</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>пе́рвая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>пе́рвое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>пе́рвые</mark></td>
+											</tr>
+											<!-- 2 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">2</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>второ́й</mark></td>
+												<td class="auxtext font-italic" rowspan="4">second</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>втора́я</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>второ́е</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>вторы́е</mark></td>
+											</tr>
+											<!-- 3 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">3</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>тре́тий</mark></td>
+												<td class="auxtext font-italic" rowspan="4">third</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>тре́тья</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>тре́тье</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>тре́тьи</mark></td>
+											</tr>
+											<!-- 4 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">4</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>четвёртый</mark></td>
+												<td class="auxtext font-italic" rowspan="4">forth</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>четвёртая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>четвёртое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>четвёртые</mark></td>
+											</tr>
+											<!-- 5 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">5</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>пя́тый</mark></td>
+												<td class="auxtext font-italic" rowspan="4">fifth</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>пя́тая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>пя́тое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>пя́тые</mark></td>
+											</tr>
+											<!-- 6 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">6</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>шесто́й</mark></td>
+												<td class="auxtext font-italic" rowspan="4">sixth</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>шеста́я</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>шесто́е</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>шесты́е</mark></td>
+											</tr>
+											<!-- 7 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">7</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>седьмо́й</mark></td>
+												<td class="auxtext font-italic" rowspan="4">seventh</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>седьма́я</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>седьмо́е</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>седьмы́е</mark></td>
+											</tr>
+											<!-- 8 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">8</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>восьмо́й</mark></td>
+												<td class="auxtext font-italic" rowspan="4">eighth</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>восьма́я</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>восьмо́е</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>восьмы́е</mark></td>
+											</tr>
+											<!-- 9 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">9</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>девя́тый</mark></td>
+												<td class="auxtext font-italic" rowspan="4">ninth</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>девя́тая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>девя́тое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>девя́тые</mark></td>
+											</tr>
+											<!-- 10 -->
+											<tr class="bg-primary">
+												<td class="py-0" colspan="3">
+													<div class="secnum">10</div>
+												</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(он) какой?</td>
+												<td class="maintext"><mark>деся́тый</mark></td>
+												<td class="auxtext font-italic" rowspan="4">tenth</td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(она) какая?</td>
+												<td class="maintext"><mark>деся́тая</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(оно) какое?</td>
+												<td class="maintext"><mark>деся́тое</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td class="auxtext">(они) какие?</td>
+												<td class="maintext"><mark>деся́тые</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="первый">
+										<div class="range" data-in="00:00:12.67;00:00:13.58"></div>
+									</div>
+									<div class="sync-entry" data-text="первая">
+										<div class="range" data-in="00:00:14.25;00:00:15.29"></div>
+									</div>
+									<div class="sync-entry" data-text="первое">
+										<div class="range" data-in="00:00:15.99;00:00:17.06"></div>
+									</div>
+									<div class="sync-entry" data-text="первые">
+										<div class="range" data-in="00:00:17.89;00:00:18.91"></div>
+									</div>
+
+									<div class="sync-entry" data-text="второй">
+										<div class="range" data-in="00:00:20.00;00:00:20.96"></div>
+									</div>
+									<div class="sync-entry" data-text="второая">
+										<div class="range" data-in="00:00:21.524;00:00:22.627"></div>
+									</div>
+									<div class="sync-entry" data-text="второе">
+										<div class="range" data-in="00:00:23.10;00:00:24.21"></div>
+									</div>
+									<div class="sync-entry" data-text="вторые">
+										<div class="range" data-in="00:00:24.67;00:00:25.80"></div>
+									</div>
+
+									<div class="sync-entry" data-text="третий">
+										<div class="range" data-in="00:00:27.01;00:00:27.95"></div>
+									</div>
+									<div class="sync-entry" data-text="третья">
+										<div class="range" data-in="00:00:28.56;00:00:29.47"></div>
+									</div>
+									<div class="sync-entry" data-text="третье">
+										<div class="range" data-in="00:00:30.21;00:00:31.13"></div>
+									</div>
+									<div class="sync-entry" data-text="третьи">
+										<div class="range" data-in="00:00:31.88;00:00:32.80"></div>
+									</div>
+
+									<div class="sync-entry" data-text="четвёртый">
+										<div class="range" data-in="00:00:33.75;00:00:35.00"></div>
+									</div>
+									<div class="sync-entry" data-text="четвёртая">
+										<div class="range" data-in="00:00:35.44;00:00:36.73"></div>
+									</div>
+									<div class="sync-entry" data-text="четвёртое">
+										<div class="range" data-in="00:00:37.28;00:00:38.57"></div>
+									</div>
+									<div class="sync-entry" data-text="четвёртые">
+										<div class="range" data-in="00:00:39.18;00:00:40.46"></div>
+									</div>
+
+									<div class="sync-entry" data-text="пятые">
+										<div class="range" data-in="00:00:41.61;00:00:42.39"></div>
+									</div>
+									<div class="sync-entry" data-text="пятая">
+										<div class="range" data-in="00:00:43.08;00:00:44.00"></div>
+									</div>
+									<div class="sync-entry" data-text="пятое">
+										<div class="range" data-in="00:00:44.69;00:00:45.60"></div>
+									</div>
+									<div class="sync-entry" data-text="пятые">
+										<div class="range" data-in="00:00:46.20;00:00:47.08"></div>
+									</div>
+
+									<div class="sync-entry" data-text="шестой">
+										<div class="range" data-in="00:00:48.10;00:00:49.07"></div>
+									</div>
+									<div class="sync-entry" data-text="шестая">
+										<div class="range" data-in="00:00:49.71;00:00:50.88"></div>
+									</div>
+									<div class="sync-entry" data-text="шестое">
+										<div class="range" data-in="00:00:51.46;00:00:52.66"></div>
+									</div>
+									<div class="sync-entry" data-text="шестые">
+										<div class="range" data-in="00:00:53.31;00:00:54.36"></div>
+									</div>
+
+									<div class="sync-entry" data-text="седьмой">
+										<div class="range" data-in="00:00:55.38;00:00:56.40"></div>
+									</div>
+									<div class="sync-entry" data-text="седьмая">
+										<div class="range" data-in="00:00:57.07;00:00:58.13"></div>
+									</div>
+									<div class="sync-entry" data-text="седьмое">
+										<div class="range" data-in="00:00:58.76;00:00:59.82"></div>
+									</div>
+									<div class="sync-entry" data-text="седьмые">
+										<div class="range" data-in="00:01:00.43;00:01:01.51"></div>
+									</div>
+
+									<div class="sync-entry" data-text="восьмой">
+										<div class="range" data-in="00:01:02.49;00:01:03.41"></div>
+									</div>
+									<div class="sync-entry" data-text="восьмая">
+										<div class="range" data-in="00:01:04.08;00:01:05.19"></div>
+									</div>
+									<div class="sync-entry" data-text="восьмое">
+										<div class="range" data-in="00:01:05.74;00:01:06.79"></div>
+									</div>
+									<div class="sync-entry" data-text="восьмые">
+										<div class="range" data-in="00:01:07.47;00:01:08.42"></div>
+									</div>
+
+									<div class="sync-entry" data-text="девятый">
+										<div class="range" data-in="00:01:09.41;00:01:10.41"></div>
+									</div>
+									<div class="sync-entry" data-text="девятая">
+										<div class="range" data-in="00:01:11.08;00:01:12.15"></div>
+									</div>
+									<div class="sync-entry" data-text="девятое">
+										<div class="range" data-in="00:01:12.83;00:01:13.91"></div>
+									</div>
+									<div class="sync-entry" data-text="девятые">
+										<div class="range" data-in="00:01:14.44;00:01:15.51"></div>
+									</div>
+
+									<div class="sync-entry" data-text="десятый">
+										<div class="range" data-in="00:01:16.59;00:01:17.64"></div>
+									</div>
+									<div class="sync-entry" data-text="десятая">
+										<div class="range" data-in="00:01:18.27;00:01:19.40"></div>
+									</div>
+									<div class="sync-entry" data-text="десятое">
+										<div class="range" data-in="00:01:20.00;00:01:21.15"></div>
+									</div>
+									<div class="sync-entry" data-text="десятые">
+										<div class="range" data-in="00:01:21.78;00:01:22.94"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <div class="prompt-once">
+				<button id="close" type="button" class="btn btn-outline-primary btn-sm" style="position: absolute;left:auto;top:4px;right:5px;">&times;</button>
+				<img src="./res/images/double-tap.svg" style="width:96px;height:96px;" />
+				<div class="h5 mt-1" style="max-width:450px;text-align: justify;">Выде&shy;ле&shy;ние и прос&shy;лу&shy;ши&shy;ва&shy;ние
+					фраг&shy;мен&shy;тов тек&shy;ста вы&shy;пол&shy;ня&shy;ет&shy;ся по двой&shy;но&shy;му кли&shy;ку</div>
+			</div> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

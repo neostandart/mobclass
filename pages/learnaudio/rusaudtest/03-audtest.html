@@ -1,0 +1,861 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<style>
+		#pageAudTest .theme-caption {
+			font-size: 1.2rem;
+		}
+
+
+		#pageAudTest .deftaskbox {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 1rem 1rem;
+		}
+
+		.deftaskbox>img {
+			max-height: 96px;
+		}
+
+
+		#pageAudTest table.resultsample {
+			margin-left: 0.5rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:first-child {
+			font-style: italic;
+			font-weight: 500;
+			font-size: 1rem;
+			padding-right: 1rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:nth-child(2) {
+			background-color: wheat;
+			border-left: gray 3px solid;
+			padding: 1rem;
+			font-size: 1.25rem;
+			font-weight: 500;
+		}
+
+		#pageAudTest .card-body>ol {
+			padding-left: 1rem;
+		}
+
+		#pageAudTest .card-body>ol>li>mark {
+			font-weight: 500;
+			background-color: unset;
+		}
+
+		#pageAudTest .card-body>ol>li>ul {
+			list-style-type: none;
+			padding-left: 1.1rem;
+		}
+
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="pageAudTest" class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h3 class="my-3 page-title">Россия</h3>
+
+			<div class="deftaskbox caption-bkg">
+				<img src="./res/images/mats/writeinnotebook.png" />
+				<div>
+					<h6>Прослушайте тексты и выполните задания в тетради</h6>
+					<hr class="mt-2">
+				</div>
+			</div>
+
+			<div class="py-2 app-separator"></div>
+
+			<table class="resultsample">
+				<tr>
+					<td>
+						Образец:
+					</td>
+					<td>
+						<p>Текст 1.</p>
+						<p>1. А, 2. Б, 3. А, 4. В, 5. А.</p>
+					</td>
+				</tr>
+			</table>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 1 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 1</div>
+			<div id="text01" class="card mt-0">
+				<div id="text01_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text01_collapse" aria-expanded="true" aria-controls="text01_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст и выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-03/text-01.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text01_collapse" class="collapse" aria-labelledby="text01_head" data-parent="#text01">
+					<div class="card-body">
+						<ol>
+							<li>
+								<mark>
+									Национальный парк находится …
+								</mark>
+								<ul>
+									<li>
+										(А) на Урале
+									</li>
+									<li>
+										(Б) рядом с Байкалом
+									</li>
+									<li>
+										(В) между Санкт-Петербургом и Москвой
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В парке «Валдайский» можно увидеть …
+								</mark>
+								<ul>
+									<li>
+										(А) много рек и озер
+									</li>
+									<li>
+										(Б) только озеро Селигер
+									</li>
+									<li>
+										(В) только озеро Валдай
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В парке …
+								</mark>
+								<ul>
+									<li>
+										(А) можно заниматься спортивной охотой и рыбалкой
+									</li>
+									<li>
+										(Б) запрещена спортивная охота и рыбалка
+									</li>
+									<li>
+										(В) разрешена спортивная охота, но нельзя ловить рыбу
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В национальном парке «Валдайский» …
+								</mark>
+								<ul>
+									<li>
+										(А) на всей территории могут находиться туристы
+									</li>
+									<li>
+										(Б) есть территории только для учёных или работников парка
+									</li>
+									<li>
+										(В) есть территории только для студентов
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 2 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 2</div>
+			<div id="text02" class="card mt-0">
+				<div id="text02_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text02_collapse" aria-expanded="true" aria-controls="text02_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст «Письмо Хасана другу Момину» и
+							выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-03/text-02.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text02_collapse" class="collapse" aria-labelledby="text02_head" data-parent="#text02">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Дагестан …
+								</mark>
+								<ul>
+									<li>
+										(А) не является Россией
+									</li>
+									<li>
+										(Б) являлся республикой России
+									</li>
+									<li>
+										(В) является республикой России
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Дагестан расположен …
+								</mark>
+								<ul>
+									<li>
+										(А) в северо-восточной части Урала
+									</li>
+									<li>
+										(Б) в северо-восточной части Кавказа
+									</li>
+									<li>
+										(В) в северо-восточной части Сибири
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Махачкала находится на берегу …
+								</mark>
+								<ul>
+									<li>
+										(А) озера
+									</li>
+									<li>
+										(Б) Чёрного моря
+									</li>
+									<li>
+										(В) Каспийского моря
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В Дагестане находится …
+								</mark>
+								<ul>
+									<li>
+										(А) одна из крупнейших на Северном Кавказе библиотек
+									</li>
+									<li>
+										(Б) один из крупнейших на Северном Кавказе театров
+									</li>
+									<li>
+										(В) один из крупнейших на Северном Кавказе музеев
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Дагестан популярен у художников и поэтов, потому что …
+								</mark>
+								<ul>
+									<li>
+										(А) там они живут бесплатно
+									</li>
+									<li>
+										(Б) они там получают образование
+									</li>
+									<li>
+										(В) там очень красивая природа
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 3 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 3</div>
+			<div id="text03" class="card mt-0">
+				<div id="text03_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text03_collapse" aria-expanded="true" aria-controls="text03_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст о путешествиях английского
+							кулинара и выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-03/text-03.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text03_collapse" class="collapse" aria-labelledby="text03_head" data-parent="#text03">
+					<div class="card-body">
+						<ol>
+							<li>
+								<mark>
+									Джон Уоррен …
+								</mark>
+								<ul>
+									<li>
+										(А) путешествует с подругой
+									</li>
+									<li>
+										(Б) ведёт передачу
+									</li>
+									<li>
+										(В) работает в ресторане
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В Приморье обитают …
+								</mark>
+								<ul>
+									<li>
+										(А) редкие животные
+									</li>
+									<li>
+										(Б) уникальные птицы
+									</li>
+									<li>
+										(В) белые медведи
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Главным чудом Приморского края считается …
+								</mark>
+								<ul>
+									<li>
+										(А) Тихоокеанский флот
+									</li>
+									<li>
+										(Б) известная кошка
+									</li>
+									<li>
+										(В) остров Петрова
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Говорят, все, кто побывал на острове …
+								</mark>
+								<ul>
+									<li>
+										(А) становятся богатыми и популярными
+									</li>
+									<li>
+										(Б) становятся здоровыми и молодыми
+									</li>
+									<li>
+										(В) становятся красивыми и талантливыми
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Джон Уоррен рассказал …
+								</mark>
+								<ul>
+									<li>
+										(А) о памятнике Катюше
+									</li>
+									<li>
+										(Б) об истории Приморского края
+									</li>
+									<li>
+										(В) о хоккейном клубе
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Джон готовил …
+								</mark>
+								<ul>
+									<li>
+										(А) бургер и мясо
+									</li>
+									<li>
+										(Б) салат из морепродуктов
+									</li>
+									<li>
+										(В) рыбу и суп
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Джон Уоррен …
+								</mark>
+								<ul>
+									<li>
+										(А) не будет продолжать кулинарные путешествия
+									</li>
+									<li>
+										(Б) будет продолжать кулинарные путешествия
+									</li>
+									<li>
+										(В) будет продолжать путешествия в следующем году
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 4 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 4</div>
+			<div id="text04" class="card mt-0">
+				<div id="text04_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text04_collapse" aria-expanded="true" aria-controls="text04_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Славы и Насти и выполните задания
+						</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-03/text-04.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text04_collapse" class="collapse" aria-labelledby="text04_head" data-parent="#text04">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Слава опоздал, потому что …
+								</mark>
+								<ul>
+									<li>
+										(А) смотрел фильм о Башкортостане
+									</li>
+									<li>
+										(Б) писал доклад о Башкортостане
+									</li>
+									<li>
+										(В) был на занятии по географии
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Башкортостан находится …
+								</mark>
+								<ul>
+									<li>
+										(А) на юге Урала
+									</li>
+									<li>
+										(Б) на юге России
+									</li>
+									<li>
+										(В) на юге Сибири
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Иремель – это …
+								</mark>
+								<ul>
+									<li>
+										(А) река
+									</li>
+									<li>
+										(Б) гора
+									</li>
+									<li>
+										(В) озеро
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Слава рассказал Насте …
+								</mark>
+								<ul>
+									<li>
+										(А) об истории Российской республики
+									</li>
+									<li>
+										(Б) о столице Башкортостана городе Уфе
+									</li>
+									<li>
+										(В) об интересном месте, которое он хочет увидеть
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									На Южный Урал хорошо съездить …
+								</mark>
+								<ul>
+									<li>
+										(А) летом
+									</li>
+									<li>
+										(Б) весной
+									</li>
+									<li>
+										(В) осенью
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Настя советует Славе поехать на Иремель, потому что …
+								</mark>
+								<ul>
+									<li>
+										(А) он там никогда не был
+									</li>
+									<li>
+										(Б) он любит природу
+									</li>
+									<li>
+										(В) она уже побывала там
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Слава предлагает Насте …
+								</mark>
+								<ul>
+									<li>
+										(А) поехать с ним на экскурсию на Иремель
+									</li>
+									<li>
+										(Б) послушать его доклад о республике Башкортостан
+									</li>
+									<li>
+										(В) показать книгу с фотографиями
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 5 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 5</div>
+			<div id="text05" class="card mt-0">
+				<div id="text05_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text05_collapse" aria-expanded="true" aria-controls="text05_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Никиты и Елены и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-03/text-05.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text05_collapse" class="collapse" aria-labelledby="text05_head" data-parent="#text05">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Республика Карелия находится …
+								</mark>
+								<ul>
+									<li>
+										(А) в северо-западной части России
+									</li>
+									<li>
+										(Б) в северо-восточной части России
+									</li>
+									<li>
+										(В) в юго-западной части России
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В республике …
+								</mark>
+								<ul>
+									<li>
+										(А) немного рек и озёр
+									</li>
+									<li>
+										(Б) нет рек и озёр
+									</li>
+									<li>
+										(В) много рек и озёр
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Никита спросил Елену …
+								</mark>
+								<ul>
+									<li>
+										(А) о сельском хозяйстве Карелии
+									</li>
+									<li>
+										(Б) о климате Карелии
+									</li>
+									<li>
+										(В) о столице Карелии
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 6 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 6</div>
+			<div id="text06" class="card mt-0">
+				<div id="text06_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text06_collapse" aria-expanded="true" aria-controls="text06_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Ивана и Умы и выполните задания
+						</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-03/text-06.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text06_collapse" class="collapse" aria-labelledby="text06_head" data-parent="#text06">
+					<div class="card-body">
+						<ol>
+							<li>
+								<mark>
+									Иван и Ума говорили …
+								</mark>
+								<ul>
+									<li>
+										(А) о Воронеже
+									</li>
+									<li>
+										(Б) о площади Победы
+									</li>
+									<li>
+										(В) о празднике
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									9 Мая – это …
+								</mark>
+								<ul>
+									<li>
+										(А) День труда
+									</li>
+									<li>
+										(Б) День Победы
+									</li>
+									<li>
+										(В) День России
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В этот день вспоминают тех, кто …
+								</mark>
+								<ul>
+									<li>
+										(А) строил город Воронеж
+									</li>
+									<li>
+										(Б) участвовал в войне
+									</li>
+									<li>
+										(В) писал о Великой Отечественной войне
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Группа пойдет на площадь …
+								</mark>
+								<ul>
+									<li>
+										(А) Ленина
+									</li>
+									<li>
+										(Б) Победы
+									</li>
+									<li>
+										(В) Черняховского
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Ума хочет посмотреть парады, концерты и салют …
+								</mark>
+								<ul>
+									<li>
+										(А) по телевизору
+									</li>
+									<li>
+										(Б) на улицах Воронежа
+									</li>
+									<li>
+										(В) из окна общежития
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Ума пойдёт к подруге, потому что …
+								</mark>
+								<ul>
+									<li>
+										(А) у той день рождения
+									</li>
+									<li>
+										(Б) она заболела
+									</li>
+									<li>
+										(В) её дедушка будет рассказывать о войне
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <h6 class="text-secondary mt-4">(Раздел находится в разработке)</h6> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

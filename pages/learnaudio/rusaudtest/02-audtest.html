@@ -1,0 +1,852 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<style>
+		#pageAudTest .theme-caption {
+			font-size: 1.2rem;
+		}
+
+
+		#pageAudTest .deftaskbox {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 1rem 1rem;
+		}
+
+		.deftaskbox>img {
+			max-height: 96px;
+		}
+
+
+		#pageAudTest table.resultsample {
+			margin-left: 0.5rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:first-child {
+			font-style: italic;
+			font-weight: 500;
+			font-size: 1rem;
+			padding-right: 1rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:nth-child(2) {
+			background-color: wheat;
+			border-left: gray 3px solid;
+			padding: 1rem;
+			font-size: 1.25rem;
+			font-weight: 500;
+		}
+
+		#pageAudTest .card-body>ol {
+			padding-left: 1rem;
+		}
+
+		#pageAudTest .card-body>ol>li>mark {
+			font-weight: 500;
+			background-color: unset;
+		}
+
+		#pageAudTest .card-body>ol>li>ul {
+			list-style-type: none;
+			padding-left: 1.1rem;
+		}
+
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="pageAudTest" class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h3 class="my-3 page-title">Вузы России</h3>
+
+			<div class="deftaskbox caption-bkg">
+				<img src="./res/images/mats/writeinnotebook.png" />
+				<div>
+					<h6>Прослушайте тексты и выполните задания в тетради</h6>
+					<hr class="mt-2">
+				</div>
+			</div>
+
+			<div class="py-2 app-separator"></div>
+
+			<table class="resultsample">
+				<tr>
+					<td>
+						Образец:
+					</td>
+					<td>
+						<p>Текст 1.</p>
+						<p>1. А, 2. Б, 3. А, 4. В, 5. А.</p>
+					</td>
+				</tr>
+			</table>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 1 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 1</div>
+			<div id="text01" class="card mt-0">
+				<div id="text01_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text01_collapse" aria-expanded="true" aria-controls="text01_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст и выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-02/text-01.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text01_collapse" class="collapse" aria-labelledby="text01_head" data-parent="#text01">
+					<div class="card-body">
+						<ol>
+							<li>
+								<mark>
+									Камилла учится …
+								</mark>
+								<ul>
+									<li>
+										(А) в Российском политехническом университете
+									</li>
+									<li>
+										(Б) в Томском политехническом университете
+									</li>
+									<li>
+										(В) в Томском гуманитарном университете
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Выбрать университет Камилле помог …
+								</mark>
+								<ul>
+									<li>
+										(А) друг
+									</li>
+									<li>
+										(Б) папа
+									</li>
+									<li>
+										(В) подруга
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В Томском политехническом университете обучается …
+								</mark>
+								<ul>
+									<li>
+										(А) около 20 000 студентов
+									</li>
+									<li>
+										(Б) менее 20 000 студентов
+									</li>
+									<li>
+										(В) 12 000 тысяч студентов
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Камилла сдала все сессии на …
+								</mark>
+								<ul>
+									<li>
+										(А) четвёрки
+									</li>
+									<li>
+										(Б) пятёрки
+									</li>
+									<li>
+										(В) пятёрки и четвёрку
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									На студенческой конференции Камилла рассказывала …
+								</mark>
+								<ul>
+									<li>
+										(А) о мероприятиях для иностранцев
+									</li>
+									<li>
+										(Б) о результатах научного эксперимента
+									</li>
+									<li>
+										(В) о студенческих клубах
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В Томском политехническом университете учатся …
+								</mark>
+								<ul>
+									<li>
+										(А) только российские студенты
+									</li>
+									<li>
+										(Б) только иностранные студенты
+									</li>
+									<li>
+										(В) российские и иностранные студенты
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 2 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 2</div>
+			<div id="text02" class="card mt-0">
+				<div id="text02_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text02_collapse" aria-expanded="true" aria-controls="text02_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст и выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-02/text-02.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text02_collapse" class="collapse" aria-labelledby="text02_head" data-parent="#text02">
+					<div class="card-body">
+						<ol>
+							<li>
+								<mark>
+									Учёные-историки …, какой университет был первым на территории России.
+								</mark>
+								<ul>
+									<li>
+										(А) знают
+									</li>
+									<li>
+										(Б) спорят
+									</li>
+									<li>
+										(В) не знают
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В России существует более …
+								</mark>
+								<ul>
+									<li>
+										(А) 1 000 вузов
+									</li>
+									<li>
+										(Б) 85 вузов
+									</li>
+									<li>
+										(В) 200 000 вузов
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Иностранные студенты могут обучаться …
+								</mark>
+								<ul>
+									<li>
+										(А) по всем уровням подготовки
+									</li>
+									<li>
+										(Б) только по программам бакалавриата
+									</li>
+									<li>
+										(В) только по программам магистратуры
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Российские вузы имеют …
+								</mark>
+								<ul>
+									<li>
+										(А) небольшой опыт обучения иностранцев
+									</li>
+									<li>
+										(Б) многолетний опыт обучения иностранцев
+									</li>
+									<li>
+										(В) сорокалетний опыт обучения иностранцев
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Российские вузы предоставляют всем студентам возможность заниматься …
+								</mark>
+								<ul>
+									<li>
+										(А) музыкой
+									</li>
+									<li>
+										(Б) спортом
+									</li>
+									<li>
+										(В) танцами
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 3 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 3</div>
+			<div id="text03" class="card mt-0">
+				<div id="text03_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text03_collapse" aria-expanded="true" aria-controls="text03_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст и выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-02/text-03.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text03_collapse" class="collapse" aria-labelledby="text03_head" data-parent="#text03">
+					<div class="card-body">
+						<ol>
+							<li>
+								<mark>
+									Университет «Высшая школа экономики» был открыт …
+								</mark>
+								<ul>
+									<li>
+										(А) в 1992 году
+									</li>
+									<li>
+										(Б) в 2002 году
+									</li>
+									<li>
+										(В) в 2013 году
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Важное место в университете занимает …
+								</mark>
+								<ul>
+									<li>
+										(А) филологическая наука
+									</li>
+									<li>
+										(Б) экономическая наука
+									</li>
+									<li>
+										(В) физическая наука
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Студенты университета имеют возможность …
+								</mark>
+								<ul>
+									<li>
+										(А) обучаться за рубежом
+									</li>
+									<li>
+										(Б) заниматься спортом
+									</li>
+									<li>
+										(В) путешествовать в разные страны
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									«Высшая школа экономики» – первый российский вуз, который …
+								</mark>
+								<ul>
+									<li>
+										(А) пригласил работать иностранных преподавателей
+									</li>
+									<li>
+										(Б) начал обучать иностранных студентов
+									</li>
+									<li>
+										(В) ввёл систему «4+2»
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									«Университет, открытый городу» – это проект, в котором участвовали …
+								</mark>
+								<ul>
+									<li>
+										(А) только студенты университета
+									</li>
+									<li>
+										(Б) только учёные университета
+									</li>
+									<li>
+										(В) все желающие
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Студенты, которые окончили университет «Высшая школа экономики», работают …
+								</mark>
+								<ul>
+									<li>
+										(А) только за рубежом
+									</li>
+									<li>
+										(Б) только в России
+									</li>
+									<li>
+										(В) по всему миру
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 4 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 4</div>
+			<div id="text04" class="card mt-0">
+				<div id="text04_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text04_collapse" aria-expanded="true" aria-controls="text04_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Ивана и Иры и выполните задания
+						</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-02/text-04.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text04_collapse" class="collapse" aria-labelledby="text04_head" data-parent="#text04">
+					<div class="card-body">
+						<ol>
+							<li>
+								<mark>
+									После занятий Ира занимается …
+								</mark>
+								<ul>
+									<li>
+										(А) в фотошколе
+									</li>
+									<li>
+										(Б) в студенческом театре
+									</li>
+									<li>
+										(В) в университетской команде
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Марина – это …
+								</mark>
+								<ul>
+									<li>
+										(А) подруга Иры
+									</li>
+									<li>
+										(Б) подруга Ивана
+									</li>
+									<li>
+										(В) известная актриса
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Спектакль, в котором будут играть девушки, называется …
+								</mark>
+								<ul>
+									<li>
+										(А) «Первый день рождения»
+									</li>
+									<li>
+										(Б) «Первый матч»
+									</li>
+									<li>
+										(В) «Первая любовь»
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Иван занимается …
+								</mark>
+								<ul>
+									<li>
+										(А) искусством
+									</li>
+									<li>
+										(Б) футболом
+									</li>
+									<li>
+										(В) физикой
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Иван не играет сегодня в футбол, потому что …
+								</mark>
+								<ul>
+									<li>
+										(А) у него болит рука
+									</li>
+									<li>
+										(Б) забыл спортивный костюм
+									</li>
+									<li>
+										(В) у него болит нога
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 5 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 5</div>
+			<div id="text05" class="card mt-0">
+				<div id="text05_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text05_collapse" aria-expanded="true" aria-controls="text05_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Даши и Юли и выполните задания
+						</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-02/text-05.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text05_collapse" class="collapse" aria-labelledby="text05_head" data-parent="#text05">
+					<div class="card-body">
+						<ol>
+							<li>
+								<mark>
+									Юля учится …
+								</mark>
+								<ul>
+									<li>
+										(А) на первом курсе
+									</li>
+									<li>
+										(Б) на втором курсе
+									</li>
+									<li>
+										(В) на третьем курсе
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Дима помог Юле найти …
+								</mark>
+								<ul>
+									<li>
+										(А) аудиторию
+									</li>
+									<li>
+										(Б) спортзал
+									</li>
+									<li>
+										(В) лабораторную работу
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Дима хорошо говорит по-английски, потому что …
+								</mark>
+								<ul>
+									<li>
+										(А) жил в Англии 3 года
+									</li>
+									<li>
+										(Б) жил в Америке 3 года
+									</li>
+									<li>
+										(В) английский – его родной язык
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Самый трудный экзамен для Юли – это экзамен…
+								</mark>
+								<ul>
+									<li>
+										(А) по истории
+									</li>
+									<li>
+										(Б) по английскому языку
+									</li>
+									<li>
+										(В) по философии
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Завтра Юля придёт в спортзал, чтобы …
+								</mark>
+								<ul>
+									<li>
+										(А) играть в теннис с Димой и Дашей
+									</li>
+									<li>
+										(Б) поговорить с Димой
+									</li>
+									<li>
+										(В) посмотреть, как студенты играют в теннис
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 6 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 6</div>
+			<div id="text06" class="card mt-0">
+				<div id="text06_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text06_collapse" aria-expanded="true" aria-controls="text06_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Артёма и Насти и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-02/text-06.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text06_collapse" class="collapse" aria-labelledby="text06_head" data-parent="#text06">
+					<div class="card-body">
+						<ol>
+							<li>
+								<mark>
+									Настя и Артём – …
+								</mark>
+								<ul>
+									<li>
+										(А) учатся на одном факультете
+									</li>
+									<li>
+										(Б) учатся на разных факультетах
+									</li>
+									<li>
+										(В) учились раньше вместе в школе
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Насте осталось сдать экзамен …
+								</mark>
+								<ul>
+									<li>
+										(А) по истории кино
+									</li>
+									<li>
+										(Б) по физике
+									</li>
+									<li>
+										(В) истории России
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Артём учится …
+								</mark>
+								<ul>
+									<li>
+										(А) на физическом факультете
+									</li>
+									<li>
+										(Б) на историческом факультете
+									</li>
+									<li>
+										(В) на филологическом факультете
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Фестиваль «Неделя кино» будет проходить …
+								</mark>
+								<ul>
+									<li>
+										(А) на следующих выходных
+									</li>
+									<li>
+										(Б) во время каникул
+									</li>
+									<li>
+										(В) в следующем месяце
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									На фестивале будут показывать …
+								</mark>
+								<ul>
+									<li>
+										(А) только русские фильмы
+									</li>
+									<li>
+										(Б) только французские фильмы
+									</li>
+									<li>
+										(В) фильмы из разных стран мира
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <h6 class="text-secondary mt-4">(Раздел находится в разработке)</h6> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

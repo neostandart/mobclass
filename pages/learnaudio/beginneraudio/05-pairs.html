@@ -1,0 +1,326 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+
+	<style>
+		.app-page td .auxtext {
+			font-weight: 500;
+			font-size: 1.2rem;
+		}
+
+		.app-page td .trans {
+			font-style: italic;
+		}
+
+		.app-page .mat-table-base td.maintext mark {
+			font-weight: 500;
+			font-size: 1.6rem;
+			color: blue;
+		}
+
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.card .dlg-caption {
+				font-size: 1.8rem;
+			}
+
+			/* *** */
+			.app-page .sync-area .sync-context .sync-text {
+				padding-right: 4px;
+			}
+
+
+			.app-page .mat-table-base td.maintext mark {
+				font-weight: 500;
+				font-size: 1.2rem;
+			}
+
+
+			.app-page td .auxtext {
+				font-weight: 500;
+				font-size: 90%;
+				width: min-content;
+			}
+
+		}
+
+		/* До создания специализированных классов для синх. диалогов, будем временно вот так корректировать */
+		.page-body .sync-area .card-body {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h4 class="my-3 page-title">5. ПАРНЫЕ СЛОВА</h4>
+			<div class="py-2 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 1 -->
+			<div class="sync-area">
+				<div id="part01" class="card">
+					<div id="part01_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part01_collapse" aria-expanded="true" aria-controls="part01_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Человек. Семья</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page05/rus-pairs-01.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part01_collapse" class="collapse show" aria-labelledby="part01_head" data-parent="#part01">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="mat-table-base samewidth2 border-light">
+										<tbody>
+											<tr class="caption">
+												<th class="">мужской род<br />(он)</th>
+												<th class="">женский род<br />(она)</th>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>ма́льчик</mark><br /><span
+														class="auxtext trans">boy</span></td>
+												<td class="maintext"><mark>де́вочка</mark><br /><span
+														class="auxtext trans">girl</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>ю́ноша</mark><br /><span
+														class="auxtext trans">young man</span></td>
+												<td class="maintext"><mark>де́вушка</mark><br /><span
+														class="auxtext trans">young girl</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>мужчи́на</mark><br /><span
+														class="auxtext trans">man</span></td>
+												<td class="maintext"><mark>же́нщина</mark><br /><span
+														class="auxtext trans">woman</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>оте́ц</mark><br /><span
+														class="auxtext trans">father</span></td>
+												<td class="maintext"><mark>мать</mark><br /><span
+														class="auxtext trans">mother</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>па́па</mark><br /><span
+														class="auxtext trans">daddy</span></td>
+												<td class="maintext"><mark>ма́ма</mark><br /><span
+														class="auxtext trans">mom</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>муж</mark><br /><span
+														class="auxtext trans">husband</span></td>
+												<td class="maintext"><mark>жена́</mark><br /><span
+														class="auxtext trans">wife</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>сын</mark><br /><span
+														class="auxtext trans">son</span></td>
+												<td class="maintext"><mark>дочь</mark><br /><span
+														class="auxtext trans">daughter</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>брат</mark><br /><span
+														class="auxtext trans">brother</span></td>
+												<td class="maintext"><mark>сестра́</mark><br /><span
+														class="auxtext trans">sister</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>де́душка</mark><br /><span
+														class="auxtext trans">grandfather</span></td>
+												<td class="maintext"><mark>ба́бушка</mark><br /><span
+														class="auxtext trans">grandmother</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>внук</mark><br /><span
+														class="auxtext trans">grandson</span></td>
+												<td class="maintext"><mark>вну́чка</mark><br /><span
+														class="auxtext trans">granddaughter</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>дя́дя</mark><br /><span
+														class="auxtext trans">uncle</span></td>
+												<td class="maintext"><mark>тётя</mark><br /><span
+														class="auxtext trans">aunt</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="мальчик">
+										<div class="range" data-in="00:00:00.90;00:00:01.80"></div>
+									</div>
+									<div class="sync-entry" data-text="девочка">
+										<div class="range" data-in="00:00:02.69;00:00:03.65"></div>
+									</div>
+									<div class="sync-entry" data-text="юноша">
+										<div class="range" data-in="00:00:04.61;00:00:05.64"></div>
+									</div>
+									<div class="sync-entry" data-text="девушка">
+										<div class="range" data-in="00:00:06.69;00:00:07.68"></div>
+									</div>
+									<div class="sync-entry" data-text="мужчина">
+										<div class="range" data-in="00:00:08.51;00:00:09.69"></div>
+									</div>
+									<div class="sync-entry" data-text="женщина">
+										<div class="range" data-in="00:00:10.65;00:00:11.65"></div>
+									</div>
+									<div class="sync-entry" data-text="отец">
+										<div class="range" data-in="00:00:12.63;00:00:13.51"></div>
+									</div>
+									<div class="sync-entry" data-text="мать">
+										<div class="range" data-in="00:00:14.35;00:00:15.06"></div>
+									</div>
+
+									<div class="sync-entry" data-text="папа">
+										<div class="range" data-in="00:00:16.24;00:00:16.97"></div>
+									</div>
+									<div class="sync-entry" data-text="мама">
+										<div class="range" data-in="00:00:17.79;00:00:18.53"></div>
+									</div>
+									<div class="sync-entry" data-text="муж">
+										<div class="range" data-in="00:00:19.29;00:00:20.08"></div>
+									</div>
+									<div class="sync-entry" data-text="жена">
+										<div class="range" data-in="00:00:20.86;00:00:21.65"></div>
+									</div>
+
+									<div class="sync-entry" data-text="сын">
+										<div class="range" data-in="00:00:22.51;00:00:23.39"></div>
+									</div>
+									<div class="sync-entry" data-text="дочь">
+										<div class="range" data-in="00:00:24.44;00:00:25.16"></div>
+									</div>
+									<div class="sync-entry" data-text="брат">
+										<div class="range" data-in="00:00:26.14;00:00:26.81"></div>
+									</div>
+									<div class="sync-entry" data-text="сестра">
+										<div class="range" data-in="00:00:27.73;00:00:28.63"></div>
+									</div>
+
+									<div class="sync-entry" data-text="дедушка">
+										<div class="range" data-in="00:00:29.67;00:00:30.82"></div>
+									</div>
+									<div class="sync-entry" data-text="бабушка">
+										<div class="range" data-in="00:00:31.94;00:00:32.85"></div>
+									</div>
+									<div class="sync-entry" data-text="внук">
+										<div class="range" data-in="00:00:33.86;00:00:34.78"></div>
+									</div>
+									<div class="sync-entry" data-text="внучка">
+										<div class="range" data-in="00:00:35.61;00:00:36.49"></div>
+									</div>
+									<div class="sync-entry" data-text="дядя">
+										<div class="range" data-in="00:00:37.51;00:00:38.52"></div>
+									</div>
+									<div class="sync-entry" data-text="тётя">
+										<div class="range" data-in="00:00:39.44;00:00:40.18"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 2 -->
+			<!-- <div class="sync-area">
+				<div id="part02" class="card">
+					<div id="part02_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part02_collapse" aria-expanded="true" aria-controls="part02_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Название раздела</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source src="mats/learnaudio/beginneraudio/page01/part02.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part02_collapse" class="collapse" aria-labelledby="part02_head" data-parent="#part02">
+						<div class="card-body">
+							<div class="sync-context">
+								<div class="sync-text">
+									<p>Содержимое раздела</p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="###">
+										<div class="range" data-in="00:00:00;00:00:01"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+
+
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <div class="prompt-once">
+				<button id="close" type="button" class="btn btn-outline-primary btn-sm" style="position: absolute;left:auto;top:4px;right:5px;">&times;</button>				
+				<img src="./res/images/double-tap.svg" style="width:96px;height:96px;" />
+				<div class="h5 mt-1" style="max-width:450px;text-align: justify;">Выде&shy;ле&shy;ние и прос&shy;лу&shy;ши&shy;ва&shy;ние
+					фраг&shy;мен&shy;тов тек&shy;ста вы&shy;пол&shy;ня&shy;ет&shy;ся по двой&shy;но&shy;му кли&shy;ку</div>
+			</div> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

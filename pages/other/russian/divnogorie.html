@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+	<style>
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.card .dlg-caption {
+				font-size: 1.8rem;
+			}
+		}
+
+
+		/* До создания специализированных классов для синх. диалогов, будем временно вот так корректировать */
+		.page-body .sync-area .card-body {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h4 class="my-3 page-title">Дивногорье</h4>
+
+			<div class="py-2 app-separator"></div>
+
+			<iframe src="https://h5p.org/h5p/embed/563106" width="1091" height="675" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+			
+			<div class="py-2 app-separator"></div>
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

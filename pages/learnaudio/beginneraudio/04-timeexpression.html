@@ -1,0 +1,684 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+
+	<style>
+		.app-page td .auxtext {
+			font-weight: 500;
+			font-size: 1.2rem;
+		}
+
+		.app-page td .trans {
+			font-style: italic;
+		}
+
+		.app-page .mat-table-base td.maintext mark {
+			font-weight: 500;
+			font-size: 1.6rem;
+			color: blue;
+		}
+
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.card .dlg-caption {
+				font-size: 1.8rem;
+			}
+
+			/* *** */
+			.app-page .sync-area .sync-context .sync-text {
+				padding-right: 4px;
+			}
+
+
+			.app-page .mat-table-base td.maintext mark {
+				font-weight: 500;
+				font-size: 1.2rem;
+			}
+
+
+			.app-page td .auxtext {
+				font-weight: 500;
+				font-size: 90%;
+				width: min-content;
+			}
+
+		}
+
+
+		/* До создания специализированных классов для синх. диалогов, будем временно вот так корректировать */
+		.page-body .sync-area .card-body {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h4 class="my-3 page-title">4. ВЫРАЖЕНИЕ ВРЕМЕНИ</h4>
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 1 -->
+			<div class="sync-area">
+				<div id="part01" class="card">
+					<div id="part01_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part01_collapse" aria-expanded="true" aria-controls="part01_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<!-- <h5 class="text-primary ml-3">вчера <span style="border: blue 1px solid; border-radius: 50%;padding: 0.2em 0.5em;">сегодня</span> завтра</h5> -->
+							<h2 class="text-primary ml-3">День</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page04/rus-time-01.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part01_collapse" class="collapse" aria-labelledby="part01_head" data-parent="#part01">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="mat-table-base samewidth2 border-light">
+										<tbody>
+											<tr class="caption">
+												<th class="">Когда?</th>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>вчера́</mark><br /><span
+														class="auxtext trans">yesterday</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>сего́дня</mark><br /><span
+														class="auxtext trans">today</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>за́втра</mark><br /><span
+														class="auxtext trans">tomorrow</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="вчера">
+										<div class="range" data-in="00:00:00.41;00:00:01.24"></div>
+									</div>
+									<div class="sync-entry" data-text="сегодня">
+										<div class="range" data-in="00:00:01.83;00:00:02.92"></div>
+									</div>
+									<div class="sync-entry" data-text="завтра">
+										<div class="range" data-in="00:00:03.45;00:00:04.33"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 2 -->
+			<div class="sync-area">
+				<div id="part02" class="card">
+					<div id="part02_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part02_collapse" aria-expanded="true" aria-controls="part02_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Время суток</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page04/rus-time-02.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part02_collapse" class="collapse" aria-labelledby="part02_head" data-parent="#part02">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="mat-table-base samewidth3 border-light">
+										<tbody>
+											<tr class="caption">
+												<th class="">Что?</th>
+												<th class="">Когда?</th>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>у́тро</mark><br /><span
+														class="auxtext trans">morning</span></td>
+												<td class="maintext"><mark>у́тром</mark><br /><span
+														class="auxtext trans">in the morning</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>день</mark><br /><span
+														class="auxtext trans">daytime</span></td>
+												<td class="maintext"><mark>днём</mark><br /><span
+														class="auxtext trans">in the daytime</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>ве́чер</mark><br /><span
+														class="auxtext trans">evening</span></td>
+												<td class="maintext"><mark>ве́чером</mark><br /><span
+														class="auxtext trans">in the evening</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>ночь</mark><br /><span
+														class="auxtext trans">night</span></td>
+												<td class="maintext"><mark>но́чью</mark><br /><span
+														class="auxtext trans">in the night</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="утро">
+										<div class="range" data-in="00:00:00.59;00:00:01.40"></div>
+									</div>
+									<div class="sync-entry" data-text="утром">
+										<div class="range" data-in="00:00:02.30;00:00:03.14"></div>
+									</div>
+									<div class="sync-entry" data-text="день">
+										<div class="range" data-in="00:00:03.97;00:00:04.72"></div>
+									</div>
+									<div class="sync-entry" data-text="днём">
+										<div class="range" data-in="00:00:05.58;00:00:06.43"></div>
+									</div>
+
+									<div class="sync-entry" data-text="вечер">
+										<div class="range" data-in="00:00:07.26;00:00:08.12"></div>
+									</div>
+									<div class="sync-entry" data-text="вечером">
+										<div class="range" data-in="00:00:08.97;00:00:09.98"></div>
+									</div>
+									<div class="sync-entry" data-text="ночь">
+										<div class="range" data-in="00:00:10.78;00:00:11.60"></div>
+									</div>
+									<div class="sync-entry" data-text="ночью">
+										<div class="range" data-in="00:00:12.43;00:00:13.31"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 3 -->
+			<div class="sync-area">
+				<div id="part03" class="card">
+					<div id="part03_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part03_collapse" aria-expanded="true" aria-controls="part03_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Дни недели</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page04/rus-time-03.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part03_collapse" class="collapse" aria-labelledby="part03_head" data-parent="#part03">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="mat-table-base samewidth3 border-light">
+										<tbody>
+											<tr class="caption">
+												<th class="">Какой день?</th>
+												<th class="">Когда?</th>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>понеде́льник</mark><br /><span
+														class="auxtext trans">Monday</span></td>
+												<td class="maintext"><mark>в понеде́льник</mark><br /><span
+														class="auxtext trans">in Monday</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>вто́рник</mark><br /><span
+														class="auxtext trans">Tuesday</span></td>
+												<td class="maintext"><mark>во вто́рник</mark><br /><span
+														class="auxtext trans">in Tuesday</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>среда́</mark><br /><span
+														class="auxtext trans">Wednesday</span></td>
+												<td class="maintext"><mark>в сре́ду</mark><br /><span
+														class="auxtext trans">in Wednesday</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>четве́рг</mark><br /><span
+														class="auxtext trans">Thursday</span></td>
+												<td class="maintext"><mark>в четве́рг</mark><br /><span
+														class="auxtext trans">in Thursday</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>пя́тница</mark><br /><span
+														class="auxtext trans">Friday</span></td>
+												<td class="maintext"><mark>в пя́тницу</mark><br /><span
+														class="auxtext trans">in Friday</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>суббо́та</mark><br /><span
+														class="auxtext trans">Saturday</span></td>
+												<td class="maintext"><mark>в суббо́ту</mark><br /><span
+														class="auxtext trans">in Saturday</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>воскресе́нье</mark><br /><span
+														class="auxtext trans">Sunday</span></td>
+												<td class="maintext"><mark>в воскресе́нье</mark><br /><span
+														class="auxtext trans">in Sunday</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="понедельник">
+										<div class="range" data-in="00:00:00.57;00:00:01.73"></div>
+									</div>
+									<div class="sync-entry" data-text="в понед">
+										<div class="range" data-in="00:00:02.35;00:00:03.56"></div>
+									</div>
+									<div class="sync-entry" data-text="вторник">
+										<div class="range" data-in="00:00:04.17;00:00:05.11"></div>
+									</div>
+									<div class="sync-entry" data-text="во вторник">
+										<div class="range" data-in="00:00:05.71;00:00:06.80"></div>
+									</div>
+									<div class="sync-entry" data-text="среда">
+										<div class="range" data-in="00:00:07.47;00:00:08.40"></div>
+									</div>
+									<div class="sync-entry" data-text="в среда">
+										<div class="range" data-in="00:00:09.18;00:00:10.10"></div>
+									</div>
+									<div class="sync-entry" data-text="четверг">
+										<div class="range" data-in="00:00:10.77;00:00:11.69"></div>
+									</div>
+									<div class="sync-entry" data-text="в четверг">
+										<div class="range" data-in="00:00:12.25;00:00:13.19"></div>
+									</div>
+									<div class="sync-entry" data-text="пятн">
+										<div class="range" data-in="00:00:13.89;00:00:14.90"></div>
+									</div>
+									<div class="sync-entry" data-text="в пятн">
+										<div class="range" data-in="00:00:15.50;00:00:16.58"></div>
+									</div>
+									<div class="sync-entry" data-text="субб">
+										<div class="range" data-in="00:00:17.07;00:00:18.07"></div>
+									</div>
+									<div class="sync-entry" data-text="в субб">
+										<div class="range" data-in="00:00:18.64;00:00:19.68"></div>
+									</div>
+									<div class="sync-entry" data-text="воскр">
+										<div class="range" data-in="00:00:20.32;00:00:21.52"></div>
+									</div>
+									<div class="sync-entry" data-text="в воскр">
+										<div class="range" data-in="00:00:22.09;00:00:23.39"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 4 -->
+			<div class="sync-area">
+				<div id="part04" class="card">
+					<div id="part04_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part04_collapse" aria-expanded="true" aria-controls="part04_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Месяцы</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page04/rus-time-04.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part04_collapse" class="collapse" aria-labelledby="part04_head" data-parent="#part04">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="mat-table-base samewidth3 border-light">
+										<tbody>
+											<tr class="caption">
+												<th class="">Какой месяц?</th>
+												<th class="">Когда?</th>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>янва́рь</mark><br /><span
+														class="auxtext trans">January</span></td>
+												<td class="maintext"><mark>в январе́</mark><br /><span
+														class="auxtext trans">in January</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>февра́ль</mark><br /><span
+														class="auxtext trans">February</span></td>
+												<td class="maintext"><mark>в феврале́</mark><br /><span
+														class="auxtext trans">in February</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>март</mark><br /><span
+														class="auxtext trans">March</span></td>
+												<td class="maintext"><mark>в ма́рте</mark><br /><span
+														class="auxtext trans">in March</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>апре́ль</mark><br /><span
+														class="auxtext trans">April</span></td>
+												<td class="maintext"><mark>в апре́ле</mark><br /><span
+														class="auxtext trans">in April</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>май</mark><br /><span
+														class="auxtext trans">May</span></td>
+												<td class="maintext"><mark>в ма́е</mark><br /><span
+														class="auxtext trans">in May</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>ию́нь</mark><br /><span
+														class="auxtext trans">June</span></td>
+												<td class="maintext"><mark>в ию́не</mark><br /><span
+														class="auxtext trans">in June</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>ию́ль</mark><br /><span
+														class="auxtext trans">July</span></td>
+												<td class="maintext"><mark>в ию́ле</mark><br /><span
+														class="auxtext trans">in July</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>а́вгуст</mark><br /><span
+														class="auxtext trans">August</span></td>
+												<td class="maintext"><mark>в а́вгусте</mark><br /><span
+														class="auxtext trans">in August</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>сентя́брь</mark><br /><span
+														class="auxtext trans">September</span></td>
+												<td class="maintext"><mark>в сентябре́</mark><br /><span
+														class="auxtext trans">in September</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>октя́брь</mark><br /><span
+														class="auxtext trans">October</span></td>
+												<td class="maintext"><mark>в октябре́</mark><br /><span
+														class="auxtext trans">in October</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>ноя́брь</mark><br /><span
+														class="auxtext trans">November</span></td>
+												<td class="maintext"><mark>в ноябре́</mark><br /><span
+														class="auxtext trans">in November</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>дека́брь</mark><br /><span
+														class="auxtext trans">December</span></td>
+												<td class="maintext"><mark>в декабре́</mark><br /><span
+														class="auxtext trans">in December</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="янв">
+										<div class="range" data-in="00:00:00.44;00:00:01.30"></div>
+									</div>
+									<div class="sync-entry" data-text="в янв">
+										<div class="range" data-in="00:00:01.81;00:00:02.73"></div>
+									</div>
+									<div class="sync-entry" data-text="фев">
+										<div class="range" data-in="00:00:03.41;00:00:04.15"></div>
+									</div>
+									<div class="sync-entry" data-text="в фев">
+										<div class="range" data-in="00:00:04.82;00:00:05.72"></div>
+									</div>
+
+									<div class="sync-entry" data-text="мар">
+										<div class="range" data-in="00:00:06.52;00:00:07.29"></div>
+									</div>
+									<div class="sync-entry" data-text="в мар">
+										<div class="range" data-in="00:00:07.88;00:00:08.79"></div>
+									</div>
+
+									<div class="sync-entry" data-text="апр">
+										<div class="range" data-in="00:00:09.50;00:00:10.29"></div>
+									</div>
+									<div class="sync-entry" data-text="в апр">
+										<div class="range" data-in="00:00:11.04;00:00:12.07"></div>
+									</div>
+
+									<div class="sync-entry" data-text="май">
+										<div class="range" data-in="00:00:12.76;00:00:13.43"></div>
+									</div>
+									<div class="sync-entry" data-text="в май">
+										<div class="range" data-in="00:00:14.04;00:00:14.90"></div>
+									</div>
+
+									<div class="sync-entry" data-text="июнь">
+										<div class="range" data-in="00:00:15.56;00:00:16.29"></div>
+									</div>
+									<div class="sync-entry" data-text="в июнь">
+										<div class="range" data-in="00:00:16.90;00:00:17.90"></div>
+									</div>
+
+									<div class="sync-entry" data-text="июль">
+										<div class="range" data-in="00:00:18.41;00:00:19.16"></div>
+									</div>
+									<div class="sync-entry" data-text="в июль">
+										<div class="range" data-in="00:00:19.85;00:00:20.83"></div>
+									</div>
+
+									<div class="sync-entry" data-text="авг">
+										<div class="range" data-in="00:00:21.58;00:00:22.59"></div>
+									</div>
+									<div class="sync-entry" data-text="в авг">
+										<div class="range" data-in="00:00:23.02;00:00:24.04"></div>
+									</div>
+
+									<div class="sync-entry" data-text="сент">
+										<div class="range" data-in="00:00:24.59;00:00:25.47"></div>
+									</div>
+									<div class="sync-entry" data-text="в сент">
+										<div class="range" data-in="00:00:25.96;00:00:26.93"></div>
+									</div>
+
+									<div class="sync-entry" data-text="окт">
+										<div class="range" data-in="00:00:27.67;00:00:28.51"></div>
+									</div>
+									<div class="sync-entry" data-text="в окт">
+										<div class="range" data-in="00:00:29.08;00:00:29.96"></div>
+									</div>
+
+									<div class="sync-entry" data-text="нояб">
+										<div class="range" data-in="00:00:30.66;00:00:31.50"></div>
+									</div>
+									<div class="sync-entry" data-text="в нояб">
+										<div class="range" data-in="00:00:32.09;00:00:32.92"></div>
+									</div>
+									<div class="sync-entry" data-text="дек">
+										<div class="range" data-in="00:00:33.80;00:00:34.59"></div>
+									</div>
+									<div class="sync-entry" data-text="в дек">
+										<div class="range" data-in="00:00:35.09;00:00:35.97"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Раздел 5 -->
+			<div class="sync-area">
+				<div id="part05" class="card">
+					<div id="part05_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part05_collapse" aria-expanded="true" aria-controls="part05_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Время года</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page04/rus-time-05.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part05_collapse" class="collapse" aria-labelledby="part05_head" data-parent="#part05">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="mat-table-base samewidth3 border-light">
+										<tbody>
+											<tr class="caption">
+												<th class="">Что?</th>
+												<th class="">Когда?</th>
+											</tr>
+
+											<tr class="text-center">
+												<td class="maintext"><mark>зима́</mark><br /><span
+														class="auxtext trans">winter</span></td>
+												<td class="maintext"><mark>зимо́й</mark><br /><span
+														class="auxtext trans">in winter</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>весна́</mark><br /><span
+														class="auxtext trans">spring</span></td>
+												<td class="maintext"><mark>весно́й</mark><br /><span
+														class="auxtext trans">in spring</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>ле́то</mark><br /><span
+														class="auxtext trans">summer</span></td>
+												<td class="maintext"><mark>ле́том</mark><br /><span
+														class="auxtext trans">in summer</span></td>
+											</tr>
+											<tr class="text-center">
+												<td class="maintext"><mark>о́сень</mark><br /><span
+														class="auxtext trans">autumn</span></td>
+												<td class="maintext"><mark>о́сенью</mark><br /><span
+														class="auxtext trans">in autumn</span></td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="зима">
+										<div class="range" data-in="00:00:00.69;00:00:01.64"></div>
+									</div>
+									<div class="sync-entry" data-text="зимой">
+										<div class="range" data-in="00:00:02.19;00:00:03.03"></div>
+									</div>
+									<div class="sync-entry" data-text="весна">
+										<div class="range" data-in="00:00:03.64;00:00:04.68"></div>
+									</div>
+									<div class="sync-entry" data-text="весной">
+										<div class="range" data-in="00:00:05.38;00:00:06.29"></div>
+									</div>
+
+									<div class="sync-entry" data-text="лето">
+										<div class="range" data-in="00:00:07.11;00:00:08.03"></div>
+									</div>
+									<div class="sync-entry" data-text="летом">
+										<div class="range" data-in="00:00:08.78;00:00:09.61"></div>
+									</div>
+									<div class="sync-entry" data-text="осень">
+										<div class="range" data-in="00:00:10.32;00:00:11.26"></div>
+									</div>
+									<div class="sync-entry" data-text="осенью">
+										<div class="range" data-in="00:00:11.75;00:00:12.67"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <div class="prompt-once">
+				<button id="close" type="button" class="btn btn-outline-primary btn-sm" style="position: absolute;left:auto;top:4px;right:5px;">&times;</button>				
+				<img src="./res/images/double-tap.svg" style="width:96px;height:96px;" />
+				<div class="h5 mt-1" style="max-width:450px;text-align: justify;">Выде&shy;ле&shy;ние и прос&shy;лу&shy;ши&shy;ва&shy;ние
+					фраг&shy;мен&shy;тов тек&shy;ста вы&shy;пол&shy;ня&shy;ет&shy;ся по двой&shy;но&shy;му кли&shy;ку</div>
+			</div> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

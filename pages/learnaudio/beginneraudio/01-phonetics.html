@@ -1,0 +1,2250 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+	<style>
+		/* До создания специализированных классов для синх. диалогов, будем временно вот так корректировать */
+		#pagePhonetics .page-body .sync-area .card-body {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		/* BGN Colors  */
+		#pagePhonetics .vowel {
+			color: darkred;
+		}
+
+		#pagePhonetics .consonant {
+			color: #1c1cf0;
+		}
+
+		#pagePhonetics .sign {
+			color: darkgreen;
+		}
+
+		/* END Colors  */
+
+
+		/* BGN Alphabet  */
+		#pagePhonetics #tblAlphabet {
+			width: auto;
+			border-collapse: separate;
+			border-spacing: 4px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		#pagePhonetics #tblAlphabet td {
+			padding: 0px;
+		}
+
+		#pagePhonetics #tblAlphabet .box {
+			position: relative;
+			display: table-cell;
+			vertical-align: middle;
+			width: 9em;
+			height: 6em;
+			overflow: hidden;
+			background-color: rgb(252, 252, 208);
+		}
+
+
+
+		#pagePhonetics #tblAlphabet .box.vowel {
+			border: darkred 2px solid;
+		}
+
+		#pagePhonetics #tblAlphabet .box.vowel mark {
+			color: darkred;
+		}
+
+		#pagePhonetics #tblAlphabet .box.consonant {
+			border: #1c1cf0 2px solid;
+		}
+
+		#pagePhonetics #tblAlphabet .box.consonant mark {
+			color: #1c1cf0;
+		}
+
+		#pagePhonetics #tblAlphabet .box.sign {
+			border: darkgreen 2px solid;
+		}
+
+		#pagePhonetics #tblAlphabet .box.sign mark {
+			color: darkgreen;
+		}
+
+		#pagePhonetics #tblAlphabet .box .letter {
+			font-size: 1.9rem;
+			line-height: 1.9rem;
+			font-weight: bold;
+			margin-top: 20px;
+		}
+
+		#pagePhonetics #tblAlphabet .box .pron {
+			position: absolute;
+			top: 4px;
+			right: 4px;
+			bottom: auto;
+			left: auto;
+			font-weight: 500;
+			font-size: 1.4rem;
+			line-height: 1.4rem;
+		}
+
+		/* END Alphabet  */
+
+
+		/* BGN LetterPresn  */
+		#pagePhonetics .mat-table-base.letterpresn {
+			font-size: 1.5rem;
+			font-weight: 500;
+		}
+
+
+		#pagePhonetics .mat-table-base tr.caption th {
+			font-size: 1.2rem;
+			font-weight: 400;
+		}
+
+		/* END LetterPresn  */
+
+
+		#pagePhonetics .slog-caption {
+			font-size: 1.2rem;
+		}
+
+		#pagePhonetics .slog-caption span {
+			font-size: 1.6rem;
+			padding: 0.1rem 0.5rem;
+			background-color: lightgray;
+			font-weight: bold;
+		}
+
+		/* BGN === Adaptive === */
+
+		@media screen and (orientation:portrait) {
+			#pagePhonetics .page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			#pagePhonetics .page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			#pagePhonetics .audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			#pagePhonetics .card .dlg-caption {
+				font-size: 1.5rem;
+			}
+
+		}
+
+		@media screen and (min-width: 576px) {
+
+			/* BEGIN Enlarge Alphabet */
+			#pagePhonetics #tblAlphabet .box {
+				height: 7em;
+			}
+
+			#pagePhonetics #tblAlphabet .box .letter {
+				font-size: 2.3rem;
+				line-height: 2.3rem;
+			}
+
+			#pagePhonetics #tblAlphabet .box .pron {
+				font-size: 1.6rem;
+				line-height: 1.6rem;
+			}
+
+			/* END Enlarge Alphabet */
+
+		}
+
+		@media screen and (min-width: 768px) {}
+
+		@media screen and (min-width: 992px) {
+
+			/* BEGIN Enlarge Alphabet */
+			#pagePhonetics #tblAlphabet .box {
+				height: 8em;
+			}
+
+			#pagePhonetics #tblAlphabet .box .letter {
+				font-size: 3rem;
+				line-height: 3rem;
+			}
+
+			#pagePhonetics #tblAlphabet .box .pron {
+				font-size: 1.9rem;
+				line-height: 1.9rem;
+			}
+
+			/* END Enlarge Alphabet */
+
+			#pagePhonetics .mat-table-base.letterpresn {
+				font-size: 1.7rem;
+			}
+
+			#pagePhonetics .slog-caption {
+				font-size: 1.3rem;
+			}
+
+			#pagePhonetics .slog-caption span {
+				font-size: 1.8rem;
+				padding: 0.1rem 0.5rem;
+				background-color: lightgray;
+				font-weight: bold;
+			}
+
+		}
+
+		@media screen and (min-width: 1200px) {
+
+			/* BEGIN Enlarge Alphabet */
+			#pagePhonetics #tblAlphabet .box {
+				height: 9em;
+			}
+
+			#pagePhonetics #tblAlphabet .box .letter {
+				font-size: 3.5rem;
+				line-height: 3.5rem;
+			}
+
+			#pagePhonetics #tblAlphabet .box .pron {
+				font-size: 2.3rem;
+				line-height: 2.3rem;
+			}
+
+			/* END Enlarge Alphabet */
+
+			#pagePhonetics .mat-table-base.letterpresn {
+				font-size: 1.8rem;
+			}
+
+		}
+
+		/* END === Adaptive === */
+	</style>
+</head>
+
+<body>
+	<div id="pagePhonetics" class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h4 class="my-3 page-title">1. ФОНЕТИКА</h4>
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Алфавит -->
+			<div class="sync-area" data-autoscroll="true">
+				<div id="part01" class="card">
+					<div id="part01_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part01_collapse" aria-expanded="true" aria-controls="part01_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Алфавит. Буквы и звуки</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-alph.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part01_collapse" class="collapse" aria-labelledby="part01_head" data-parent="#part01">
+						<div class="card-body">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table id="tblAlphabet" class="table mat-table text-center">
+										<tbody>
+											<tr>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>Аа</mark></div>
+														<div class="pron"><mark>[а]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Кк</mark></div>
+														<div class="pron"><mark>[к]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Хх</mark></div>
+														<div class="pron"><mark>[х]</mark></div>
+													</div>
+
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Бб</mark></div>
+														<div class="pron"><mark>[б]</mark></div>
+													</div>
+
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Лл</mark></div>
+														<div class="pron"><mark>[л]</mark></div>
+													</div>
+
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Цц</mark></div>
+														<div class="pron"><mark>[ц]</mark></div>
+													</div>
+
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Вв</mark></div>
+														<div class="pron"><mark>[в]</mark></div>
+													</div>
+
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Мм</mark></div>
+														<div class="pron"><mark>[м]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Чч</mark></div>
+														<div class="pron"><mark>[ч]</mark></div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Гг</mark></div>
+														<div class="pron"><mark>[г]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Нн</mark></div>
+														<div class="pron"><mark>[н]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Шш</mark></div>
+														<div class="pron"><mark>[ш]</mark></div>
+													</div>
+
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Дд</mark></div>
+														<div class="pron"><mark>[д]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>Оо</mark></div>
+														<div class="pron"><mark>[о]</mark></div>
+													</div>
+
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Щщ</mark></div>
+														<div class="pron"><mark>[щ]</mark></div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>Ее</mark></div>
+														<div class="pron"><mark>[йэ]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Пп</mark></div>
+														<div class="pron"><mark>[п]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box sign">
+														<div class="letter"><mark>ъ</mark></div>
+														<div class="pron"></div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>Ёё</mark></div>
+														<div class="pron"><mark>[йо]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Рр</mark></div>
+														<div class="pron"><mark>[р]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>ы</mark></div>
+														<div class="pron"><mark>[ы]</mark></div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Жж</mark></div>
+														<div class="pron"><mark>[ж]</mark></div>
+													</div>
+
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Сс</mark></div>
+														<div class="pron"><mark>[с]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box sign">
+														<div class="letter"><mark>ь</mark></div>
+														<div class="pron"></div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Зз</mark></div>
+														<div class="pron"><mark>[з]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Тт</mark></div>
+														<div class="pron"><mark>[т]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>Ээ</mark></div>
+														<div class="pron"><mark>[э]</mark></div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>Ии</mark></div>
+														<div class="pron"><mark>[и]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>Уу</mark></div>
+														<div class="pron"><mark>[у]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>Юю</mark></div>
+														<div class="pron"><mark>[йу]</mark></div>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Йй</mark></div>
+														<div class="pron"><mark>[й]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box consonant">
+														<div class="letter"><mark>Фф</mark></div>
+														<div class="pron"><mark>[ф]</mark></div>
+													</div>
+												</td>
+												<td>
+													<div class="box vowel">
+														<div class="letter"><mark>Яя</mark></div>
+														<div class="pron"><mark>[йа]</mark></div>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+								</div>
+								<div class="sync-info">
+									<!-- Row 1 -->
+									<div class="sync-entry" data-text="А">
+										<div class="range" data-in="00:00:13.30;00:00:14.02"></div>
+									</div>
+									<div class="sync-entry" data-text="[А]">
+										<div class="range" data-in="00:00:14.55;00:00:15.02"></div>
+									</div>
+
+									<div class="sync-entry" data-text="К">
+										<div class="range" data-in="00:00:46.88;00:00:47.63"></div>
+									</div>
+									<div class="sync-entry" data-text="[К]">
+										<div class="range" data-in="00:00:48.17;00:00:48.69"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Х">
+										<div class="range" data-in="00:01:17.37;00:01:18.17"></div>
+									</div>
+									<div class="sync-entry" data-text="[Х]">
+										<div class="range" data-in="00:01:18.62;00:01:19.25"></div>
+									</div>
+
+									<!-- Row 2 -->
+									<div class="sync-entry" data-text="Б">
+										<div class="range" data-in="00:00:16.25;00:00:17.05"></div>
+									</div>
+									<div class="sync-entry" data-text="[Б]">
+										<div class="range" data-in="00:00:17.51;00:00:18.15"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Л">
+										<div class="range" data-in="00:00:49.73;00:00:50.43"></div>
+									</div>
+									<div class="sync-entry" data-text="[Л]">
+										<div class="range" data-in="00:00:51.00;00:00:51.57"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ц">
+										<div class="range" data-in="00:01:20.16;00:01:20.91"></div>
+									</div>
+									<div class="sync-entry" data-text="[Ц]">
+										<div class="range" data-in="00:01:21.29;00:01:21.81"></div>
+									</div>
+
+									<!-- Row 3 -->
+									<div class="sync-entry" data-text="В">
+										<div class="range" data-in="00:00:19.21;00:00:20.10"></div>
+									</div>
+									<div class="sync-entry" data-text="[В]">
+										<div class="range" data-in="00:00:20.60;00:00:21.27"></div>
+									</div>
+
+									<div class="sync-entry" data-text="М">
+										<div class="range" data-in="00:00:52.59;00:00:53.27"></div>
+									</div>
+									<div class="sync-entry" data-text="[М]">
+										<div class="range" data-in="00:00:53.75;00:00:54.34"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ч">
+										<div class="range" data-in="00:01:23.09;00:01:23.85"></div>
+									</div>
+									<div class="sync-entry" data-text="[Ч]">
+										<div class="range" data-in="00:01:24.53;00:01:25.04"></div>
+									</div>
+
+									<!-- Row 4 -->
+									<div class="sync-entry" data-text="Г">
+										<div class="range" data-in="00:00:22.12;00:00:23.06"></div>
+									</div>
+									<div class="sync-entry" data-text="[Г]">
+										<div class="range" data-in="00:00:23.52;00:00:24.15"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Н">
+										<div class="range" data-in="00:00:55.25;00:00:55.99"></div>
+									</div>
+									<div class="sync-entry" data-text="[Н]">
+										<div class="range" data-in="00:00:56.57;00:00:57.19"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ш">
+										<div class="range" data-in="00:01:26.08;00:01:26.92"></div>
+									</div>
+									<div class="sync-entry" data-text="[Ш]">
+										<div class="range" data-in="00:01:27.50;00:01:28.05"></div>
+									</div>
+
+									<!-- Row 5 -->
+									<div class="sync-entry" data-text="Д">
+										<div class="range" data-in="00:00:25.17;00:00:26.02"></div>
+									</div>
+									<div class="sync-entry" data-text="[Д]">
+										<div class="range" data-in="00:00:26.52;00:00:27.14"></div>
+									</div>
+
+									<div class="sync-entry" data-text="О">
+										<div class="range" data-in="00:00:58.18;00:00:58.90"></div>
+									</div>
+									<div class="sync-entry" data-text="[О]">
+										<div class="range" data-in="00:00:59.37;00:01:00.00"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Щ">
+										<div class="range" data-in="00:01:29.23;00:01:30.14"></div>
+									</div>
+									<div class="sync-entry" data-text="[Щ]">
+										<div class="range" data-in="00:01:30.66;00:01:31.33"></div>
+									</div>
+
+									<!-- Row 6 -->
+									<div class="sync-entry" data-text="Е">
+										<div class="range" data-in="00:00:28.31;00:00:29.22"></div>
+									</div>
+									<div class="sync-entry" data-text="[Е]">
+										<div class="range" data-in="00:00:29.79;00:00:30.45"></div>
+									</div>
+
+									<div class="sync-entry" data-text="П">
+										<div class="range" data-in="00:01:00.70;00:01:01.60"></div>
+									</div>
+									<div class="sync-entry" data-text="[П]">
+										<div class="range" data-in="00:01:02.06;00:01:02.64"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ъ">
+										<div class="range" data-in="00:01:32.35;00:01:33.52"></div>
+									</div>
+
+									<!-- Row 7 -->
+									<div class="sync-entry" data-text="Ё">
+										<div class="range" data-in="00:00:31.33;00:00:32.31"></div>
+									</div>
+									<div class="sync-entry" data-text="[Ё]">
+										<div class="range" data-in="00:00:32.78;00:00:33.43"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Р">
+										<div class="range" data-in="00:01:03.38;00:01:04.05"></div>
+									</div>
+									<div class="sync-entry" data-text="[Р]">
+										<div class="range" data-in="00:01:04.54;00:01:05.11"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ы">
+										<div class="range" data-in="00:01:34.77;00:01:35.45"></div>
+									</div>
+									<div class="sync-entry" data-text="[Ы]">
+										<div class="range" data-in="00:01:36.07;00:01:36.73"></div>
+									</div>
+
+									<!-- Row 8 -->
+									<div class="sync-entry" data-text="Ж">
+										<div class="range" data-in="00:00:34.47;00:00:35.37"></div>
+									</div>
+									<div class="sync-entry" data-text="[Ж]">
+										<div class="range" data-in="00:00:35.90;00:00:36.45"></div>
+									</div>
+
+									<div class="sync-entry" data-text="С">
+										<div class="range" data-in="00:01:05.97;00:01:06.63"></div>
+									</div>
+									<div class="sync-entry" data-text="[С]">
+										<div class="range" data-in="00:01:07.07;00:01:07.66"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ь">
+										<div class="range" data-in="00:01:37.88;00:01:39.06"></div>
+									</div>
+
+									<!-- Row 9 -->
+									<div class="sync-entry" data-text="З">
+										<div class="range" data-in="00:00:37.46;00:00:38.29"></div>
+									</div>
+									<div class="sync-entry" data-text="[З]">
+										<div class="range" data-in="00:00:38.84;00:00:39.47"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Т">
+										<div class="range" data-in="00:01:08.68;00:01:09.34"></div>
+									</div>
+									<div class="sync-entry" data-text="[Т]">
+										<div class="range" data-in="00:01:09.86;00:01:10.31"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Э">
+										<div class="range" data-in="00:01:40.07;00:01:40.81"></div>
+									</div>
+									<div class="sync-entry" data-text="[Э]">
+										<div class="range" data-in="00:01:41.45;00:01:42.12"></div>
+									</div>
+
+									<!-- Row 10 -->
+									<div class="sync-entry" data-text="И">
+										<div class="range" data-in="00:00:40.44;00:00:41.15"></div>
+									</div>
+									<div class="sync-entry" data-text="[И]">
+										<div class="range" data-in="00:00:41.58;00:00:42.28"></div>
+									</div>
+
+									<div class="sync-entry" data-text="У">
+										<div class="range" data-in="00:01:11.23;00:01:11.94"></div>
+									</div>
+									<div class="sync-entry" data-text="[У]">
+										<div class="range" data-in="00:01:12.49;00:01:13.11"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ю">
+										<div class="range" data-in="00:01:42.93;00:01:43.77"></div>
+									</div>
+									<div class="sync-entry" data-text="[Ю]">
+										<div class="range" data-in="00:01:44.40;00:01:45.14"></div>
+									</div>
+
+									<!-- Row 11 -->
+									<div class="sync-entry" data-text="Й">
+										<div class="range" data-in="00:00:43.17;00:00:44.42"></div>
+									</div>
+									<div class="sync-entry" data-text="[Й]">
+										<div class="range" data-in="00:00:44.97;00:00:45.53"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ф">
+										<div class="range" data-in="00:01:14.20;00:01:14.97"></div>
+									</div>
+									<div class="sync-entry" data-text="[Ф]">
+										<div class="range" data-in="00:01:15.53;00:01:16.12"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Я">
+										<div class="range" data-in="00:01:46.19;00:01:46.89"></div>
+									</div>
+									<div class="sync-entry" data-text="[Я]">
+										<div class="range" data-in="00:01:47.57;00:01:48.26"></div>
+									</div>
+
+								</div> <!-- END sync-info -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Гласные -->
+			<div class="sync-area">
+				<div id="part02" class="card">
+					<div id="part02_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part02_collapse" aria-expanded="true" aria-controls="part02_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Гласные</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-vowels.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part02_collapse" class="collapse" aria-labelledby="part02_head" data-parent="#part02">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td>а<mark class="vowel">[а]</mark></td>
+												<td>я<mark class="vowel">[йа]</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td>о<mark class="vowel">[о]</mark></td>
+												<td>ё<mark class="vowel">[йо]</mark></td>
+											</tr>
+											<!--  -->
+											<tr class="text-center">
+												<td>у<mark class="vowel">[у]</mark></td>
+												<td>ю<mark class="vowel">[йу]</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td>э<mark class="vowel">[э]</mark></td>
+												<td>е<mark class="vowel">[йэ]</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td>ы<mark class="vowel">[ы]</mark></td>
+												<td>и<mark class="vowel">[и]</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="А">
+										<div class="range" data-in="00:00:02.03;00:00:02.80"></div>
+									</div>
+									<div class="sync-entry" data-text="Я">
+										<div class="range" data-in="00:00:03.35;00:00:04.14"></div>
+									</div>
+									<div class="sync-entry" data-text="О">
+										<div class="range" data-in="00:00:05.05;00:00:05.85"></div>
+									</div>
+									<div class="sync-entry" data-text="Ё">
+										<div class="range" data-in="00:00:06.38;00:00:07.07"></div>
+									</div>
+									<div class="sync-entry" data-text="У">
+										<div class="range" data-in="00:00:08.16;00:00:09.02"></div>
+									</div>
+									<div class="sync-entry" data-text="Ю">
+										<div class="range" data-in="00:00:09.67;00:00:10.44"></div>
+									</div>
+									<div class="sync-entry" data-text="Э">
+										<div class="range" data-in="00:00:11.51;00:00:12.40"></div>
+									</div>
+									<div class="sync-entry" data-text="Е">
+										<div class="range" data-in="00:00:12.97;00:00:13.74"></div>
+									</div>
+									<div class="sync-entry" data-text="Ы">
+										<div class="range" data-in="00:00:14.72;00:00:15.61"></div>
+									</div>
+									<div class="sync-entry" data-text="И">
+										<div class="range" data-in="00:00:16.20;00:00:17.01"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BGN Согласные -->
+			<div class="sync-area">
+				<div id="part03" class="card">
+					<div id="part03_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part03_collapse" aria-expanded="true" aria-controls="part03_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h2 class="text-primary ml-3 dlg-caption">Согласные</h2>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-consonants.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part03_collapse" class="collapse" aria-labelledby="part03_head" data-parent="#part03">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base samewidth4 letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="caption">
+												<th colspan="2">парные</th>
+												<th colspan="2">непарные</th>
+											</tr>
+											<tr class="caption">
+												<th>звонкие</th>
+												<th>глухие</th>
+												<th>звонкие</th>
+												<th>глухие</th>
+											</tr>
+
+											<tr class="text-center">
+												<td>б<mark class="consonant">[б]</mark></td>
+												<td>п<mark class="consonant">[п]</mark></td>
+												<td>л<mark class="consonant">[л]</mark></td>
+												<td>х<mark class="consonant">[х]</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td>в<mark class="consonant">[в]</mark></td>
+												<td>ф<mark class="consonant">[ф]</mark></td>
+												<td>м<mark class="consonant">[м]</mark></td>
+												<td>ц<mark class="consonant">[ц]</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td>г<mark class="consonant">[г]</mark></td>
+												<td>к<mark class="consonant">[к]</mark></td>
+												<td>н<mark class="consonant">[н]</mark></td>
+												<td>ч<mark class="consonant">[ч]</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td>д<mark class="consonant">[д]</mark></td>
+												<td>т<mark class="consonant">[т]</mark></td>
+												<td>р<mark class="consonant">[р]</mark></td>
+												<td>щ<mark class="consonant">[щ]</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td>з<mark class="consonant">[з]</mark></td>
+												<td>с<mark class="consonant">[с]</mark></td>
+												<td>й<mark class="consonant">[й]</mark></td>
+												<td></td>
+											</tr>
+											<tr class="text-center">
+												<td>ж<mark class="consonant">[ж]</mark></td>
+												<td>ш<mark class="consonant">[ш]</mark></td>
+												<td></td>
+												<td></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="Б">
+										<div class="range" data-in="00:00:02.69;00:00:03.34"></div>
+									</div>
+									<div class="sync-entry" data-text="П">
+										<div class="range" data-in="00:00:04.01;00:00:04.51"></div>
+									</div>
+									<div class="sync-entry" data-text="Л">
+										<div class="range" data-in="00:00:18.17;00:00:18.79"></div>
+									</div>
+									<div class="sync-entry" data-text="Х">
+										<div class="range" data-in="00:00:24.70;00:00:25.32"></div>
+									</div>
+
+									<div class="sync-entry" data-text="В">
+										<div class="range" data-in="00:00:05.44;00:00:06.11"></div>
+									</div>
+									<div class="sync-entry" data-text="Ф">
+										<div class="range" data-in="00:00:06.66;00:00:07.29"></div>
+									</div>
+									<div class="sync-entry" data-text="М">
+										<div class="range" data-in="00:00:19.61;00:00:20.23"></div>
+									</div>
+									<div class="sync-entry" data-text="Ц">
+										<div class="range" data-in="00:00:26.02;00:00:26.58"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Г">
+										<div class="range" data-in="00:00:08.13;00:00:08.77"></div>
+									</div>
+									<div class="sync-entry" data-text="К">
+										<div class="range" data-in="00:00:09.39;00:00:09.90"></div>
+									</div>
+									<div class="sync-entry" data-text="Н">
+										<div class="range" data-in="00:00:20.90;00:00:21.54"></div>
+									</div>
+									<div class="sync-entry" data-text="Ч">
+										<div class="range" data-in="00:00:27.38;00:00:27.93"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Д">
+										<div class="range" data-in="00:00:10.56;00:00:11.24"></div>
+									</div>
+									<div class="sync-entry" data-text="Т">
+										<div class="range" data-in="00:00:11.80;00:00:12.25"></div>
+									</div>
+									<div class="sync-entry" data-text="Р">
+										<div class="range" data-in="00:00:22.25;00:00:22.85"></div>
+									</div>
+									<div class="sync-entry" data-text="Щ">
+										<div class="range" data-in="00:00:28.52;00:00:29.22"></div>
+									</div>
+
+									<div class="sync-entry" data-text="З">
+										<div class="range" data-in="00:00:13.02;00:00:13.68"></div>
+									</div>
+									<div class="sync-entry" data-text="С">
+										<div class="range" data-in="00:00:14.16;00:00:14.89"></div>
+									</div>
+									<div class="sync-entry" data-text="Й">
+										<div class="range" data-in="00:00:23.32;00:00:24.07"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Ж">
+										<div class="range" data-in="00:00:15.56;00:00:16.22"></div>
+									</div>
+									<div class="sync-entry" data-text="Ш">
+										<div class="range" data-in="00:00:16.70;00:00:17.27"></div>
+									</div>
+								</div>
+							</div>
+
+							<div class="py-3 app-separator"></div>
+
+							<div
+								style="display: flex;flex-direction: row;align-items: center;  margin-left: auto;margin-right: auto;width:fit-content;">
+								<span class="display-2">!</span>
+								<table class="fixed mat-table-base letterpresn"
+									style="margin-left: auto;margin-right: auto;width:auto;">
+									<tbody>
+										<tr class="caption">
+											<th>всегда твёрдые</th>
+											<th>всегда мягкие</th>
+										</tr>
+										<tr class="text-center">
+											<td>ж<span class="consonant">[ж]</span></td>
+											<td>ч<span class="consonant">[ч]</span></td>
+										</tr>
+										<tr class="text-center">
+											<td>ш<span class="consonant">[ш]</span></td>
+											<td>щ<span class="consonant">[щ]</span></td>
+										</tr>
+										<tr class="text-center">
+											<td>ц<span class="consonant">[ц]</span></td>
+											<td>й<span class="consonant">[й]</span></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+
+			<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+			<!-- BGN СЛОГИ -->
+
+
+			<div class="mx-auto mt-4 px-3 py-3 text-center caption-bkg">
+				<h3 class="text-primary">СЛОГИ</h3>
+				<h6 class="text-primary">Слушайте. Повторяйте. Читайте</h6>
+			</div>
+
+
+			<!-- ============================================================ -->
+			<!-- BEGIN М -->
+			<div class="sync-area">
+				<div id="part04" class="card">
+					<div id="part04_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part04_collapse" aria-expanded="true" aria-controls="part04_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>м</span> твёрдый и мягкий</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-01.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part04_collapse" class="collapse" aria-labelledby="part04_head" data-parent="#part04">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">ма – мя</mark></td>
+												<td><mark class="consonant">ам – ям</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">мо – мё</mark></td>
+												<td><mark class="consonant">ом – ём</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">му – мю</mark></td>
+												<td><mark class="consonant">ум – юм</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">мэ – ме</mark></td>
+												<td><mark class="consonant">эм – ем</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">мы – ми</mark></td>
+												<td><mark class="consonant">ым – им</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="Ма-Мя">
+										<div class="range" data-in="00:00:00.30;00:00:02.27"></div>
+									</div>
+									<div class="sync-entry" data-text="АМ-ЯМ">
+										<div class="range" data-in="00:00:14.90;00:00:16.80"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Мо-Мё">
+										<div class="range" data-in="00:00:03.08;00:00:05.08"></div>
+									</div>
+									<div class="sync-entry" data-text="ОМ-ЁМ">
+										<div class="range" data-in="00:00:17.44;00:00:19.40"></div>
+									</div>
+
+									<div class="sync-entry" data-text="Му-Мю">
+										<div class="range" data-in="00:00:05.91;00:00:08.03"></div>
+									</div>
+									<div class="sync-entry" data-text="УМ-ЮМ">
+										<div class="range" data-in="00:00:20.05;00:00:22.09"></div>
+									</div>
+
+									<div class="sync-entry" data-text="МЭ-МЕ">
+										<div class="range" data-in="00:00:08.83;00:00:11.09"></div>
+									</div>
+									<div class="sync-entry" data-text="ЭМ-ЕМ">
+										<div class="range" data-in="00:00:22.64;00:00:24.56"></div>
+									</div>
+
+									<div class="sync-entry" data-text="МЫ-МИ">
+										<div class="range" data-in="00:00:11.77;00:00:14.03"></div>
+									</div>
+									<div class="sync-entry" data-text="ЫМ-ИМ">
+										<div class="range" data-in="00:00:25.17;00:00:27.08"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- ============================================================ -->
+			<!-- BEGIN Н -->
+			<div class="sync-area">
+				<div id="part05" class="card">
+					<div id="part05_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part05_collapse" aria-expanded="true" aria-controls="part05_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>н</span> твёрдый и мягкий</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-02.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part05_collapse" class="collapse" aria-labelledby="part05_head" data-parent="#part05">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">на – ня</mark></td>
+												<td><mark class="consonant">ан – ян</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">но – нё</mark></td>
+												<td><mark class="consonant">он – ён</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ну – ню</mark></td>
+												<td><mark class="consonant">ун – юн</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">нэ – не</mark></td>
+												<td><mark class="consonant">эн – ен</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ны – ни</mark></td>
+												<td><mark class="consonant">ын – ин</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="на-ня">
+										<div class="range" data-in="00:00:00.50;00:00:02.49"></div>
+									</div>
+									<div class="sync-entry" data-text="ан-ян">
+										<div class="range" data-in="00:00:13.81;00:00:15.69"></div>
+									</div>
+
+									<div class="sync-entry" data-text="но-нё">
+										<div class="range" data-in="00:00:03.01;00:00:05.11"></div>
+									</div>
+									<div class="sync-entry" data-text="он-ён">
+										<div class="range" data-in="00:00:16.36;00:00:18.24"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ну-ню">
+										<div class="range" data-in="00:00:05.74;00:00:07.84"></div>
+									</div>
+									<div class="sync-entry" data-text="ун-юн">
+										<div class="range" data-in="00:00:18.94;00:00:20.86"></div>
+									</div>
+
+									<div class="sync-entry" data-text="нэ-не">
+										<div class="range" data-in="00:00:08.37;00:00:10.42"></div>
+									</div>
+									<div class="sync-entry" data-text="эн-ен">
+										<div class="range" data-in="00:00:21.46;00:00:23.49"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ны-ни">
+										<div class="range" data-in="00:00:11.02;00:00:13.10"></div>
+									</div>
+									<div class="sync-entry" data-text="ын-ин">
+										<div class="range" data-in="00:00:24.09;00:00:26.13"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- ============================================================ -->
+			<!-- BEGIN Л -->
+			<div class="sync-area">
+				<div id="part06" class="card">
+					<div id="part06_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part06_collapse" aria-expanded="true" aria-controls="part06_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>л</span> твёрдый и мягкий</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-03.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part06_collapse" class="collapse" aria-labelledby="part06_head" data-parent="#part06">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">ла – ля</mark></td>
+												<td><mark class="consonant">ал – ял</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ло – лё</mark></td>
+												<td><mark class="consonant">ол – ёл</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">лу – лю</mark></td>
+												<td><mark class="consonant">ул – юл</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">лэ – ле</mark></td>
+												<td><mark class="consonant">эл – ел</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">лы – ли</mark></td>
+												<td><mark class="consonant">ыл – ил</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="ла-ля">
+										<div class="range" data-in="00:00:00.70;00:00:02.38"></div>
+									</div>
+									<div class="sync-entry" data-text="ал-ял">
+										<div class="range" data-in="00:00:12.23;00:00:13.79"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ло-лё">
+										<div class="range" data-in="00:00:02.90;00:00:04.51"></div>
+									</div>
+									<div class="sync-entry" data-text="ол-ёл">
+										<div class="range" data-in="00:00:14.27;00:00:15.95"></div>
+									</div>
+
+									<div class="sync-entry" data-text="лу-лю">
+										<div class="range" data-in="00:00:05.07;00:00:06.83"></div>
+									</div>
+									<div class="sync-entry" data-text="ул-юл">
+										<div class="range" data-in="00:00:16.48;00:00:18.10"></div>
+									</div>
+
+									<div class="sync-entry" data-text="лэ-ле">
+										<div class="range" data-in="00:00:07.35;00:00:09.20"></div>
+									</div>
+									<div class="sync-entry" data-text="эл-ел">
+										<div class="range" data-in="00:00:18.71;00:00:20.42"></div>
+									</div>
+
+									<div class="sync-entry" data-text="лы-ли">
+										<div class="range" data-in="00:00:09.68;00:00:11.49"></div>
+									</div>
+									<div class="sync-entry" data-text="ыл-ил">
+										<div class="range" data-in="00:00:21.08;00:00:22.67"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- ============================================================ -->
+			<!-- BEGIN Р -->
+			<div class="sync-area">
+				<div id="part07" class="card">
+					<div id="part07_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part07_collapse" aria-expanded="true" aria-controls="part07_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>р</span> твёрдый и мягкий</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-04.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part07_collapse" class="collapse" aria-labelledby="part07_head" data-parent="#part07">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">ра – ря</mark></td>
+												<td><mark class="consonant">бра – бря</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ро – рё</mark></td>
+												<td><mark class="consonant">бро – брё</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ру – рю</mark></td>
+												<td><mark class="consonant">бру – брю</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">рэ – ре</mark></td>
+												<td><mark class="consonant">брэ – бре</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ры – ри</mark></td>
+												<td><mark class="consonant">бры – бри</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="ра-ря">
+										<div class="range" data-in="00:00:00.30;00:00:01.93"></div>
+									</div>
+									<div class="sync-entry" data-text="бра-бря">
+										<div class="range" data-in="00:00:12.20;00:00:14.00"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ро-рё">
+										<div class="range" data-in="00:00:02.50;00:00:04.18"></div>
+									</div>
+									<div class="sync-entry" data-text="бро-брё">
+										<div class="range" data-in="00:00:14.39;00:00:16.30"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ру-рю">
+										<div class="range" data-in="00:00:04.74;00:00:06.63"></div>
+									</div>
+									<div class="sync-entry" data-text="бру-брю">
+										<div class="range" data-in="00:00:16.73;00:00:18.65"></div>
+									</div>
+
+									<div class="sync-entry" data-text="рэ-ре">
+										<div class="range" data-in="00:00:07.09;00:00:08.94"></div>
+									</div>
+									<div class="sync-entry" data-text="брэ-бре">
+										<div class="range" data-in="00:00:19.03;00:00:20.86"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ры-ри">
+										<div class="range" data-in="00:00:09.47;00:00:11.42"></div>
+									</div>
+									<div class="sync-entry" data-text="бры-бри">
+										<div class="range" data-in="00:00:21.20;00:00:22.94"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- ============================================================ -->
+			<!-- BEGIN Б, П -->
+			<div class="sync-area">
+				<div id="part08" class="card">
+					<div id="part08_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part08_collapse" aria-expanded="true" aria-controls="part08_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>б, п</span> твёрдые и мягкие</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-05.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part08_collapse" class="collapse" aria-labelledby="part08_head" data-parent="#part08">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">ба – бя</mark></td>
+												<td><mark class="consonant">па – пя</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">бо – бё</mark></td>
+												<td><mark class="consonant">по – пё</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">бу – бю</mark></td>
+												<td><mark class="consonant">пу – пю</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">бэ – бе</mark></td>
+												<td><mark class="consonant">пэ – пе</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">бы – би</mark></td>
+												<td><mark class="consonant">пы – пи</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="ба-бя">
+										<div class="range" data-in="00:00:00.69;00:00:02.58"></div>
+									</div>
+									<div class="sync-entry" data-text="па-пя">
+										<div class="range" data-in="00:00:12.99;00:00:14.67"></div>
+									</div>
+
+									<div class="sync-entry" data-text="бо-бё">
+										<div class="range" data-in="00:00:03.13;00:00:05.02"></div>
+									</div>
+									<div class="sync-entry" data-text="по-пё">
+										<div class="range" data-in="00:00:15.21;00:00:16.95"></div>
+									</div>
+
+									<div class="sync-entry" data-text="бу-бю">
+										<div class="range" data-in="00:00:05.55;00:00:07.49"></div>
+									</div>
+									<div class="sync-entry" data-text="пу-пю">
+										<div class="range" data-in="00:00:17.43;00:00:19.35"></div>
+									</div>
+
+									<div class="sync-entry" data-text="бэ-бе">
+										<div class="range" data-in="00:00:07.92;00:00:09.90"></div>
+									</div>
+									<div class="sync-entry" data-text="пэ-пе">
+										<div class="range" data-in="00:00:19.88;00:00:21.73"></div>
+									</div>
+
+									<div class="sync-entry" data-text="бы-би">
+										<div class="range" data-in="00:00:10.28;00:00:12.39"></div>
+									</div>
+									<div class="sync-entry" data-text="пы-пи">
+										<div class="range" data-in="00:00:22.28;00:00:24.10"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- ============================================================ -->
+			<!-- BEGIN В, Ф -->
+			<div class="sync-area">
+				<div id="part09" class="card">
+					<div id="part09_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part09_collapse" aria-expanded="true" aria-controls="part09_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>в, ф</span> твёрдые и мягкие</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-06.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part09_collapse" class="collapse" aria-labelledby="part09_head" data-parent="#part09">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">ва – вя</mark></td>
+												<td><mark class="consonant">фа – фя</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">во – вё</mark></td>
+												<td><mark class="consonant">фо – фё</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ву – вю</mark></td>
+												<td><mark class="consonant">фу – фю</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">вэ – ве</mark></td>
+												<td><mark class="consonant">фэ – фе</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">вы – ви</mark></td>
+												<td><mark class="consonant">фы – фи</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="ва-вя">
+										<div class="range" data-in="00:00:00.20;00:00:02.01"></div>
+									</div>
+									<div class="sync-entry" data-text="фа-фя">
+										<div class="range" data-in="00:00:11.97;00:00:13.77"></div>
+									</div>
+
+									<div class="sync-entry" data-text="во-вё">
+										<div class="range" data-in="00:00:02.57;00:00:04.34"></div>
+									</div>
+									<div class="sync-entry" data-text="фо-фё">
+										<div class="range" data-in="00:00:14.18;00:00:16.01"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ву-вю">
+										<div class="range" data-in="00:00:04.80;00:00:06.65"></div>
+									</div>
+									<div class="sync-entry" data-text="фу-фю">
+										<div class="range" data-in="00:00:16.43;00:00:18.33"></div>
+									</div>
+
+									<div class="sync-entry" data-text="вэ-ве">
+										<div class="range" data-in="00:00:07.12;00:00:08.90"></div>
+									</div>
+									<div class="sync-entry" data-text="фэ-фе">
+										<div class="range" data-in="00:00:18.59;00:00:20.35"></div>
+									</div>
+
+									<div class="sync-entry" data-text="вы-ви">
+										<div class="range" data-in="00:00:09.40;00:00:11.32"></div>
+									</div>
+									<div class="sync-entry" data-text="фы-фи">
+										<div class="range" data-in="00:00:20.72;00:00:22.51"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- ============================================================ -->
+			<!-- BEGIN Д, Т -->
+			<div class="sync-area">
+				<div id="part10" class="card">
+					<div id="part10_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part10_collapse" aria-expanded="true" aria-controls="part10_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>д, т</span> твёрдые и мягкие</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-07.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part10_collapse" class="collapse" aria-labelledby="part10_head" data-parent="#part10">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">да – дя</mark></td>
+												<td><mark class="consonant">та – тя</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">до – дё</mark></td>
+												<td><mark class="consonant">то – тё</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ду – дю</mark></td>
+												<td><mark class="consonant">ту – тю</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">дэ – де</mark></td>
+												<td><mark class="consonant">тэ – те</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ды – ди</mark></td>
+												<td><mark class="consonant">ты – ти</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="да-дя">
+										<div class="range" data-in="00:00:00.36;00:00:02.16"></div>
+									</div>
+									<div class="sync-entry" data-text="та-тя">
+										<div class="range" data-in="00:00:11.95;00:00:13.61"></div>
+									</div>
+
+									<div class="sync-entry" data-text="до-дё">
+										<div class="range" data-in="00:00:02.47;00:00:04.32"></div>
+									</div>
+									<div class="sync-entry" data-text="то-тё">
+										<div class="range" data-in="00:00:14.10;00:00:15.88"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ду-дю">
+										<div class="range" data-in="00:00:04.70;00:00:06.58"></div>
+									</div>
+									<div class="sync-entry" data-text="ту-тю">
+										<div class="range" data-in="00:00:16.42;00:00:18.25"></div>
+									</div>
+
+									<div class="sync-entry" data-text="дэ-де">
+										<div class="range" data-in="00:00:06.99;00:00:09.01"></div>
+									</div>
+									<div class="sync-entry" data-text="тэ-те">
+										<div class="range" data-in="00:00:18.79;00:00:20.60"></div>
+									</div>
+
+									<div class="sync-entry" data-text="ды-ди">
+										<div class="range" data-in="00:00:09.44;00:00:11.30"></div>
+									</div>
+									<div class="sync-entry" data-text="ты-ти">
+										<div class="range" data-in="00:00:21.30;00:00:23.07"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- ============================================================ -->
+			<!-- BEGIN З, С -->
+			<div class="sync-area">
+				<div id="part11" class="card">
+					<div id="part11_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part11_collapse" aria-expanded="true" aria-controls="part11_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>з, с</span> твёрдые и мягкие</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-08.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part11_collapse" class="collapse" aria-labelledby="part11_head" data-parent="#part11">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">за – зя</mark></td>
+												<td><mark class="consonant">са – ся</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">зо – зё</mark></td>
+												<td><mark class="consonant">со – сё</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">зу – зю</mark></td>
+												<td><mark class="consonant">су – сю</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">зэ – зе</mark></td>
+												<td><mark class="consonant">сэ – се</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">зы – зи</mark></td>
+												<td><mark class="consonant">сы – си</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="за-зя">
+										<div class="range" data-in="00:00:00.02;00:00:02.00"></div>
+									</div>
+									<div class="sync-entry" data-text="са-ся">
+										<div class="range" data-in="00:00:12.14;00:00:13.97"></div>
+									</div>
+
+									<div class="sync-entry" data-text="зо-зё">
+										<div class="range" data-in="00:00:02.31;00:00:04.21"></div>
+									</div>
+									<div class="sync-entry" data-text="со-сё">
+										<div class="range" data-in="00:00:14.40;00:00:16.23"></div>
+									</div>
+
+									<div class="sync-entry" data-text="зу-зю">
+										<div class="range" data-in="00:00:04.61;00:00:06.62"></div>
+									</div>
+									<div class="sync-entry" data-text="су-сю">
+										<div class="range" data-in="00:00:16.66;00:00:18.59"></div>
+									</div>
+
+									<div class="sync-entry" data-text="зэ-зе">
+										<div class="range" data-in="00:00:07.08;00:00:09.07"></div>
+									</div>
+									<div class="sync-entry" data-text="сэ-се">
+										<div class="range" data-in="00:00:19.05;00:00:20.80"></div>
+									</div>
+
+									<div class="sync-entry" data-text="зы-зи">
+										<div class="range" data-in="00:00:09.61;00:00:11.62"></div>
+									</div>
+									<div class="sync-entry" data-text="сы-си">
+										<div class="range" data-in="00:00:21.16;00:00:23.06"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN К, Г, Х  -->
+			<div class="sync-area">
+				<div id="part12" class="card">
+					<div id="part12_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part12_collapse" aria-expanded="true" aria-controls="part12_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>к, г, х</span> твёрдые и мягкие</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-09.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part12_collapse" class="collapse" aria-labelledby="part12_head" data-parent="#part12">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">ка – га – ха</mark></td>
+												<td><mark class="consonant">ке – ге – хе</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ко – го – хо</mark></td>
+												<td><mark class="consonant">ки – ги – хи</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">ку – гу – ху</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="ка-га-ха">
+										<div class="range" data-in="00:00:00.62;00:00:03.25"></div>
+									</div>
+									<div class="sync-entry" data-text="ке-ге-хе">
+										<div class="range" data-in="00:00:11.02;00:00:13.96"></div>
+									</div>
+									<div class="sync-entry" data-text="ко-го-хо">
+										<div class="range" data-in="00:00:04.03;00:00:06.78"></div>
+									</div>
+									<div class="sync-entry" data-text="ки-ги-хи">
+										<div class="range" data-in="00:00:14.54;00:00:17.63"></div>
+									</div>
+									<div class="sync-entry" data-text="ку-гу-ху">
+										<div class="range" data-in="00:00:07.42;00:00:10.27"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Ш, Ж, Ц Ч, Щ -->
+			<div class="sync-area">
+				<div id="part13" class="card">
+					<div id="part13_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part13_collapse" aria-expanded="true" aria-controls="part13_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>ш, ж, ц</span> всегда твёрдые<br /><span>ч, щ</span>
+								всегда мягкие</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-10.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part13_collapse" class="collapse" aria-labelledby="part13_head" data-parent="#part13">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<div style="display: flex;flex-direction: row;justify-content: center;">
+										<table class="fixed mat-table-base letterpresn" style="width: auto;">
+											<tbody>
+												<tr class="text-center">
+													<td><mark class="consonant">ша – жа – ца</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">шо – жо – цо</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">шу – жу – цу</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">ше – же – це</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">ши – жи – ци</mark></td>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="fixed mat-table-base letterpresn ml-3"
+											style="width: auto;white-space: nowrap;">
+											<tbody>
+												<tr class="text-center">
+													<td><mark class="consonant">ча – ща</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">чё – щё</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">чу – щу</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">че – ще</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">чи – щи</mark></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="ша – жа – ца">
+										<div class="range" data-in="00:00:00.46;00:00:03.06"></div>
+									</div>
+									<div class="sync-entry" data-text="шо – жо – цо">
+										<div class="range" data-in="00:00:03.72;00:00:06.40"></div>
+									</div>
+									<div class="sync-entry" data-text="шу – жу – цу">
+										<div class="range" data-in="00:00:07.21;00:00:10.16"></div>
+									</div>
+									<div class="sync-entry" data-text="ше – же – це">
+										<div class="range" data-in="00:00:10.97;00:00:13.89"></div>
+									</div>
+									<div class="sync-entry" data-text="ши – жи – ци">
+										<div class="range" data-in="00:00:14.93;00:00:17.94"></div>
+									</div>
+
+
+									<div class="sync-entry" data-text="ча – ща">
+										<div class="range" data-in="00:00:19.17;00:00:21.03"></div>
+									</div>
+									<div class="sync-entry" data-text="чё – щё">
+										<div class="range" data-in="00:00:21.60;00:00:23.50"></div>
+									</div>
+									<div class="sync-entry" data-text="чу – щу">
+										<div class="range" data-in="00:00:24.05;00:00:26.02"></div>
+									</div>
+									<div class="sync-entry" data-text="че – ще">
+										<div class="range" data-in="00:00:26.55;00:00:28.50"></div>
+									</div>
+									<div class="sync-entry" data-text="чи – щи">
+										<div class="range" data-in="00:00:29.07;00:00:31.03"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Ш Щ Й -->
+			<div class="sync-area">
+				<div id="part14" class="card">
+					<div id="part14_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part14_collapse" aria-expanded="true" aria-controls="part14_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>ш</span> твёрдый, <span>щ</span> мягкий
+								<br /><span>й</span> мягкий</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-11.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part14_collapse" class="collapse" aria-labelledby="part14_head" data-parent="#part14">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+
+									<div style="display: flex;flex-direction: row;justify-content: center; ">
+										<table class="fixed mat-table-base letterpresn" style="width:auto;">
+											<tbody>
+												<tr class="text-center">
+													<td><mark class="consonant">аш – ащ</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">ош – ощ</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">уш – ущ</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">еш – ещ</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">иш – ищ</mark></td>
+												</tr>
+											</tbody>
+										</table>
+
+										<table class="fixed mat-table-base letterpresn ml-3"
+											style="width:auto; white-space:nowrap;">
+											<tbody>
+												<tr class="text-center">
+													<td><mark class="consonant">ай – яй</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">ой – ёй</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">уй – юй</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">эй – ей</mark></td>
+												</tr>
+												<tr class="text-center">
+													<td><mark class="consonant">ый – ий</mark></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="аш – ащ">
+										<div class="range" data-in="00:00:00.36;00:00:02.15"></div>
+									</div>
+									<div class="sync-entry" data-text="ош – ощ">
+										<div class="range" data-in="00:00:02.90;00:00:04.62"></div>
+									</div>
+									<div class="sync-entry" data-text="уш – ущ">
+										<div class="range" data-in="00:00:05.27;00:00:07.15"></div>
+									</div>
+									<div class="sync-entry" data-text="еш – ещ">
+										<div class="range" data-in="00:00:07.74;00:00:09.80"></div>
+									</div>
+									<div class="sync-entry" data-text="иш – ищ">
+										<div class="range" data-in="00:00:10.43;00:00:12.44"></div>
+									</div>
+									<div class="sync-entry" data-text="ай – яй">
+										<div class="range" data-in="00:00:13.42;00:00:15.10"></div>
+									</div>
+									<div class="sync-entry" data-text="ой – ёй">
+										<div class="range" data-in="00:00:15.59;00:00:17.37"></div>
+									</div>
+									<div class="sync-entry" data-text="уй – юй">
+										<div class="range" data-in="00:00:17.93;00:00:19.66"></div>
+									</div>
+									<div class="sync-entry" data-text="эй – ей">
+										<div class="range" data-in="00:00:20.20;00:00:22.00"></div>
+									</div>
+									<div class="sync-entry" data-text="ый – ий">
+										<div class="range" data-in="00:00:22.42;00:00:24.27"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BEGIN Ь -->
+			<div class="sync-area">
+				<div id="part15" class="card">
+					<div id="part15_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part15_collapse" aria-expanded="true" aria-controls="part15_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<div class="ml-3 slog-caption"><span>ь</span> (мягкий знак)</div>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/rus-slogy-12.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part15_collapse" class="collapse" aria-labelledby="part15_head" data-parent="#part15">
+						<div class="card-body" style="padding-right: 0.25rem;">
+							<div class="sync-context" data-factor-in="0.2">
+								<div class="sync-text">
+									<table class="fixed mat-table-base letterpresn"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">бол – боль</mark></td>
+												<td><mark class="consonant">пят – пять</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">сол – соль</mark></td>
+												<td><mark class="consonant">пут – путь</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">кол – коль</mark></td>
+												<td><mark class="consonant">пит – пить</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">пол – поль</mark></td>
+												<td><mark class="consonant">бит – бить</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">рол – роль</mark></td>
+												<td><mark class="consonant">выт – выть</mark></td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="fixed mat-table-base letterpresn mt-3"
+										style="margin-left: auto;margin-right: auto;width:auto;">
+										<tbody>
+											<tr class="text-center">
+												<td><mark class="consonant">бю – бью</mark></td>
+												<td><mark class="consonant">тя – тья</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">лю – лью</mark></td>
+												<td><mark class="consonant">ля – лья</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">пю – пью</mark></td>
+												<td><mark class="consonant">зя – зья</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">вю – вью</mark></td>
+												<td><mark class="consonant">мя – мья</mark></td>
+											</tr>
+											<tr class="text-center">
+												<td><mark class="consonant">мю – мью</mark></td>
+												<td><mark class="consonant">дя – дья</mark></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="бол – боль">
+										<div class="range" data-in="00:00:00.18;00:00:01.89"></div>
+									</div>
+									<div class="sync-entry" data-text="пят – пять">
+										<div class="range" data-in="00:00:11.40;00:00:13.12"></div>
+									</div>
+
+									<div class="sync-entry" data-text="сол – соль">
+										<div class="range" data-in="00:00:02.29;00:00:04.04"></div>
+									</div>
+									<div class="sync-entry" data-text="пут – путь">
+										<div class="range" data-in="00:00:13.63;00:00:15.27"></div>
+									</div>
+
+									<div class="sync-entry" data-text="кол – коль">
+										<div class="range" data-in="00:00:04.52;00:00:06.26"></div>
+									</div>
+									<div class="sync-entry" data-text="пит – пить">
+										<div class="range" data-in="00:00:15.72;00:00:17.39"></div>
+									</div>
+
+									<div class="sync-entry" data-text="пол – поль">
+										<div class="range" data-in="00:00:06.78;00:00:08.49"></div>
+									</div>
+									<div class="sync-entry" data-text="бит – бить">
+										<div class="range" data-in="00:00:17.77;00:00:19.58"></div>
+									</div>
+
+									<div class="sync-entry" data-text="рол – роль">
+										<div class="range" data-in="00:00:09.05;00:00:10.84"></div>
+									</div>
+									<div class="sync-entry" data-text="выт – выть">
+										<div class="range" data-in="00:00:20.09;00:00:21.93"></div>
+									</div>
+									<!-- Table 2 -->
+									<div class="sync-entry" data-text="бю – бью">
+										<div class="range" data-in="00:00:23.04;00:00:24.81"></div>
+									</div>
+									<div class="sync-entry" data-text="тя – тья">
+										<div class="range" data-in="00:00:34.98;00:00:36.78"></div>
+									</div>
+									<div class="sync-entry" data-text="лю – лью">
+										<div class="range" data-in="00:00:25.20;00:00:26.99"></div>
+									</div>
+									<div class="sync-entry" data-text="ля – лья">
+										<div class="range" data-in="00:00:37.26;00:00:39.12"></div>
+									</div>
+									<div class="sync-entry" data-text="пю – пью">
+										<div class="range" data-in="00:00:27.47;00:00:29.46"></div>
+									</div>
+									<div class="sync-entry" data-text="зя – зья">
+										<div class="range" data-in="00:00:39.65;00:00:41.76"></div>
+									</div>
+									<div class="sync-entry" data-text="вю – вью">
+										<div class="range" data-in="00:00:29.82;00:00:31.96"></div>
+									</div>
+									<div class="sync-entry" data-text="мя – мья">
+										<div class="range" data-in="00:00:42.25;00:00:44.17"></div>
+									</div>
+									<div class="sync-entry" data-text="мю – мью">
+										<div class="range" data-in="00:00:32.41;00:00:34.34"></div>
+									</div>
+									<div class="sync-entry" data-text="дя – дья">
+										<div class="range" data-in="00:00:44.56;00:00:46.51"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- END <div class="sync-area"> -->
+
+
+			<!-- END СЛОГИ -->
+			<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <div class="prompt-once">
+				<button id="close" type="button" class="btn btn-outline-primary btn-sm" style="position: absolute;left:auto;top:4px;right:5px;">&times;</button>
+				<img src="./res/images/double-tap.svg" style="width:96px;height:96px;" />
+				<div class="h5 mt-1" style="max-width:450px;text-align: justify;">Выде&shy;ле&shy;ние и прос&shy;лу&shy;ши&shy;ва&shy;ние
+					фраг&shy;мен&shy;тов тек&shy;ста вы&shy;пол&shy;ня&shy;ет&shy;ся по двой&shy;но&shy;му кли&shy;ку</div>
+			</div> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

@@ -1,0 +1,868 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<style>
+		#pageAudTest .theme-caption {
+			font-size: 1.2rem;
+		}
+
+
+		#pageAudTest .deftaskbox {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 1rem 1rem;
+		}
+
+		.deftaskbox>img {
+			max-height: 96px;
+		}
+
+
+		#pageAudTest table.resultsample {
+			margin-left: 0.5rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:first-child {
+			font-style: italic;
+			font-weight: 500;
+			font-size: 1rem;
+			padding-right: 1rem;
+		}
+
+		#pageAudTest table.resultsample tr:first-child td:nth-child(2) {
+			background-color: wheat;
+			border-left: gray 3px solid;
+			padding: 1rem;
+			font-size: 1.25rem;
+			font-weight: 500;
+		}
+
+
+		#pageAudTest .card-body>ol {
+			padding-left: 1rem;
+		}
+
+		#pageAudTest .card-body>ol>li>mark {
+			font-weight: 500;
+			background-color: unset;
+		}
+
+		#pageAudTest .card-body>ol>li>ul {
+			list-style-type: none;
+			padding-left: 1.1rem;
+		}
+
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="pageAudTest" class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h3 class="my-3 page-title">Земля – наш общий дом</h3>
+
+			<div class="deftaskbox caption-bkg">
+				<img src="./res/images/mats/writeinnotebook.png" />
+				<div>
+					<h6>Прослушайте тексты и выполните задания в тетради</h6>
+					<hr class="mt-2">
+				</div>
+			</div>
+
+			<div class="py-2 app-separator"></div>
+
+			<table class="resultsample">
+				<tr>
+					<td>
+						Образец:
+					</td>
+					<td>
+						<p>Текст 1.</p>
+						<p>1. А, 2. Б, 3. А, 4. В, 5. А.</p>
+					</td>
+				</tr>
+			</table>
+
+			<!-- <h6 class="text-secondary mt-4">(Раздел находится в разработке)</h6> -->
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 1 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 1</div>
+			<div id="text01" class="card mt-0">
+				<div id="text01_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text01_collapse" aria-expanded="true" aria-controls="text01_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст «Письмо Виктора брату» и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-05/text-01.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text01_collapse" class="collapse" aria-labelledby="text01_head" data-parent="#text01">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Виктор живёт …
+								</mark>
+								<ul>
+									<li>
+										(А) на юге России
+									</li>
+									<li>
+										(Б) на западе России
+									</li>
+									<li>
+										(В) на севере России
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Виктор живет …
+								</mark>
+								<ul>
+									<li>
+										(А) в большом городе
+									</li>
+									<li>
+										(Б) в посёлке
+									</li>
+									<li>
+										(В) в деревне
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Виктор работает …
+								</mark>
+								<ul>
+									<li>
+										(А) на рыбном заводе
+									</li>
+									<li>
+										(Б) в школе
+									</li>
+									<li>
+										(В) на метеорологической станции
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Летом в посёлке бывают проблемы …
+								</mark>
+								<ul>
+									<li>
+										(А) с едой
+									</li>
+									<li>
+										(Б) с питьевой водой
+									</li>
+									<li>
+										(В) с транспортом
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Количество белых медведей на севере …
+								</mark>
+								<ul>
+									<li>
+										(А) увеличилось
+									</li>
+									<li>
+										(Б) уменьшилось
+									</li>
+									<li>
+										(В) не изменилось
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Белые медведи перестали бояться людей, потому что поняли, что …
+								</mark>
+								<ul>
+									<li>
+										(А) человек им не опасен
+									</li>
+									<li>
+										(Б) люди уехали из поселка
+									</li>
+									<li>
+										(В) всегда убегают от них
+									</li>
+								</ul>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 2 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 2</div>
+			<div id="text02" class="card mt-0">
+				<div id="text02_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text02_collapse" aria-expanded="true" aria-controls="text02_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст «Рассказ журналиста о Байкале» и
+							выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-05/text-02.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text02_collapse" class="collapse" aria-labelledby="text02_head" data-parent="#text02">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Озеро Байкал находится …
+								</mark>
+								<ul>
+									<li>
+										(А) в южной части Сибири
+									</li>
+									<li>
+										(Б) в северной части Сибири
+									</li>
+									<li>
+										(В) в западной части Сибири
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Озеро Байкал–это …
+								</mark>
+								<ul>
+									<li>
+										(А) 5% питьевой воды Земли
+									</li>
+									<li>
+										(Б) 20% питьевой воды Земли
+									</li>
+									<li>
+										(В) 10% питьевой воды Земли
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Чтобы сохранить природу, на берегу Байкала создали …
+								</mark>
+								<ul>
+									<li>
+										(А) ботанический сад
+									</li>
+									<li>
+										(Б) зоопарк
+									</li>
+									<li>
+										(В) большой заповедник
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									В результате борьбы экологов комбинат …
+								</mark>
+								<ul>
+									<li>
+										(А) открыли
+									</li>
+									<li>
+										(Б) закрыли
+									</li>
+									<li>
+										(В) не построили
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 3 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 3</div>
+			<div id="text03" class="card mt-0">
+				<div id="text03_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text03_collapse" aria-expanded="true" aria-controls="text03_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте текст о Воронежском заповеднике и
+							выполните задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-05/text-03.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text03_collapse" class="collapse" aria-labelledby="text03_head" data-parent="#text03">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Вы слушали …
+								</mark>
+								<ul>
+									<li>
+										(А) информацию экскурсовода
+									</li>
+									<li>
+										(Б) радиопередачу
+									</li>
+									<li>
+										(В) лекцию
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Воронежский государственный заповедник – это …
+								</mark>
+								<ul>
+									<li>
+										(А) один из самых больших заповедников России
+									</li>
+									<li>
+										(Б) один из новых заповедников России
+									</li>
+									<li>
+										(В) один из старейших заповедников России
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Заповедник открыли …
+								</mark>
+								<ul>
+									<li>
+										(А) в 1917 году
+									</li>
+									<li>
+										(Б) в 1927 году
+									</li>
+									<li>
+										(В) в 1934 году
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Своим созданием заповедник обязан такому животному, как …
+								</mark>
+								<ul>
+									<li>
+										(А) кабан
+									</li>
+									<li>
+										(Б) бобёр
+									</li>
+									<li>
+										(В) волк
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Самое ценное дерево в заповеднике – это …
+								</mark>
+								<ul>
+									<li>
+										(А) берёза
+									</li>
+									<li>
+										(Б) дуб
+									</li>
+									<li>
+										(В) сосна
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Сейчас в заповеднике …
+								</mark>
+								<ul>
+									<li>
+										(А) 133 вида деревьев
+									</li>
+									<li>
+										(Б) 145 видов деревьев
+									</li>
+									<li>
+										(В) 200 видов деревьев
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Эмблема заповедника – это …
+								</mark>
+								<ul>
+									<li>
+										(А) 3 фигуры животных
+									</li>
+									<li>
+										(Б) 1 фигура животного
+									</li>
+									<li>
+										(В) 2 фигуры животных
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 4 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 4</div>
+			<div id="text04" class="card mt-0">
+				<div id="text04_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text04_collapse" aria-expanded="true" aria-controls="text04_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Фатимы и Веры и выполните задания
+						</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-05/text-04.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text04_collapse" class="collapse" aria-labelledby="text04_head" data-parent="#text04">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Фатима вчера ходила …
+								</mark>
+								<ul>
+									<li>
+										(А) в театр
+									</li>
+									<li>
+										(Б) в музей
+									</li>
+									<li>
+										(В) в цирк
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Вера вчера …
+								</mark>
+								<ul>
+									<li>
+										(А) ходила с Фатимой
+									</li>
+									<li>
+										(Б) опоздала
+									</li>
+									<li>
+										(В) не ходила в цирк
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									«Веневитиново» – это часть …
+								</mark>
+								<ul>
+									<li>
+										(А) биологического факультета
+									</li>
+									<li>
+										(Б) экономического факультета
+									</li>
+									<li>
+										(В) географического факультета
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									У студентов-биологов на «Веневитиново» …
+								</mark>
+								<ul>
+									<li>
+										(А) бывают спортивные олимпиады
+									</li>
+									<li>
+										(Б) бывают занятия
+									</li>
+									<li>
+										(В) бывает практика
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									На «Веневитиново» есть …
+								</mark>
+								<ul>
+									<li>
+										(А) Музей истории
+									</li>
+									<li>
+										(Б) Музей природы
+									</li>
+									<li>
+										(В) Музей народных инструментов
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Отдыхая на «Веневитиново», можно побывать …
+								</mark>
+								<ul>
+									<li>
+										(А) на реке Волге
+									</li>
+									<li>
+										(Б) на реке Усманка
+									</li>
+									<li>
+										(В) на реке Дон
+									</li>
+								</ul>
+							</li>
+
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 5 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 5</div>
+			<div id="text05" class="card mt-0">
+				<div id="text05_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text05_collapse" aria-expanded="true" aria-controls="text05_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Виктора и Бориса и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-05/text-05.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text05_collapse" class="collapse" aria-labelledby="text05_head" data-parent="#text05">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Борис и Виктор встречаются …
+								</mark>
+								<ul>
+									<li>
+										(А) часто
+									</li>
+									<li>
+										(Б) редко
+									</li>
+									<li>
+										(В) каждую субботу
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Борис и Виктор раньше учились вместе …
+								</mark>
+								<ul>
+									<li>
+										(А) в школе
+									</li>
+									<li>
+										(Б) в техникуме
+									</li>
+									<li>
+										(В) в училище
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Виктор учится ….
+								</mark>
+								<ul>
+									<li>
+										(А) на географическом факультете
+									</li>
+									<li>
+										(Б) на экономическом факультете
+									</li>
+									<li>
+										(В) на биологическом факультете
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Виктор занимается изучением …
+								</mark>
+								<ul>
+									<li>
+										(А) редких животных
+									</li>
+									<li>
+										(Б) редких растений
+									</li>
+									<li>
+										(В) лесов
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Ботанический сад ВГУ создан …
+								</mark>
+								<ul>
+									<li>
+										(А) в 1937 году
+									</li>
+									<li>
+										(Б) в 1948 году
+									</li>
+									<li>
+										(В) в 1957 году
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Виктор ходит в ботанический сад …
+								</mark>
+								<ul>
+									<li>
+										(А) 2 раза в неделю
+									</li>
+									<li>
+										(Б) 1 раз в неделю
+									</li>
+									<li>
+										(В) 3 раза в неделю
+									</li>
+								</ul>
+							</li>
+
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="py-3 app-separator"></div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- 6 -->
+			<div class="display-4 p-0 bg-secondary text-white text-center">Текст 6</div>
+			<div id="text06" class="card mt-0">
+				<div id="text06_head" class="card-header d-flex flex-column">
+					<div class="d-flex flex-row align-items-center">
+						<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+							data-target="#text06_collapse" aria-expanded="true" aria-controls="text06_collapse">
+							<i class="fa fa-file-text-o fa-2x mt-1"></i>
+						</button>
+						<h2 class="theme-caption text-primary ml-3">Прослушайте диалог Яна Пина с Ахмедом и выполните
+							задания</h2>
+					</div>
+					<div class="mt-2 audio-box">
+						<audio preload="none" controls>
+							<source src="mats/learnaudio/rusaudtest/test-05/text-06.mp3"
+								type="audio/mpeg">
+							Your browser does not support the audio tag.
+						</audio>
+					</div>
+				</div>
+				<div id="text06_collapse" class="collapse" aria-labelledby="text06_head" data-parent="#text06">
+					<div class="card-body">
+
+						<ol>
+							<li>
+								<mark>
+									Ян Пин ездил вчера …
+								</mark>
+								<ul>
+									<li>
+										(А) в Воронежский заповедник
+									</li>
+									<li>
+										(Б) в ботанический сад ВГУ
+									</li>
+									<li>
+										(В) на турбазу «Веневитиново»
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Воронежский заповедник расположен …
+								</mark>
+								<ul>
+									<li>
+										(А) в 40 километрах от Воронежа
+									</li>
+									<li>
+										(Б) в 30 километрах от Воронежа
+									</li>
+									<li>
+										(В) в 50 километрах от Воронежа
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<mark>
+									Эмблема заповедника – это фигуры …
+								</mark>
+								<ul>
+									<li>
+										(А) волка и зайца
+									</li>
+									<li>
+										(Б) бобра и оленя
+									</li>
+									<li>
+										(В) медведя и кабана
+									</li>
+								</ul>
+							</li>
+						</ol>
+
+					</div>
+				</div>
+			</div>
+
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <h6 class="text-secondary mt-4">(Раздел находится в разработке)</h6> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>

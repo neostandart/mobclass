@@ -1,0 +1,405 @@
+/*
+Blue (Primary):         #007bff;
+Link Tile bg-color:     #409cff;
+
+Mark highlighted:       #add8e6;
+
+*/
+
+/*
+==============================================================================
+Main Styles
+==============================================================================
+*/
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.app-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.app-frame .app-splashscreen {
+  position: absolute;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+}
+
+.app-splashscreen > div {
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+/*
+==============================================================================
+Incompatible Message
+==============================================================================
+*/
+
+.app-incompatible {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+  background-color: dimgray;
+}
+
+.app-incompatible .message {
+  display: block;
+  margin: 20% auto auto auto;
+  padding: 30px;
+  background-color: whitesmoke;
+  text-align: center;
+  font-size: large;
+}
+
+/*
+==============================================================================
+Main View
+==============================================================================
+*/
+
+.app-frame .app-mainview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  overflow: hidden;
+}
+
+/*
+==============================================================================
+Page Presenter
+==============================================================================
+*/
+
+.app-mainview .page-presenter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  background-color: #f8f9fa;
+  visibility: hidden;
+}
+
+/*
+    Pages Transition
+*/
+
+.app-mainview .page-presenter.current {
+  visibility: visible;
+  z-index: 1;
+}
+
+/* move from / to  */
+
+.trans-moveToLeft {
+  -webkit-animation: moveToLeft 0.6s ease both;
+  animation: moveToLeft 0.6s ease both;
+}
+
+.trans-moveFromLeft {
+  -webkit-animation: moveFromLeft 0.6s ease both;
+  animation: moveFromLeft 0.6s ease both;
+}
+
+.trans-moveToRight {
+  -webkit-animation: moveToRight 0.6s ease both;
+  animation: moveToRight 0.6s ease both;
+}
+
+.trans-moveFromRight {
+  -webkit-animation: moveFromRight 0.6s ease both;
+  animation: moveFromRight 0.6s ease both;
+}
+
+/* key frames  */
+
+@-webkit-keyframes moveToLeft {
+  from {
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes moveToLeft {
+  from {
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes moveFromLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+  }
+}
+
+@keyframes moveFromLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@-webkit-keyframes moveToRight {
+  from {
+  }
+
+  to {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+@keyframes moveToRight {
+  from {
+  }
+
+  to {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes moveFromRight {
+  from {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+@keyframes moveFromRight {
+  from {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+/*
+==============================================================================
+Master content
+==============================================================================
+*/
+
+.page-presenter .master-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* overflow-y: scroll; */
+}
+
+.master-content header {
+  position: relative;
+  width: 100%;
+  padding: 0px;
+  /* border-bottom: #6c757d 8px solid; */
+  /* border-bottom: #007bff 8px solid; */
+  /* color: #409cff; */
+  border-bottom: #409cff 8px solid;
+}
+
+.master-content header #logo {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  padding: 0.2rem 0px;
+  z-index: -1;
+}
+
+.master-content header #title {
+  margin: 0px auto;
+}
+
+.master-content .app-part-toggle {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.master-content .sect-caption {
+  width: 70%;
+  font-size: 1.25rem;
+  min-height: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.master-content .detail-link {
+  width: 100%;
+  padding: 1.5rem;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+  background-color: #409cff;
+  cursor: pointer;
+  /**/
+  display: flex;
+  flex-direction: row;
+  border-bottom: transparent 3px solid;
+}
+
+.master-content .detail-link.lastactive {
+  border-bottom: #ffc107 3px solid;
+}
+
+.master-content .detail-link:active {
+  transform: translate(2px, 2px);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+}
+
+.master-content .detail-anchor {
+  width: 100%;
+  cursor: pointer;
+  color: #212529;
+  padding: 1.5rem;
+  box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5);
+  background-color: #409cff;
+  /**/
+  display: flex;
+  flex-direction: row;
+}
+
+.master-content .detail-anchor:hover {
+  text-decoration: none;
+  color: #212529;
+}
+
+.master-content .detail-anchor:active {
+  color: #212529;
+  transform: translate(2px, 2px);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+/* icon */
+
+.master-content .detail-link i,
+.master-content .detail-anchor i {
+  margin-left: auto;
+  margin-right: 0;
+  color: #343a40;
+}
+
+/* *** Full/Restore Screen Button *** */
+
+.master-content > header > #btnScreenToggle {
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  transform: translateX(-100%);
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  background: url("./../res/images/fullscreen.svg") no-repeat center;
+  background-size: 24px 24px;
+  cursor: pointer;
+  /* display: inline-block; */
+}
+
+.master-content > header > #btnScreenToggle.restorescreen {
+  background: url("./../res/images/restorescreen.svg") no-repeat center;
+  background-size: 24px 24px;
+}
+
+.master-content > .partbox {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+/*
+==============================================================================
+Application (Material) Page
+==============================================================================
+*/
+
+.app-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #e9ecef;
+}
+
+/*** Page Header ***/
+
+.app-page .page-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.25rem;
+  border-bottom: #6c757d 1px solid;
+}
+
+.app-page .page-header .btn.goback {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  border-radius: 50%;
+  border: 2px #343a40 solid;
+  font-size: 1.5em;
+}
+
+.app-page .page-header .btn.goback:hover {
+  background-color: #f8f9fa;
+}
+
+.app-page .page-header .btn.goback:active {
+  background-color: #343a40;
+  color: white;
+}
+
+.app-page .page-header .title {
+  margin-left: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/*** Page Body ***/
+
+.app-page .page-body {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-left: #6c757d 1px dashed;
+  border-right: #6c757d 1px dashed;
+  padding-bottom: 1rem;
+}

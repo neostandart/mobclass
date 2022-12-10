@@ -1,0 +1,192 @@
+/*
+==============================================================================
+Font Size 
+==============================================================================
+*/
+
+@media screen and (min-width: 0px) {
+    .master-content .app-linkcontainer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .master-content .card-body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .master-content .detail-link {
+        font-size: 80%;
+    }
+
+    .master-content .app-part-toggle {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .master-content .app-linkcontainer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .master-content .card-body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .master-content .detail-link {
+        font-size: 80%;
+    }
+
+    .master-content .app-part-toggle {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .master-content .app-linkcontainer {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .master-content .card-body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .master-content .detail-link {
+        font-size: 90%;
+    }
+
+    .master-content .app-part-toggle {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+    .master-content .app-linkcontainer {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .master-content .card-body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .master-content .detail-link {
+        font-size: 100%;
+    }
+
+    .master-content .app-part-toggle {
+        font-size: 1.5rem;
+    }
+
+
+    .page-body .mat-table01 td {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+    .master-content .app-linkcontainer {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .master-content .card-body {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .master-content .detail-link {
+        font-size: 100%;
+    }
+
+    .master-content .app-part-toggle {
+        font-size: 1.5rem;
+    }
+
+
+    .page-body .mat-table01 td {
+        font-size: 1rem;
+    }
+}
+
+
+/* Screen orientation */
+
+@media screen and (orientation:portrait) {
+    .master-content header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .master-content header #title>h1 {
+		font-size: 2rem;
+    }
+
+    .master-content header #logo {
+        position: relative;
+        width: 70px;
+        height: auto;
+        padding: 0.2rem 0px 0.2rem 0.25rem;
+        z-index: -1;
+    }
+
+    .master-content>header>#btnScreenToggle {
+        position: relative;
+        margin-right: 0px;
+        align-self: flex-start;
+        transform: initial;
+        top: initial;
+        left: initial;
+    }
+
+    .master-content {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .master-content .sect-caption {
+        width: 90%;
+        font-size: 1.1rem;
+    }
+
+    .master-content .card .card-header button {
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+    }
+
+
+    .master-content .card .card-header button>img {
+        display: block;
+        width: 64px;
+    }
+
+
+    /* .app-page .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 1;
+        -webkit-column-gap: 1.25rem;
+        -moz-column-gap: 1.25rem;
+        column-gap: 1.25rem;
+        orphans: 1;
+        widows: 1;
+    } */
+
+/* Materials */
+
+    .app-page .page-body .mat-atext-expander .subject li {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+}

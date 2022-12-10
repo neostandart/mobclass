@@ -1,0 +1,443 @@
+/*
+==============================================================================
+colors
+==============================================================================
+*/
+.app-page .subcap-bg {
+  background-color: hsl(195, 53%, 79%);
+}
+
+/*
+==============================================================================
+Media Syncronization
+==============================================================================
+*/
+
+.app-page .sync-area {
+  position: relative;
+}
+
+.app-page .sync-area .sync-context {
+  position: relative;
+  padding-left: 32px;
+  margin-left: 0px;
+}
+
+.app-page .sync-area .sensor {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 32px;
+  height: 100%;
+}
+
+.app-page .sync-area .sensor > .indicator {
+  position: relative;
+  margin: 0px;
+  width: 8px;
+  height: 100%;
+  background-color: lightgray;
+  border-radius: 3px;
+}
+
+.app-page .sync-area .sensor.active > .indicator {
+  background-color: rgba(0, 136, 248, 0.3);
+}
+
+.app-page .sync-area .sync-context .sync-text mark {
+  background-color: transparent;
+  padding: 2px 3px;
+  border: transparent 1px solid;
+  cursor: pointer;
+  /* Safari 3.1+ */
+  -webkit-user-select: none;
+  /* Firefox 2+ */
+  -moz-user-select: none;
+  /* IE 10+ */
+  -ms-user-select: none;
+  /* Standard syntax */
+  user-select: none;
+}
+
+.app-page .sync-area .sync-context .sync-text mark.highlighted {
+  /* background-color: #add8e6; */
+  /* background-color:rgba(135, 207, 235, 0.7); */
+  /* background-color:rgba(100, 195, 233, 0.5); */
+  background-color: rgba(0, 136, 248, 0.3);
+}
+
+.app-page .sync-area .sync-context .sync-text mark.selected {
+  /* border-color: blue; */
+  /* я отказался от рамки (при переносе происх. некр. эффект налезания)*/
+  /* background-color: #add8e6; */
+  /* background-color:rgba(135, 207, 235, 0.7); */
+  /* background-color:rgba(100, 195, 233, 0.5); */
+  /* я пробовал разн. прозрачность чтобы полностью не перекр. actor-label*/
+  background-color: rgba(0, 136, 248, 0.3);
+}
+
+.app-page .sync-area .sync-context .sync-text mark.selected-obj {
+  border: rgba(0, 136, 248, 0.3) 2px solid;
+}
+
+.app-page .sync-area .sync-context .sync-text .actor-label {
+  font-size: 80%;
+  color: #3c5372;
+  margin-bottom: 0;
+
+  /* Safari 3.1+ */
+  -webkit-user-select: none;
+  /* Firefox 2+ */
+  -moz-user-select: none;
+  /* IE 10+ */
+  -ms-user-select: none;
+  /* Standard syntax */
+  user-select: none;
+}
+
+.app-page .sync-area .pointer-syncentry {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 0px;
+  top: 32px;
+  visibility: hidden;
+}
+
+.app-page .sync-area .pointer-syncentry.entryready {
+  fill: #6c757d;
+}
+
+.app-page .sync-area .pointer-syncentry.entrynow {
+  fill: #007bff;
+}
+
+.app-page .sync-area .pointer-syncentry.entryphantom {
+  fill: #6c757d;
+  opacity: 0.5;
+}
+
+.app-page .synctextpause {
+	position:fixed;
+	width:50px;
+	height: 50px;
+	z-index: 1000;
+	top:0px;
+	bottom: auto;
+	left:0px;
+	right:auto;	
+	margin: 5px;
+}
+
+/*
+==============================================================================
+Card Folder Class
+==============================================================================
+*/
+
+.app-page .card.folder .folder-bkg {
+  background-color: rgb(243, 243, 180);
+}
+
+.app-page .card.folder > .card-header .folder-toggle > i {
+  width: 1em;
+  font-size: 1.5em;
+}
+
+.app-page .card.folder > .card-header .folder-toggle > i:before {
+  content: "\f105";
+}
+
+.app-page .card.folder > .card-header {
+  border: transparent 3px solid;
+  background-color: rgb(223, 219, 219);
+}
+
+.app-page .card.folder .card-body {
+  border-left: goldenrod 3px solid;
+  border-bottom: goldenrod 3px solid;
+  border-right: goldenrod 3px solid;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.app-page .card.folder.opened > .card-header {
+  background-color: rgb(243, 243, 180);
+  border: goldenrod 3px solid;
+}
+
+.app-page .card.folder.opened > .card-header .folder-toggle > i:before {
+  content: "\f107";
+}
+
+/*
+==============================================================================
+media-box
+==============================================================================
+*/
+
+.app-page .media-box {
+  overflow: hidden;
+  width: 100%;
+  padding: 0px;
+}
+
+.app-page .media-box > video {
+  max-width: 100%;
+  max-height: 500px;
+  /* Возможно это будет делать код vmb-system обраб. класс (н-р) data-type="Mediabox" */
+}
+
+/*
+==============================================================================
+mat-table-base
+==============================================================================
+*/
+
+.app-page .caption-bkg {
+  background-color: rgb(223, 219, 219);
+}
+
+.app-page .mat-table-base {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.app-page .mat-table-base.fixed {
+  table-layout: fixed;
+}
+
+.app-page .mat-table-base tr.caption {
+  text-align: center;
+  background-color: #dee2e6;
+}
+
+.app-page .mat-table-base tr.caption th {
+  border: #495057 1px solid;
+  font-weight: 400;
+  padding: 0.25rem;
+}
+
+.app-page .mat-table-base td {
+  border: #343a40 1px solid;
+  padding: 0.25rem;
+}
+
+.app-page .mat-table-base.border-light td {
+  border: gray 1px solid;
+}
+
+.app-page .mat-table-base.samewidth2 td {
+  width: 50%;
+}
+
+.app-page .mat-table-base.samewidth3 td {
+  width: 33.333%;
+}
+
+.app-page .mat-table-base.samewidth4 td {
+  width: 25%;
+}
+
+.app-page table td.br-t-none {
+  border-top: transparent;
+  width: 0;
+}
+.app-page table td.br-l-none {
+  border-left: transparent;
+  width: 0;
+}
+.app-page table td.br-r-none {
+  border-right: transparent;
+  width: 0;
+}
+.app-page table td.br-b-none {
+  border-bottom: transparent;
+  width: 0;
+}
+
+/*
+==============================================================================
+mat-table01
+==============================================================================
+*/
+
+.app-page .mat-table01 {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.app-page .mat-table01.fixed {
+  table-layout: fixed;
+}
+
+.app-page .mat-table01 tr.caption {
+  text-align: center;
+  background-color: rgb(223, 219, 219);
+}
+
+.app-page .mat-table01 tr.caption th {
+  border: #343a40 2px solid;
+  padding: 0.25rem;
+}
+
+.app-page .mat-table01 td {
+  border: #343a40 1px solid;
+  padding: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/*
+==============================================================================
+mat-atext-expander
+==============================================================================
+*/
+
+/* Работаем над классами... */
+.app-page .mat-atext-expander {
+  background: whitesmoke;
+}
+
+.app-page .mat-atext-expander > .header {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-page .mat-atext-expander > .header > .caption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.app-page .mat-atext-expander > .header > .audio-box {
+  margin-top: 0.5rem;
+}
+
+.app-page .mat-atext-expander .text {
+  margin-top: 0.5rem;
+}
+
+.app-page .mat-atext-expander ul.subject {
+  padding-left: 0.5rem;
+}
+
+.app-page .mat-atext-expander .subject li {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/*
+==============================================================================
+Semantic
+==============================================================================
+*/
+
+.app-page .mat-obj {
+  font-style: italic;
+}
+
+/* === Phonetics  === */
+
+.app-page .mat-table {
+  width: 100%;
+}
+
+.app-page span.signbox {
+  /* padding: 0.1rem 0.5rem; */
+  padding: 0 0.2rem;
+  background-color: lightgray;
+}
+
+/* .app-page .mat-table.text-center {
+    text-align: center;
+
+} */
+
+/*
+//////////////////////////////////////////////////////////////////////////////
+Page Bricks
+//////////////////////////////////////////////////////////////////////////////
+*/
+
+/*
+==============================================================================
+PromptOnce
+==============================================================================
+*/
+.app-page .bk-brick[data-type="PromptOnce"] {
+  position: absolute;
+  display: block;
+  z-index: 1000;
+  top: 0%;
+  left: auto;
+  right: 0px;
+  padding: 30px 20px;
+  border: #007bff 8px solid;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  max-width: 80%;
+}
+
+/*
+==============================================================================
+HorizontalArea
+==============================================================================
+*/
+.app-page .bk-brick[data-type="HorizontalArea"] {
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+  /* border: green 5px dashed; */
+}
+
+.app-page .bk-brick[data-type="HorizontalArea"] > .content {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: block;
+}
+
+.app-page .bk-brick[data-type="HorizontalArea"] > .indicator {
+  display: block;
+  z-index: 1000;
+  position: absolute;
+  top: 10%;
+  left: auto;
+  right: 0px;
+}
+
+.app-page .bk-brick[data-type="HorizontalArea"] > .indicator > .image {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  fill: #007bff;
+  -webkit-animation: kf-attractPointerRight 0.7s linear alternate infinite;
+  animation: kf-attractPointerRight 1.5s linear alternate infinite;
+}
+
+.app-page .bk-brick[data-type="HorizontalArea"] > .indicator > .label {
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: #007bff;
+}
+
+@-webkit-keyframes kf-attractPointerRight {
+  from {
+  }
+  to {
+    -webkit-transform: translateX(-30px);
+  }
+}
+
+@keyframes kf-attractPointerRight {
+  from {
+  }
+  to {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+}

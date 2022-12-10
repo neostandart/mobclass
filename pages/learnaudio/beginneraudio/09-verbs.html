@@ -1,0 +1,824 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-cache">
+
+
+	<!--
+	Для реализации аудиоплеера решил использовать:
+	Responsive & Touch-Friendly Audio Player 
+	https://tympanus.net/codrops/2012/12/04/responsive-touch-friendly-audio-player/
+-->
+
+	<style>
+		.app-page .tbl-rule {
+			width: fit-content;
+			min-width: 300px;
+			white-space: nowrap;
+			margin-left: auto;
+			margin-right: auto;
+			border-collapse: collapse;
+		}
+
+		.app-page .tbl-rule td {
+			text-align: center;
+			font-size: 1.2rem;
+			font-weight: 500;
+			padding: 4px 16px;
+			background-color: white;
+			border-bottom: lightgray 2px solid;
+		}
+
+
+		/************************/
+		/* BGN CARD-VERB Styles */
+
+		.app-page .card-verb-nest {
+			padding-right: 4px;
+			padding-left: 4px;
+		}
+
+		.app-page .card-verb {
+			height: 100%;
+			padding: 1rem;
+			color: white;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.app-page .card-verb .header {
+			font-size: 1.4rem;
+			line-height: 1;
+			text-align: center;
+			padding-bottom: 0.5em;
+			border-bottom: lightgray 2px solid;
+		}
+
+		.app-page .card-verb .header .trans {
+			font-size: 80%;
+			font-style: italic;
+		}
+
+		.app-page .card-verb .body {
+			font-size: 1rem;
+			text-align: left;
+			background-color: white;
+			height: 100%;
+		}
+
+		.app-page .body>.subj-nest {
+			padding-right: 2px;
+			padding-left: 2px;
+			text-align: center;
+		}
+
+		.app-page .card-verb .body .hsep {
+			height: 2px;
+			background-color: lightgray;
+			margin: 2px 0px;
+			width: 100%;
+		}
+
+		.app-page .card-verb .body mark {
+			display: inline-block;
+			line-height: 1;
+			margin-bottom: 4px;
+			text-align: center;
+			color: blue;
+		}
+
+		.app-page .card-verb .body mark span.subj {
+			font-weight: 500;
+		}
+
+
+		/* END CARD-VERB Styles */
+		/************************/
+
+		@media (min-width: 576px) {
+			/* .app-page {
+				border: red 5px dotted;
+			} */
+
+			.app-page .card-verb-nest {
+				padding-right: 8px;
+				padding-left: 8px;
+			}
+
+			.app-page .card-verb .header {
+				font-size: 1.6rem;
+				border-bottom: lightgray 2px solid;
+			}
+
+			.app-page .card-verb .body {
+				font-size: 1.2rem;
+			}
+
+			.app-page .body>.subj-nest {
+				padding-right: 6px;
+				padding-left: 6px;
+			}
+		}
+
+		@media (min-width: 768px) {
+			/* .app-page {
+				border: darkgreen 5px dotted;
+			} */
+
+			.app-page .card-verb-nest {
+				padding-right: 12px;
+				padding-left: 12px;
+			}
+
+			.app-page .card-verb {
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+			}
+
+			.app-page .card-verb .header {
+				font-size: 1.8rem;
+				border-bottom: lightgray 2px solid;
+			}
+
+			.app-page .card-verb .body {
+				font-size: 1.4rem;
+			}
+
+			.app-page .body>.subj-nest {
+				padding-right: 10px;
+				padding-left: 10px;
+			}
+
+		}
+
+		/* */
+
+		@media screen and (orientation:portrait) {
+			.page-body {
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+			.page-title {
+				text-align: center;
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+
+			.audio-box {
+				position: relative;
+				margin-left: -15px;
+				margin-right: -15px;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+
+		}
+
+
+		/* До создания специализированных классов для синх. диалогов, будем временно вот так корректировать */
+		.page-body .sync-area .card-body {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="app-page">
+		<div class="page-header">
+			<button type="button" class="btn goback"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+			<div class="title"></div>
+		</div>
+
+		<div class="container bg-light page-body">
+			<h4 class="my-3 page-title">9. ГЛАГОЛЫ</h4>
+
+			<div class="py-2 app-separator"></div>
+			<h5 class="text-secondary mt-2">(Раздел не завершён...)</h5>
+
+
+			<div class="mt-0 mb-3 px-3 py-2 caption-bkg">
+				<h3 class="text-primary mb-2 text-left text-md-center">I спряжение</h3>
+				<div class="h6 bg-light my-2 p-2 text-center rounded">К I спряжению относятся глаголы на<br
+						class="d-md-none" /> -<b>ать</b>, -<b>ять</b>, -<b>еть</b></div>
+
+				<table class="tbl-rule text-center">
+					<tbody>
+						<tr>
+							<th class="pb-1">КТО?</th>
+							<th class="pb-1">ОКОНЧАНИЯ</th>
+						</tr>
+						<tr>
+							<td>я</td>
+							<td>-ю / -у</td>
+						</tr>
+						<tr>
+							<td>ты</td>
+							<td>-ешь / ёшь</td>
+						</tr>
+						<tr>
+							<td>он, она́</td>
+							<td>-ет / ёт</td>
+						</tr>
+						<tr>
+							<td>мы</td>
+							<td>-ем / ём</td>
+						</tr>
+						<tr>
+							<td>вы</td>
+							<td>-ете / ёте</td>
+						</tr>
+						<tr>
+							<td>они́</td>
+							<td>-ют / -ут</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BGN Player 01 -->
+			<div class="sync-area">
+				<div id="part01_1" class="card">
+					<div id="part01_1_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part01_1_collapse" aria-expanded="true" aria-controls="part01_1_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3">Глаголы I спряжения</h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/part01_1.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part01_1_collapse" class="collapse" aria-labelledby="part01_1_head"
+						data-parent="#part01_1">
+						<div class="card-body pt-0">
+							<div class="sync-context">
+								<div class="sync-text">
+									<!-- ROW 1 -->
+									<div class="row pr-2">
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-primary">
+												<div class="header">
+													<span>де́ла-ть</span><br /><span class="trans">(do,
+														make)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark class="selected">я<br /><span
+																	class="subj">де́ла&#8209;ю</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">де́ла&#8209;ешь</span></mark>
+														</div>
+														<div><mark>он/она<br /><span
+																	class="subj">де́ла&#8209;ет</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">де́ла&#8209;ем</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">де́ла&#8209;ете</span></mark>
+														</div>
+														<div><mark>они<br /><span
+																	class="subj">де́ла&#8209;ют</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-primary">
+												<div class="header">
+													<span>чита́-ть</span><br /><span class="trans">(read)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark class="selected">я<br /><span
+																	class="subj">чита́-ю</span></mark></div>
+														<div><mark>ты<br /><span class="subj">чита́-ешь</span></mark>
+														</div>
+														<div><mark>он/она<br /><span class="subj">чита́-ет</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span class="subj">чита́-ем</span></mark>
+														</div>
+														<div><mark>вы<br /><span class="subj">чита́-ете</span></mark>
+														</div>
+														<div><mark>они<br /><span class="subj">чита́-ют</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div><!-- END row -->
+
+									<!-- ROW 2 -->
+									<div class="row pr-2 mt-3 mt-md-4">
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-secondary">
+												<div class="header">
+													<span>слу́ша-ть</span><br /><span class="trans">(listen)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark class="selected">я<br /><span
+																	class="subj">слу́ша&#8209;ю</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">слу́ша&#8209;ешь</span></mark>
+														</div>
+														<div><mark>он/она<br /><span
+																	class="subj">слу́ша&#8209;ет</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">слу́ша&#8209;ем</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">слу́ша&#8209;ете</span></mark>
+														</div>
+														<div><mark>они<br /><span
+																	class="subj">слу́ша&#8209;ют</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-secondary">
+												<div class="header">
+													<span>изуча́-ть</span><br /><span class="trans">(study)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark class="selected">я<br /><span
+																	class="subj">изуча́-ю</span></mark></div>
+														<div><mark>ты<br /><span class="subj">изуча́-ешь</span></mark>
+														</div>
+														<div><mark>он/она<br /><span
+																	class="subj">изуча́-ет</span></mark></div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span class="subj">изуча́-ем</span></mark>
+														</div>
+														<div><mark>вы<br /><span class="subj">изуча́-ете</span></mark>
+														</div>
+														<div><mark>они<br /><span class="subj">изуча́-ют</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div><!-- END row -->
+
+									<!-- ROW 3 -->
+									<div class="row pr-2 mt-3 mt-md-4">
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-success">
+												<div class="header">
+													<span>зна-ть</span><br /><span class="trans">(know)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark class="selected">я<br /><span
+																	class="subj">зна́&#8209;ю</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">зна́&#8209;ешь</span></mark>
+														</div>
+														<div><mark>он/она<br /><span
+																	class="subj">зна́&#8209;ет</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">зна́&#8209;ем</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">зна́&#8209;ете</span></mark>
+														</div>
+														<div><mark>они<br /><span
+																	class="subj">зна́&#8209;ют</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-success">
+												<div class="header">
+													<span>ду́ма-ть</span><br /><span class="trans">(think)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark class="selected">я<br /><span
+																	class="subj">ду́ма-ю</span></mark></div>
+														<div><mark>ты<br /><span class="subj">ду́ма-ешь</span></mark>
+														</div>
+														<div><mark>он/она<br /><span class="subj">ду́ма-ет</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span class="subj">ду́ма-ем</span></mark>
+														</div>
+														<div><mark>вы<br /><span class="subj">ду́ма-ете</span></mark>
+														</div>
+														<div><mark>они<br /><span class="subj">ду́ма-ют</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div><!-- END row -->
+
+
+
+
+
+
+
+
+
+
+
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="###">
+										<div class="range" data-in="00:00:00;00:00:01"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END Player 01 -->
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BGN Player 02 -->
+			<div class="sync-area">
+				<div id="part01_2" class="card">
+					<div id="part01_2_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part01_2_collapse" aria-expanded="true" aria-controls="part01_2_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3">Глаголы I спряжения с изменением основы</h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/part01_2.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part01_2_collapse" class="collapse" aria-labelledby="part01_2_head"
+						data-parent="#part01_2">
+						<div class="card-body pt-0">
+							<div class="sync-context">
+								<div class="sync-text">
+									<!-- ROW 1 -->
+									<div class="row pr-2">
+										<div class="col-6 card-verb-nest">
+										</div>
+										<div class="col-6 card-verb-nest">
+										</div>
+									</div><!-- END row -->
+
+
+
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="###">
+										<div class="range" data-in="00:00:00;00:00:01"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END Player 02 -->
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BGN Player 03 -->
+			<div class="sync-area">
+				<div id="part01_3" class="card">
+					<div id="part01_3_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part01_3_collapse" aria-expanded="true" aria-controls="part01_3_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3">Глаголы I спряжения с <span
+									class="signbox">&#8209;ва&#8209;</span>, <span
+									class="signbox">&#8209;ова&#8209;</span>/<span
+									class="signbox">&#8209;ева&#8209;</span> </h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/part01_3.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part01_3_collapse" class="collapse" aria-labelledby="part01_3_head"
+						data-parent="#part01_3">
+						<div class="card-body pt-0">
+							<div class="sync-context">
+								<div class="sync-text">
+									<!-- ROW 1 -->
+									<div class="row pr-2">
+										<div class="col-6 card-verb-nest">
+										</div>
+										<div class="col-6 card-verb-nest">
+										</div>
+									</div><!-- END row -->
+
+
+
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="###">
+										<div class="range" data-in="00:00:00;00:00:01"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END Player 03 -->
+
+
+			<!-- ================================================================================== -->
+			<!-- ================================================================================== -->
+			<!-- ================================================================================== -->
+
+			<div class="mt-0 mb-3 px-3 py-2 mt-4 caption-bkg">
+				<h3 class="text-primary mb-2 text-left text-md-center">II спряжение</h3>
+				<div class="h6 bg-light my-2 p-2 text-center rounded">Ко II спряжению относятся глаголы на<br
+						class="d-md-none" /> -<b>ить</b>, -<b>еть</b></div>
+
+				<table class="tbl-rule text-center">
+					<tbody>
+						<tr>
+							<th class="pb-1">КТО?</th>
+							<th class="pb-1">ОКОНЧАНИЯ</th>
+						</tr>
+						<tr>
+							<td>я</td>
+							<td>-ю / -у</td>
+						</tr>
+						<tr>
+							<td>ты</td>
+							<td>-ишь</td>
+						</tr>
+						<tr>
+							<td>он, она́,<br />оно́</td>
+							<td>-ит</td>
+						</tr>
+						<tr>
+							<td>мы</td>
+							<td>-им</td>
+						</tr>
+						<tr>
+							<td>вы</td>
+							<td>-ите</td>
+						</tr>
+						<tr>
+							<td>они́</td>
+							<td>-ят / -ат</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BGN Player 02-1 -->
+			<div class="sync-area">
+				<div id="part02_1" class="card">
+					<div id="part02_1_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part02_1_collapse" aria-expanded="true" aria-controls="part02_1_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3">Глаголы II спряжения</h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/part02_1.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part02_1_collapse" class="collapse" aria-labelledby="part02_1_head"
+						data-parent="#part02_1">
+						<div class="card-body pt-0">
+							<div class="sync-context">
+								<div class="sync-text">
+									<p>Содержимое раздела</p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="###">
+										<div class="range" data-in="00:00:00;00:00:01"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END Player 02-1 -->
+
+
+			<!-- //////////////////////////////////////////////// -->
+			<!-- BGN Player 02-2 -->
+			<div class="sync-area">
+				<div id="part02_2" class="card">
+					<div id="part02_2_head" class="card-header d-flex flex-column">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part02_2_collapse" aria-expanded="true" aria-controls="part02_2_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h5 class="text-primary ml-3">Глаголы II спряжения с изменением основы</h5>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/part02_2.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part02_2_collapse" class="collapse" aria-labelledby="part02_2_head"
+						data-parent="#part02_2">
+						<div class="card-body pt-0">
+							<div class="sync-context">
+								<div class="sync-text">
+									<p>Содержимое раздела</p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="###">
+										<div class="range" data-in="00:00:00;00:00:01"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END Player 02-2 -->
+
+
+			<!-- ================================================================================== -->
+			<!-- ================================================================================== -->
+			<!-- ================================================================================== -->
+
+			<div class="sync-area mt-4">
+				<div id="part03_1" class="card">
+					<div id="part03_1_head" class="card-header d-flex flex-column caption-bkg">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part03_1_collapse" aria-expanded="true" aria-controls="part03_1_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h3 class="text-primary ml-3">Особые формы глагола</h3>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/part03_1.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part03_1_collapse" class="collapse" aria-labelledby="part03_1_head"
+						data-parent="#part03_1">
+						<div class="card-body pt-0">
+							<div class="sync-context">
+								<div class="sync-text">
+									<p>Содержимое раздела</p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="###">
+										<div class="range" data-in="00:00:00;00:00:01"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- ================================================================================== -->
+			<!-- ================================================================================== -->
+			<!-- ================================================================================== -->
+
+			<div class="sync-area mt-4">
+				<div id="part03_2" class="card">
+					<div id="part03_2_head" class="card-header d-flex flex-column caption-bkg">
+						<div class="d-flex flex-row align-items-center">
+							<button class="btn btn-outline-primary" type="button" data-toggle="collapse"
+								data-target="#part03_2_collapse" aria-expanded="true" aria-controls="part03_2_collapse">
+								<i class="fa fa-file-text-o fa-2x mt-1"></i>
+							</button>
+							<h3 class="text-primary ml-3">Глаголы на <span class="signbox">&#8209;ся</span></h3>
+						</div>
+						<div class="mt-2 audio-box">
+							<audio preload="none" controls>
+								<source
+									src="mats/learnaudio/beginneraudio/page01/part03_2.mp3"
+									type="audio/mpeg">
+								Your browser does not support the audio tag.
+							</audio>
+						</div>
+					</div>
+					<div id="part03_2_collapse" class="collapse" aria-labelledby="part03_2_head"
+						data-parent="#part03_2">
+						<div class="card-body pt-0">
+							<div class="sync-context">
+								<div class="sync-text">
+									<p>Содержимое раздела</p>
+								</div>
+								<div class="sync-info">
+									<div class="sync-entry" data-text="###">
+										<div class="range" data-in="00:00:00;00:00:01"></div>
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<div class="py-2 app-separator"></div>
+
+			<!-- <div class="prompt-once">
+				<button id="close" type="button" class="btn btn-outline-primary btn-sm" style="position: absolute;left:auto;top:4px;right:5px;">&times;</button>				
+				<img src="./res/images/double-tap.svg" style="width:96px;height:96px;" />
+				<div class="h5 mt-1" style="max-width:450px;text-align: justify;">Выде&shy;ле&shy;ние и прос&shy;лу&shy;ши&shy;ва&shy;ние
+					фраг&shy;мен&shy;тов тек&shy;ста вы&shy;пол&shy;ня&shy;ет&shy;ся по двой&shy;но&shy;му кли&shy;ку</div>
+			</div> -->
+
+		</div>
+		<!-- END page-body -->
+	</div>
+	<!-- END app-page -->
+</body>
+
+</html>
