@@ -6,13 +6,6 @@
 	<meta charset="utf-8">
 	<meta http-equiv="Cache-Control" content="no-cache">
 
-
-	<!--
-	Для реализации аудиоплеера решил использовать:
-	Responsive & Touch-Friendly Audio Player 
-	https://tympanus.net/codrops/2012/12/04/responsive-touch-friendly-audio-player/
--->
-
 	<style>
 		.app-page .tbl-rule {
 			width: fit-content;
@@ -55,6 +48,10 @@
 			text-align: center;
 			padding-bottom: 0.5em;
 			border-bottom: lightgray 2px solid;
+		}
+
+		.app-page .card-verb .header mark {
+			color: inherit;
 		}
 
 		.app-page .card-verb .header .trans {
@@ -121,36 +118,6 @@
 				padding-right: 6px;
 				padding-left: 6px;
 			}
-		}
-
-		@media (min-width: 768px) {
-			/* .app-page {
-				border: darkgreen 5px dotted;
-			} */
-
-			.app-page .card-verb-nest {
-				padding-right: 12px;
-				padding-left: 12px;
-			}
-
-			.app-page .card-verb {
-				box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-			}
-
-			.app-page .card-verb .header {
-				font-size: 1.8rem;
-				border-bottom: lightgray 2px solid;
-			}
-
-			.app-page .card-verb .body {
-				font-size: 1.4rem;
-			}
-
-			.app-page .body>.subj-nest {
-				padding-right: 10px;
-				padding-left: 10px;
-			}
-
 		}
 
 		/* */
@@ -255,9 +222,7 @@
 						</div>
 						<div class="mt-2 audio-box">
 							<audio preload="none" controls>
-								<source
-									src="mats/learnaudio/beginneraudio/page01/part01_1.mp3"
-									type="audio/mpeg">
+								<source src="mats/learnaudio/beginneraudio/page09/1stConjVerbs.mp3" type="audio/mpeg">
 								Your browser does not support the audio tag.
 							</audio>
 						</div>
@@ -272,18 +237,17 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-primary">
 												<div class="header">
-													<span>де́ла-ть</span><br /><span class="trans">(do,
+													<mark>де́ла-ть</mark><br /><span class="trans">(do,
 														make)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark class="selected">я<br /><span
-																	class="subj">де́ла&#8209;ю</span></mark>
+														<div><mark>я<br /><span class="subj">де́ла&#8209;ю</span></mark>
 														</div>
 														<div><mark>ты<br /><span
 																	class="subj">де́ла&#8209;ешь</span></mark>
 														</div>
-														<div><mark>он/она<br /><span
+														<div><mark>он/она́<br /><span
 																	class="subj">де́ла&#8209;ет</span></mark>
 														</div>
 													</div>
@@ -295,7 +259,7 @@
 														<div><mark>вы<br /><span
 																	class="subj">де́ла&#8209;ете</span></mark>
 														</div>
-														<div><mark>они<br /><span
+														<div><mark>они́<br /><span
 																	class="subj">де́ла&#8209;ют</span></mark>
 														</div>
 													</div>
@@ -305,15 +269,14 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-primary">
 												<div class="header">
-													<span>чита́-ть</span><br /><span class="trans">(read)</span>
+													<mark>чита́-ть</mark><br /><span class="trans">(read)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark class="selected">я<br /><span
-																	class="subj">чита́-ю</span></mark></div>
+														<div><mark>я<br /><span class="subj">чита́-ю</span></mark></div>
 														<div><mark>ты<br /><span class="subj">чита́-ешь</span></mark>
 														</div>
-														<div><mark>он/она<br /><span class="subj">чита́-ет</span></mark>
+														<div><mark>он/она́<br /><span class="subj">чита́-ет</span></mark>
 														</div>
 													</div>
 													<div class="hsep d-md-none"></div>
@@ -322,7 +285,7 @@
 														</div>
 														<div><mark>вы<br /><span class="subj">чита́-ете</span></mark>
 														</div>
-														<div><mark>они<br /><span class="subj">чита́-ют</span></mark>
+														<div><mark>они́<br /><span class="subj">чита́-ют</span></mark>
 														</div>
 													</div>
 												</div>
@@ -335,17 +298,17 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-secondary">
 												<div class="header">
-													<span>слу́ша-ть</span><br /><span class="trans">(listen)</span>
+													<mark>слу́ша-ть</mark><br /><span class="trans">(listen)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark class="selected">я<br /><span
+														<div><mark>я<br /><span
 																	class="subj">слу́ша&#8209;ю</span></mark>
 														</div>
 														<div><mark>ты<br /><span
 																	class="subj">слу́ша&#8209;ешь</span></mark>
 														</div>
-														<div><mark>он/она<br /><span
+														<div><mark>он/она́<br /><span
 																	class="subj">слу́ша&#8209;ет</span></mark>
 														</div>
 													</div>
@@ -357,7 +320,7 @@
 														<div><mark>вы<br /><span
 																	class="subj">слу́ша&#8209;ете</span></mark>
 														</div>
-														<div><mark>они<br /><span
+														<div><mark>они́<br /><span
 																	class="subj">слу́ша&#8209;ют</span></mark>
 														</div>
 													</div>
@@ -367,15 +330,15 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-secondary">
 												<div class="header">
-													<span>изуча́-ть</span><br /><span class="trans">(study)</span>
+													<mark>изуча́-ть</mark><br /><span class="trans">(study)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark class="selected">я<br /><span
-																	class="subj">изуча́-ю</span></mark></div>
+														<div><mark>я<br /><span class="subj">изуча́-ю</span></mark>
+														</div>
 														<div><mark>ты<br /><span class="subj">изуча́-ешь</span></mark>
 														</div>
-														<div><mark>он/она<br /><span
+														<div><mark>он/она́<br /><span
 																	class="subj">изуча́-ет</span></mark></div>
 													</div>
 													<div class="hsep d-md-none"></div>
@@ -384,7 +347,7 @@
 														</div>
 														<div><mark>вы<br /><span class="subj">изуча́-ете</span></mark>
 														</div>
-														<div><mark>они<br /><span class="subj">изуча́-ют</span></mark>
+														<div><mark>они́<br /><span class="subj">изуча́-ют</span></mark>
 														</div>
 													</div>
 												</div>
@@ -397,17 +360,16 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-success">
 												<div class="header">
-													<span>зна-ть</span><br /><span class="trans">(know)</span>
+													<mark>зна-ть</mark><br /><span class="trans">(know)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark class="selected">я<br /><span
-																	class="subj">зна́&#8209;ю</span></mark>
+														<div><mark>я<br /><span class="subj">зна́&#8209;ю</span></mark>
 														</div>
 														<div><mark>ты<br /><span
 																	class="subj">зна́&#8209;ешь</span></mark>
 														</div>
-														<div><mark>он/она<br /><span
+														<div><mark>он/она́<br /><span
 																	class="subj">зна́&#8209;ет</span></mark>
 														</div>
 													</div>
@@ -419,7 +381,7 @@
 														<div><mark>вы<br /><span
 																	class="subj">зна́&#8209;ете</span></mark>
 														</div>
-														<div><mark>они<br /><span
+														<div><mark>они́<br /><span
 																	class="subj">зна́&#8209;ют</span></mark>
 														</div>
 													</div>
@@ -429,15 +391,14 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-success">
 												<div class="header">
-													<span>ду́ма-ть</span><br /><span class="trans">(think)</span>
+													<mark>ду́ма-ть</mark><br /><span class="trans">(think)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark class="selected">я<br /><span
-																	class="subj">ду́ма-ю</span></mark></div>
+														<div><mark>я<br /><span class="subj">ду́ма-ю</span></mark></div>
 														<div><mark>ты<br /><span class="subj">ду́ма-ешь</span></mark>
 														</div>
-														<div><mark>он/она<br /><span class="subj">ду́ма-ет</span></mark>
+														<div><mark>он/она́<br /><span class="subj">ду́ма-ет</span></mark>
 														</div>
 													</div>
 													<div class="hsep d-md-none"></div>
@@ -446,7 +407,7 @@
 														</div>
 														<div><mark>вы<br /><span class="subj">ду́ма-ете</span></mark>
 														</div>
-														<div><mark>они<br /><span class="subj">ду́ма-ют</span></mark>
+														<div><mark>они́<br /><span class="subj">ду́ма-ют</span></mark>
 														</div>
 													</div>
 												</div>
@@ -454,24 +415,236 @@
 										</div>
 									</div><!-- END row -->
 
-
-
-
-
-
-
-
-
-
-
+									<!-- ROW 4 -->
+									<div class="row pr-2 mt-3 mt-md-4">
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-primary">
+												<div class="header">
+													<mark>повторя́-ть</mark><br /><span class="trans">(repeat)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span class="subj">повторя́-ю</span></mark>
+														</div>
+														<div><mark>ты<br /><span class="subj">повторя́-ешь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span
+																	class="subj">повторя́-ет</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span class="subj">повторя́-ем</span></mark>
+														</div>
+														<div><mark>вы<br /><span class="subj">повторя́-ете</span></mark>
+														</div>
+														<div><mark>они́<br /><span
+																	class="subj">повторя́-ют</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-primary">
+												<div class="header">
+													<mark>боле́-ть</mark><br /><span class="trans">(ill)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span class="subj">боле́-ю</span></mark></div>
+														<div><mark>ты<br /><span class="subj">боле́-ешь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span class="subj">боле́-ет</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span class="subj">боле́-ем</span></mark>
+														</div>
+														<div><mark>вы<br /><span class="subj">боле́-ете</span></mark>
+														</div>
+														<div><mark>они́<br /><span class="subj">боле́-ют</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div><!-- END Row 4 -->
 								</div>
+
 								<div class="sync-info">
-									<div class="sync-entry" data-text="###">
-										<div class="range" data-in="00:00:00;00:00:01"></div>
+									<div class="sync-entry" data-text="де́ла-ть">
+										<div class="range" data-in="00:00:03.306;00:00:04.014"></div>
 									</div>
-
-
+									<div class="sync-entry" data-text="я де́ла-ю">
+										<div class="range" data-in="00:00:04.714;00:00:05.871"></div>
+									</div>
+									<div class="sync-entry" data-text="ты де́ла-ешь">
+										<div class="range" data-in="00:00:06.367;00:00:07.776"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ де́ла-ет">
+										<div class="range" data-in="00:00:08.303;00:00:10.207"></div>
+									</div>
+									<div class="sync-entry" data-text="мы де́ла-ем">
+										<div class="range" data-in="00:00:10.922;00:00:12.310"></div>
+									</div>
+									<div class="sync-entry" data-text="вы де́ла-ете">
+										<div class="range" data-in="00:00:12.949;00:00:14.595"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ де́ла-ют">
+										<div class="range" data-in="00:00:14.973;00:00:16.592"></div>
+									</div>
+									<div class="sync-entry" data-text="чита́-ть">
+										<div class="range" data-in="00:00:17.817;00:00:18.749"></div>
+									</div>
+									<div class="sync-entry" data-text="я чита́-ю">
+										<div class="range" data-in="00:00:19.506;00:00:20.860"></div>
+									</div>
+									<div class="sync-entry" data-text="ты чита́-ешь">
+										<div class="range" data-in="00:00:21.606;00:00:23.151"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ чита́-ет">
+										<div class="range" data-in="00:00:23.754;00:00:25.802"></div>
+									</div>
+									<div class="sync-entry" data-text="мы чита́-ем">
+										<div class="range" data-in="00:00:26.471;00:00:27.954"></div>
+									</div>
+									<div class="sync-entry" data-text="вы чита́-ете">
+										<div class="range" data-in="00:00:28.510;00:00:30.231"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ чита́-ют">
+										<div class="range" data-in="00:00:30.967;00:00:32.852"></div>
+									</div>
+									<div class="sync-entry" data-text="слу́ша-ть">
+										<div class="range" data-in="00:00:34.450;00:00:35.301"></div>
+									</div>
+									<div class="sync-entry" data-text="я слу́ша-ю">
+										<div class="range" data-in="00:00:35.866;00:00:37.397"></div>
+									</div>
+									<div class="sync-entry" data-text="ты слу́ша-ешь">
+										<div class="range" data-in="00:00:37.958;00:00:39.597"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ слу́ша-ет">
+										<div class="range" data-in="00:00:40.209;00:00:42.386"></div>
+									</div>
+									<div class="sync-entry" data-text="мы слу́ша-ем">
+										<div class="range" data-in="00:00:42.948;00:00:44.438"></div>
+									</div>
+									<div class="sync-entry" data-text="вы слу́ша-ете">
+										<div class="range" data-in="00:00:45.068;00:00:46.707"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ слу́ша-ют">
+										<div class="range" data-in="00:00:47.263;00:00:48.895"></div>
+									</div>
+									<div class="sync-entry" data-text="изуча́-ть">
+										<div class="range" data-in="00:00:50.104;00:00:51.179"></div>
+									</div>
+									<div class="sync-entry" data-text="я изуча́-ю">
+										<div class="range" data-in="00:00:52.065;00:00:53.664"></div>
+									</div>
+									<div class="sync-entry" data-text="ты изуча́-ешь">
+										<div class="range" data-in="00:00:54.217;00:00:55.857"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ изуча́-ет">
+										<div class="range" data-in="00:00:56.317;00:00:58.350"></div>
+									</div>
+									<div class="sync-entry" data-text="мы изуча́-ем">
+										<div class="range" data-in="00:00:59.068;00:01:00.605"></div>
+									</div>
+									<div class="sync-entry" data-text="вы изуча́-ете">
+										<div class="range" data-in="00:01:01.258;00:01:03.129"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ изуча́-ют">
+										<div class="range" data-in="00:01:03.781;00:01:05.631"></div>
+									</div>
+									<div class="sync-entry" data-text="зна-ть">
+										<div class="range" data-in="00:01:07.479;00:01:08.187"></div>
+									</div>
+									<div class="sync-entry" data-text="я зна́-ю">
+										<div class="range" data-in="00:01:08.802;00:01:10.231"></div>
+									</div>
+									<div class="sync-entry" data-text="ты зна́-ешь">
+										<div class="range" data-in="00:01:10.971;00:01:12.434"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ зна́-ет">
+										<div class="range" data-in="00:01:12.974;00:01:14.987"></div>
+									</div>
+									<div class="sync-entry" data-text="мы зна́-ем">
+										<div class="range" data-in="00:01:15.549;00:01:16.869"></div>
+									</div>
+									<div class="sync-entry" data-text="вы зна́-ете">
+										<div class="range" data-in="00:01:17.574;00:01:19.146"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ зна́-ют">
+										<div class="range" data-in="00:01:19.515;00:01:21.209"></div>
+									</div>
+									<div class="sync-entry" data-text="ду́ма-ть">
+										<div class="range" data-in="00:01:23.142;00:01:23.952"></div>
+									</div>
+									<div class="sync-entry" data-text="я ду́ма-ю">
+										<div class="range" data-in="00:01:24.765;00:01:26.309"></div>
+									</div>
+									<div class="sync-entry" data-text="ты ду́ма-ешь">
+										<div class="range" data-in="00:01:26.939;00:01:28.687"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ ду́ма-ет">
+										<div class="range" data-in="00:01:29.080;00:01:31.059"></div>
+									</div>
+									<div class="sync-entry" data-text="мы ду́ма-ем">
+										<div class="range" data-in="00:01:31.692;00:01:33.080"></div>
+									</div>
+									<div class="sync-entry" data-text="вы ду́ма-ете">
+										<div class="range" data-in="00:01:33.758;00:01:35.466"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ ду́ма-ют">
+										<div class="range" data-in="00:01:35.941;00:01:37.669"></div>
+									</div>
+									<div class="sync-entry" data-text="повторя́-ть">
+										<div class="range" data-in="00:01:39.007;00:01:40.020"></div>
+									</div>
+									<div class="sync-entry" data-text="я повторя́-ю">
+										<div class="range" data-in="00:01:40.590;00:01:42.148"></div>
+									</div>
+									<div class="sync-entry" data-text="ты повторя́-ешь">
+										<div class="range" data-in="00:01:42.802;00:01:44.400"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ повторя́-ет">
+										<div class="range" data-in="00:01:44.989;00:01:47.112"></div>
+									</div>
+									<div class="sync-entry" data-text="мы повторя́-ем">
+										<div class="range" data-in="00:01:47.928;00:01:49.547"></div>
+									</div>
+									<div class="sync-entry" data-text="вы повторя́-ете">
+										<div class="range" data-in="00:01:50.116;00:01:51.987"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ повторя́-ют">
+										<div class="range" data-in="00:01:52.308;00:01:54.152"></div>
+									</div>
+									<div class="sync-entry" data-text="боле́-ть">
+										<div class="range" data-in="00:01:55.575;00:01:56.452"></div>
+									</div>
+									<div class="sync-entry" data-text="я боле́-ю">
+										<div class="range" data-in="00:01:57.005;00:01:58.610"></div>
+									</div>
+									<div class="sync-entry" data-text="ты боле́-ешь">
+										<div class="range" data-in="00:01:59.105;00:02:00.805"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ боле́-ет">
+										<div class="range" data-in="00:02:01.107;00:02:02.957"></div>
+									</div>
+									<div class="sync-entry" data-text="мы боле́-ем">
+										<div class="range" data-in="00:02:03.609;00:02:05.126"></div>
+									</div>
+									<div class="sync-entry" data-text="вы боле́-ете">
+										<div class="range" data-in="00:02:05.640;00:02:07.266"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ боле́-ют">
+										<div class="range" data-in="00:02:07.592;00:02:09.238"></div>
+									</div>
 								</div>
+
+
 							</div>
 						</div>
 					</div>
@@ -494,9 +667,7 @@
 						</div>
 						<div class="mt-2 audio-box">
 							<audio preload="none" controls>
-								<source
-									src="mats/learnaudio/beginneraudio/page01/part01_2.mp3"
-									type="audio/mpeg">
+								<source src="mats/learnaudio/beginneraudio/page01/part01_2.mp3" type="audio/mpeg">
 								Your browser does not support the audio tag.
 							</audio>
 						</div>
@@ -549,9 +720,7 @@
 						</div>
 						<div class="mt-2 audio-box">
 							<audio preload="none" controls>
-								<source
-									src="mats/learnaudio/beginneraudio/page01/part01_3.mp3"
-									type="audio/mpeg">
+								<source src="mats/learnaudio/beginneraudio/page01/part01_3.mp3" type="audio/mpeg">
 								Your browser does not support the audio tag.
 							</audio>
 						</div>
@@ -644,9 +813,7 @@
 						</div>
 						<div class="mt-2 audio-box">
 							<audio preload="none" controls>
-								<source
-									src="mats/learnaudio/beginneraudio/page01/part02_1.mp3"
-									type="audio/mpeg">
+								<source src="mats/learnaudio/beginneraudio/page01/part02_1.mp3" type="audio/mpeg">
 								Your browser does not support the audio tag.
 							</audio>
 						</div>
@@ -687,9 +854,7 @@
 						</div>
 						<div class="mt-2 audio-box">
 							<audio preload="none" controls>
-								<source
-									src="mats/learnaudio/beginneraudio/page01/part02_2.mp3"
-									type="audio/mpeg">
+								<source src="mats/learnaudio/beginneraudio/page01/part02_2.mp3" type="audio/mpeg">
 								Your browser does not support the audio tag.
 							</audio>
 						</div>
@@ -732,9 +897,7 @@
 						</div>
 						<div class="mt-2 audio-box">
 							<audio preload="none" controls>
-								<source
-									src="mats/learnaudio/beginneraudio/page01/part03_1.mp3"
-									type="audio/mpeg">
+								<source src="mats/learnaudio/beginneraudio/page01/part03_1.mp3" type="audio/mpeg">
 								Your browser does not support the audio tag.
 							</audio>
 						</div>
@@ -776,9 +939,7 @@
 						</div>
 						<div class="mt-2 audio-box">
 							<audio preload="none" controls>
-								<source
-									src="mats/learnaudio/beginneraudio/page01/part03_2.mp3"
-									type="audio/mpeg">
+								<source src="mats/learnaudio/beginneraudio/page01/part03_2.mp3" type="audio/mpeg">
 								Your browser does not support the audio tag.
 							</audio>
 						</div>
