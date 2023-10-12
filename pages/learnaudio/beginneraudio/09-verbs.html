@@ -30,13 +30,13 @@
 		/* BGN CARD-VERB Styles */
 
 		.app-page .card-verb-nest {
-			padding-right: 4px;
-			padding-left: 4px;
+			padding-right: 2px;
+			padding-left: 2px;
 		}
 
 		.app-page .card-verb {
 			height: 100%;
-			padding: 1rem;
+			padding: 4px;
 			color: white;
 			display: flex;
 			flex-direction: column;
@@ -96,9 +96,14 @@
 		/************************/
 
 		@media (min-width: 576px) {
-			/* .app-page {
-				border: red 5px dotted;
-			} */
+			.app-page .card-verb-nest {
+				padding-right: 4px;
+				padding-left: 4px;
+			}
+
+			.app-page .card-verb {
+				padding: 1rem;
+			}
 
 			.app-page .card-verb-nest {
 				padding-right: 8px;
@@ -718,25 +723,26 @@
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>я<br /><span
-																	class="subj">пи<u>ш</u>&#8209;у́</span></mark></div>
-														<div><mark>ты<br /><span
-																	class="subj">пи́<u>ш</u>&#8209;ешь</span></mark>
+														<div><mark>я<br /><span class="subj">пи<span
+																		class="sel-u">ш</span>&#8209;у́</span></mark>
 														</div>
-														<div><mark>он/она́<br /><span
-																	class="subj">пи́<u>ш</u>&#8209;ет</span></mark>
+														<div><mark>ты<br /><span class="subj">пи́<span
+																		class="sel-u">ш</span>&#8209;ешь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span class="subj">пи́<span
+																		class="sel-u">ш</span>&#8209;ет</span></mark>
 														</div>
 													</div>
 													<div class="hsep d-md-none"></div>
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>мы<br /><span
-																	class="subj">пи́<u>ш</u>&#8209;ем</span></mark>
+														<div><mark>мы<br /><span class="subj">пи́<span
+																		class="sel-u">ш</span>&#8209;ем</span></mark>
 														</div>
-														<div><mark>вы<br /><span
-																	class="subj">пи́<u>ш</u>&#8209;ете</span></mark>
+														<div><mark>вы<br /><span class="subj">пи́<span
+																		class="sel-u">ш</span>&#8209;ете</span></mark>
 														</div>
-														<div><mark>они́<br /><span
-																	class="subj">пи́<u>ш</u>&#8209;ут</span></mark>
+														<div><mark>они́<br /><span class="subj">пи́<span
+																		class="sel-u">ш</span>&#8209;ут</span></mark>
 														</div>
 													</div>
 												</div>
@@ -754,21 +760,27 @@
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>я<br /><span
-																	class="subj">п<u>о</u>&#8209;ю́</span></mark></div>
-														<div><mark>ты<br /><span
-																	class="subj">п<u>о</u>&#8209;ёшь</span></mark></div>
-														<div><mark>он/она́<br /><span
-																	class="subj">п<u>о</u>&#8209;ёт</span></mark></div>
+														<div><mark>я<br /><span class="subj">п<span
+																		class="sel-u">о</span>&#8209;ю́</span></mark>
+														</div>
+														<div><mark>ты<br /><span class="subj">п<span
+																		class="sel-u">о</span>&#8209;ёшь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span class="subj">п<span
+																		class="sel-u">о</span>&#8209;ёт</span></mark>
+														</div>
 													</div>
 													<div class="hsep d-md-none"></div>
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>мы<br /><span
-																	class="subj">п<u>о</u>&#8209;ём</span></mark></div>
-														<div><mark>вы<br /><span
-																	class="subj">п<u>о</u>&#8209;ёте</span></mark></div>
-														<div><mark>они́<br /><span
-																	class="subj">п<u>о</u>&#8209;ю́т</span></mark></div>
+														<div><mark>мы<br /><span class="subj">п<span
+																		class="sel-u">о</span>&#8209;ём</span></mark>
+														</div>
+														<div><mark>вы<br /><span class="subj">п<span
+																		class="sel-u">о</span>&#8209;ёте</span></mark>
+														</div>
+														<div><mark>они́<br /><span class="subj">п<span
+																		class="sel-u">о</span>&#8209;ю́т</span></mark>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -886,31 +898,31 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-success">
 												<div class="header">
-													<mark>танц<u>ева́</u>&#8209;ть</mark><br /><span
+													<mark>танц<span class="sel-u">ева́</span>&#8209;ть</mark><br /><span
 														class="trans">(dance)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>я<br /><span class="subj">танц<b
-																		style="color:darkred">у́</b>&#8209;ю</span></mark>
+														<div><mark>я<br /><span class="subj">танц<span
+																		class="sel-u">у́</span>&#8209;ю</span></mark>
 														</div>
-														<div><mark>ты<br /><span class="subj">танц<b
-																		style="color:darkred">у́</b>&#8209;ешь</span></mark>
+														<div><mark>ты<br /><span class="subj">танц<span
+																		class="sel-u">у́</span>&#8209;ешь</span></mark>
 														</div>
-														<div><mark>он/она́<br /><span class="subj">танц<b
-																		style="color:darkred">у́</b>&#8209;ет</span></mark>
+														<div><mark>он/она́<br /><span class="subj">танц<span
+																		class="sel-u">у́</span>&#8209;ет</span></mark>
 														</div>
 													</div>
 													<div class="hsep d-md-none"></div>
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>мы<br /><span class="subj">танц<b
-																		style="color:darkred">у́</b>&#8209;ем</span></mark>
+														<div><mark>мы<br /><span class="subj">танц<span
+																		class="sel-u">у́</span>&#8209;ем</span></mark>
 														</div>
-														<div><mark>вы<br /><span class="subj">танц<b
-																		style="color:darkred">у́</b>&#8209;ете</span></mark>
+														<div><mark>вы<br /><span class="subj">танц<span
+																		class="sel-u">у́</span>&#8209;ете</span></mark>
 														</div>
-														<div><mark>они́<br /><span class="subj">танц<b
-																		style="color:darkred">у́</b>&#8209;ют</span></mark>
+														<div><mark>они́<br /><span class="subj">танц<span
+																		class="sel-u">у́</span>&#8209;ют</span></mark>
 														</div>
 													</div>
 												</div>
@@ -919,31 +931,32 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-primary">
 												<div class="header">
-													<mark>фотографи́р<u>ова</u>-ть</mark><br /><span class="trans">(take
+													<mark>фотографи́р<span class="sel-u">ова</span>-ть</mark><br /><span
+														class="trans">(take
 														picture)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
-													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>я<br /><span class="subj">фотографи́р<b
-																		style="color:darkred">у́</b>&#8209;ю</span></mark>
+													<div class="col-12 col-lg-6 subj-nest">
+														<div><mark>я<br /><span class="subj">фотографи́р<span
+																		class="sel-u">у́</span>&#8209;ю</span></mark>
 														</div>
-														<div><mark>ты<br /><span class="subj">фотографи́р<b
-																		style="color:darkred">у́</b>&#8209;ешь</span></mark>
+														<div><mark>ты<br /><span class="subj">фотографи́р<span
+																		class="sel-u">у́</span>&#8209;ешь</span></mark>
 														</div>
-														<div><mark>он/она́<br /><span class="subj">фотографи́р<b
-																		style="color:darkred">у́</b>&#8209;ет</span></mark>
+														<div><mark>он/она́<br /><span class="subj">фотографи́р<span
+																		class="sel-u">у́</span>&#8209;ет</span></mark>
 														</div>
 													</div>
 													<div class="hsep d-md-none"></div>
-													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>мы<br /><span class="subj">фотографи́р<b
-																		style="color:darkred">у́</b>&#8209;ем</span></mark>
+													<div class="col-12 col-lg-6 subj-nest">
+														<div><mark>мы<br /><span class="subj">фотографи́р<span
+																		class="sel-u">у́</span>&#8209;ем</span></mark>
 														</div>
-														<div><mark>вы<br /><span class="subj">фотографи́р<b
-																		style="color:darkred">у́</b>&#8209;ете</span></mark>
+														<div><mark>вы<br /><span class="subj">фотографи́р<span
+																		class="sel-u">у́</span>&#8209;ете</span></mark>
 														</div>
-														<div><mark>они́<br /><span class="subj">фотографи́р<b
-																		style="color:darkred">у́</b>&#8209;ют</span></mark>
+														<div><mark>они́<br /><span class="subj">фотографи́р<span
+																		class="sel-u">у́</span>&#8209;ют</span></mark>
 														</div>
 													</div>
 												</div>
@@ -957,31 +970,31 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-primary">
 												<div class="header">
-													<mark>рис<u>ова́</u>-ть</mark><br /><span
+													<mark>рис<span class="sel-u">ова́</span>-ть</mark><br /><span
 														class="trans">(draw)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>я<br /><span class="subj">рис<b
-																		style="color:darkred">у́</b>&#8209;ю</span></mark>
+														<div><mark>я<br /><span class="subj">рис<span
+																		class="sel-u">у́</span>&#8209;ю</span></mark>
 														</div>
-														<div><mark>ты<br /><span class="subj">рис<b
-																		style="color:darkred">у́</b>&#8209;ешь</span></mark>
+														<div><mark>ты<br /><span class="subj">рис<span
+																		class="sel-u">у́</span>&#8209;ешь</span></mark>
 														</div>
-														<div><mark>он/она́<br /><span class="subj">рис<b
-																		style="color:darkred">у́</b>&#8209;ет</span></mark>
+														<div><mark>он/она́<br /><span class="subj">рис<span
+																		class="sel-u">у́</span>&#8209;ет</span></mark>
 														</div>
 													</div>
 													<div class="hsep d-md-none"></div>
 													<div class="col-12 col-md-6 subj-nest">
-														<div><mark>мы<br /><span class="subj">рис<b
-																		style="color:darkred">у́</b>&#8209;ем</span></mark>
+														<div><mark>мы<br /><span class="subj">рис<span
+																		class="sel-u">у́</span>&#8209;ем</span></mark>
 														</div>
-														<div><mark>вы<br /><span class="subj">рис<b
-																		style="color:darkred">у́</b>&#8209;ете</span></mark>
+														<div><mark>вы<br /><span class="subj">рис<span
+																		class="sel-u">у́</span>&#8209;ете</span></mark>
 														</div>
-														<div><mark>они́<br /><span class="subj">рис<b
-																		style="color:darkred">у́</b>&#8209;ют
+														<div><mark>они́<br /><span class="subj">рис<span
+																		class="sel-u">у́</span>&#8209;ют
 																</span></mark></div>
 													</div>
 												</div>
@@ -990,7 +1003,8 @@
 										<div class="col-6 card-verb-nest">
 											<div class="card-verb bg-success">
 												<div class="header">
-													<mark>да<u>ва́</u>-ть</mark><br /><span class="trans">(give)</span>
+													<mark>да<span class="sel-u">ва́</span>-ть</mark><br /><span
+														class="trans">(give)</span>
 												</div>
 												<div class="row mt-3 mx-0 text-center text-md-left body">
 													<div class="col-12 col-md-6 subj-nest">
@@ -1115,10 +1129,6 @@
 			<!-- II спряжение -->
 			<!-- ================================================================================== -->
 
-
-			<h5 class="text-secondary mt-5">(Раздел не завершён...)</h5>
-
-
 			<div class="mt-0 mb-3 px-3 py-2 mt-4 caption-bkg">
 				<h3 class="text-primary mb-2 text-left text-md-center">II спряжение</h3>
 				<div class="h6 bg-light my-2 p-2 text-center rounded">Ко II спряжению относятся глаголы на<br
@@ -1172,7 +1182,7 @@
 						</div>
 						<div class="mt-2 audio-box">
 							<audio preload="none" controls>
-								<source src="mats/learnaudio/beginneraudio/page01/part02_1.mp3" type="audio/mpeg">
+								<source src="mats/learnaudio/beginneraudio/page09/2ndConjVerbs.mp3" type="audio/mpeg">
 								Your browser does not support the audio tag.
 							</audio>
 						</div>
@@ -1182,14 +1192,228 @@
 						<div class="card-body pt-0">
 							<div class="sync-context">
 								<div class="sync-text">
-									<p>Содержимое раздела</p>
-								</div>
-								<div class="sync-info">
-									<div class="sync-entry" data-text="###">
-										<div class="range" data-in="00:00:00;00:00:01"></div>
+									<!-- ROW 1  (дефис: &#8209;) -->
+									<div class="row pr-2">
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-success">
+												<div class="header">
+													<mark>говор&#8209;и́ть</mark><br /><span
+														class="trans">(speak)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span
+																	class="subj">говор&#8209;ю́</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">говор&#8209;и́шь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span
+																	class="subj">говор&#8209;и́т</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">говор&#8209;и́м</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">говор&#8209;и́те</span></mark>
+														</div>
+														<div><mark>они́<br /><span
+																	class="subj">говор&#8209;я́т</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-primary">
+												<div class="header">
+													<mark>смотр&#8209;е́ть</mark><br /><span class="trans">(watch, look
+														at)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span
+																	class="subj">смотр&#8209;ю́</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">смо́тр&#8209;ишь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span
+																	class="subj">смо́тр&#8209;ит</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">смо́тр&#8209;им</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">смо́тр&#8209;ите</span></mark>
+														</div>
+														<div><mark>они́<br /><span
+																	class="subj">смо́тр&#8209;ят</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
+									<!-- END row -->
 
+									<!-- ROW 2  (дефис: &#8209;) -->
+									<div class="row pr-2 mt-3 mt-md-4">
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-primary">
+												<div class="header">
+													<mark>уч&#8209;и́ть</mark><br /><span class="trans">(teach,
+														learn)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span class="subj">уч&#8209;у́</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">у́ч&#8209;ишь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span
+																	class="subj">у́ч&#8209;ит</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span class="subj">у́ч&#8209;им</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">у́ч&#8209;ите</span></mark>
+														</div>
+														<div><mark>они́<br /><span
+																	class="subj">у́ч&#8209;ат</span></mark></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-success">
+												<div class="header">
+													<mark>звон&#8209;и́ть</mark><br /><span class="trans">(wring,
+														call)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span class="subj">звон&#8209;ю́</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">звон&#8209;и́шь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span
+																	class="subj">звон&#8209;и́т</span></mark></div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">звон&#8209;и́м</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">звон&#8209;и́те</span></mark>
+														</div>
+														<div><mark>они́<br /><span
+																	class="subj">звон&#8209;я́т</span></mark></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- END row -->
+								</div>
 
+								<div class="sync-info">
+									<div class="sync-entry" data-text="говор-и́ть">
+										<div class="range" data-in="00:00:03.455;00:00:04.346"></div>
+									</div>
+									<div class="sync-entry" data-text="я говор-ю́">
+										<div class="range" data-in="00:00:04.965;00:00:06.394"></div>
+									</div>
+									<div class="sync-entry" data-text="ты говор-и́шь">
+										<div class="range" data-in="00:00:07.030;00:00:08.509"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ говор-и́т">
+										<div class="range" data-in="00:00:08.934;00:00:10.851"></div>
+									</div>
+									<div class="sync-entry" data-text="мы говор-и́м">
+										<div class="range" data-in="00:00:11.323;00:00:12.813"></div>
+									</div>
+									<div class="sync-entry" data-text="вы говор-и́те">
+										<div class="range" data-in="00:00:13.646;00:00:15.292"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ говор-я́т">
+										<div class="range" data-in="00:00:15.663;00:00:17.293"></div>
+									</div>
+									<div class="sync-entry" data-text="смотр-е́ть">
+										<div class="range" data-in="00:00:19.881;00:00:20.879"></div>
+									</div>
+									<div class="sync-entry" data-text="я смотр-ю́">
+										<div class="range" data-in="00:00:21.270;00:00:22.757"></div>
+									</div>
+									<div class="sync-entry" data-text="ты смо́тр-ишь">
+										<div class="range" data-in="00:00:23.338;00:00:24.930"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ смо́тр-ит">
+										<div class="range" data-in="00:00:25.443;00:00:27.393"></div>
+									</div>
+									<div class="sync-entry" data-text="мы смо́тр-им">
+										<div class="range" data-in="00:00:27.927;00:00:29.567"></div>
+									</div>
+									<div class="sync-entry" data-text="вы смо́тр-ите">
+										<div class="range" data-in="00:00:29.938;00:00:31.745"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ смо́тр-ят">
+										<div class="range" data-in="00:00:32.102;00:00:33.884"></div>
+									</div>
+									<div class="sync-entry" data-text="уч-и́ть">
+										<div class="range" data-in="00:00:38.141;00:00:38.984"></div>
+									</div>
+									<div class="sync-entry" data-text="я уч-у́">
+										<div class="range" data-in="00:00:39.429;00:00:40.841"></div>
+									</div>
+									<div class="sync-entry" data-text="ты у́ч-ишь">
+										<div class="range" data-in="00:00:41.395;00:00:42.889"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ у́ч-ит">
+										<div class="range" data-in="00:00:43.266;00:00:45.005"></div>
+									</div>
+									<div class="sync-entry" data-text="мы у́ч-им">
+										<div class="range" data-in="00:00:45.681;00:00:47.128"></div>
+									</div>
+									<div class="sync-entry" data-text="вы у́ч-ите">
+										<div class="range" data-in="00:00:47.607;00:00:49.255"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ у́ч-ат">
+										<div class="range" data-in="00:00:49.547;00:00:51.237"></div>
+									</div>
+									<div class="sync-entry" data-text="звон-и́ть">
+										<div class="range" data-in="00:00:53.573;00:00:54.443"></div>
+									</div>
+									<div class="sync-entry" data-text="я звон-ю́">
+										<div class="range" data-in="00:00:55.161;00:00:56.526"></div>
+									</div>
+									<div class="sync-entry" data-text="ты звон-и́шь">
+										<div class="range" data-in="00:00:57.046;00:00:58.515"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ звон-и́т">
+										<div class="range" data-in="00:00:59.007;00:01:00.894"></div>
+									</div>
+									<div class="sync-entry" data-text="мы звон-и́м">
+										<div class="range" data-in="00:01:01.319;00:01:02.813"></div>
+									</div>
+									<div class="sync-entry" data-text="вы звон-и́те">
+										<div class="range" data-in="00:01:03.313;00:01:04.972"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ звон-я́т">
+										<div class="range" data-in="00:01:05.274;00:01:06.891"></div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -1213,7 +1437,8 @@
 						</div>
 						<div class="mt-2 audio-box">
 							<audio preload="none" controls>
-								<source src="mats/learnaudio/beginneraudio/page01/part02_2.mp3" type="audio/mpeg">
+								<source src="mats/learnaudio/beginneraudio/page09/BaseFlexed_2ndConjVerbs.mp3"
+									type="audio/mpeg">
 								Your browser does not support the audio tag.
 							</audio>
 						</div>
@@ -1222,16 +1447,235 @@
 						data-parent="#part02_2">
 						<div class="card-body pt-0">
 							<div class="sync-context">
+
 								<div class="sync-text">
-									<p>Содержимое раздела</p>
-								</div>
-								<div class="sync-info">
-									<div class="sync-entry" data-text="###">
-										<div class="range" data-in="00:00:00;00:00:01"></div>
+									<!-- ROW 1  (дефис: &#8209;) -->
+									<div class="row pr-2">
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-success">
+												<div class="header">
+													<mark>люб&#8209;и́ть</mark><br /><span class="trans">(like, be fond
+														of)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span class="subj">люб<span
+																		class="sel-u">л</span>&#8209;ю́</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">лю́б&#8209;ишь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span
+																	class="subj">лю́б&#8209;ит</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">лю́б&#8209;им</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">лю́б&#8209;ите</span></mark>
+														</div>
+														<div><mark>они́<br /><span
+																	class="subj">лю́б&#8209;ят</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-primary">
+												<div class="header">
+													<mark>готов&#8209;и́ть</mark><br /><span class="trans">(cook,
+														prepare)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span class="subj">гото́в<span
+																		class="sel-u">л</span>&#8209;ю</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">гото́в&#8209;ишь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span
+																	class="subj">гото́в&#8209;ит</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">гото́в&#8209;им</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">гото́в&#8209;ите</span></mark>
+														</div>
+														<div><mark>они́<br /><span
+																	class="subj">гото́в&#8209;ят</span></mark>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 									</div>
+									<!-- END row -->
 
-
+									<!-- ROW 2  (дефис: &#8209;) -->
+									<div class="row pr-2 mt-3 mt-md-4">
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-primary">
+												<div class="header">
+													<mark>ви́д&#8209;еть</mark><br /><span class="trans">(see,
+														percept)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span class="subj">ви́<span
+																		class="sel-u">ж</span>&#8209;у</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">ви́д&#8209;ишь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span
+																	class="subj">ви́д&#8209;ит</span></mark>
+														</div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">ви́д&#8209;им</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">ви́д&#8209;ите</span></mark>
+														</div>
+														<div><mark>они́<br /><span
+																	class="subj">ви́д&#8209;ят</span></mark></div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-6 card-verb-nest">
+											<div class="card-verb bg-success">
+												<div class="header">
+													<mark>перевод&#8209;и́ть</mark><br /><span class="trans">(translate,
+														interpret)</span>
+												</div>
+												<div class="row mt-3 mx-0 text-center text-md-left body">
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>я<br /><span class="subj">перево<span
+																		class="sel-u">ж</span>&#8209;у́</span></mark>
+														</div>
+														<div><mark>ты<br /><span
+																	class="subj">перево́д&#8209;ишь</span></mark>
+														</div>
+														<div><mark>он/она́<br /><span
+																	class="subj">перево́д&#8209;ит</span></mark></div>
+													</div>
+													<div class="hsep d-md-none"></div>
+													<div class="col-12 col-md-6 subj-nest">
+														<div><mark>мы<br /><span
+																	class="subj">перево́д&#8209;им</span></mark>
+														</div>
+														<div><mark>вы<br /><span
+																	class="subj">перево́д&#8209;ите</span></mark>
+														</div>
+														<div><mark>они́<br /><span
+																	class="subj">перево́д&#8209;ят</span></mark></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<!-- END row -->
 								</div>
+
+								<div class="sync-info">
+									<div class="sync-entry" data-text="люб-и́ть">
+										<div class="range" data-in="00:00:05.924;00:00:06.718"></div>
+									</div>
+									<div class="sync-entry" data-text="я любл-ю́">
+										<div class="range" data-in="00:00:07.374;00:00:08.766"></div>
+									</div>
+									<div class="sync-entry" data-text="ты лю́б-ишь">
+										<div class="range" data-in="00:00:09.286;00:00:10.643"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ лю́б-ит">
+										<div class="range" data-in="00:00:11.027;00:00:12.911"></div>
+									</div>
+									<div class="sync-entry" data-text="мы лю́б-им">
+										<div class="range" data-in="00:00:13.411;00:00:14.743"></div>
+									</div>
+									<div class="sync-entry" data-text="вы лю́б-ите">
+										<div class="range" data-in="00:00:15.229;00:00:16.867"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ лю́б-ят">
+										<div class="range" data-in="00:00:17.094;00:00:18.700"></div>
+									</div>
+									<div class="sync-entry" data-text="готов-и́ть">
+										<div class="range" data-in="00:00:21.301;00:00:22.297"></div>
+									</div>
+									<div class="sync-entry" data-text="я гото́вл-ю">
+										<div class="range" data-in="00:00:23.056;00:00:24.528"></div>
+									</div>
+									<div class="sync-entry" data-text="ты гото́в-ишь">
+										<div class="range" data-in="00:00:25.198;00:00:26.760"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ гото́в-ит">
+										<div class="range" data-in="00:00:27.232;00:00:29.192"></div>
+									</div>
+									<div class="sync-entry" data-text="мы гото́в-им">
+										<div class="range" data-in="00:00:29.882;00:00:31.434"></div>
+									</div>
+									<div class="sync-entry" data-text="вы гото́в-ите">
+										<div class="range" data-in="00:00:31.846;00:00:33.489"></div>
+									</div>
+									<div class="sync-entry" data-text="они гото́в-ят">
+										<div class="range" data-in="00:00:33.731;00:00:35.472"></div>
+									</div>
+									<div class="sync-entry" data-text="ви́д-еть">
+										<div class="range" data-in="00:00:37.576;00:00:38.296"></div>
+									</div>
+									<div class="sync-entry" data-text="я ви́ж-у">
+										<div class="range" data-in="00:00:38.754;00:00:40.235"></div>
+									</div>
+									<div class="sync-entry" data-text="ты ви́д-ишь">
+										<div class="range" data-in="00:00:40.667;00:00:42.017"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ ви́д-ит">
+										<div class="range" data-in="00:00:42.496;00:00:44.291"></div>
+									</div>
+									<div class="sync-entry" data-text="мы ви́д-им">
+										<div class="range" data-in="00:00:44.804;00:00:46.198"></div>
+									</div>
+									<div class="sync-entry" data-text="вы ви́д-ите">
+										<div class="range" data-in="00:00:46.705;00:00:48.290"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ ви́д-ят">
+										<div class="range" data-in="00:00:48.531;00:00:50.225"></div>
+									</div>
+									<div class="sync-entry" data-text="перевод-и́ть">
+										<div class="range" data-in="00:00:52.350;00:00:53.350"></div>
+									</div>
+									<div class="sync-entry" data-text="я перевож-у́">
+										<div class="range" data-in="00:00:53.673;00:00:55.440"></div>
+									</div>
+									<div class="sync-entry" data-text="ты перево́д-ишь">
+										<div class="range" data-in="00:00:55.824;00:00:57.625"></div>
+									</div>
+									<div class="sync-entry" data-text="он / она́ перево́д-ит">
+										<div class="range" data-in="00:00:57.961;00:00:59.970"></div>
+									</div>
+									<div class="sync-entry" data-text="мы перево́д-им">
+										<div class="range" data-in="00:01:00.572;00:01:02.538"></div>
+									</div>
+									<div class="sync-entry" data-text="вы перево́д-ите">
+										<div class="range" data-in="00:01:02.997;00:01:04.995"></div>
+									</div>
+									<div class="sync-entry" data-text="они́ перево́д-ят">
+										<div class="range" data-in="00:01:05.216;00:01:07.068"></div>
+									</div>
+								</div>
+
 							</div>
 						</div>
 					</div>
@@ -1243,6 +1687,9 @@
 			<!-- ================================================================================== -->
 			<!-- Особые формы глагола (есть, пить, спать ) (хотеть, мочь) -->
 			<!-- ================================================================================== -->
+
+			<h5 class="text-secondary mt-5">(Раздел не завершён...)</h5>
+
 
 			<div class="sync-area mt-4">
 				<div id="part03_1" class="card">

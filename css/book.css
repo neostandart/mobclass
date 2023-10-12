@@ -17,13 +17,13 @@ Media Syncronization
   position: relative;
 }
 
-.app-page .sync-area .sync-context {
+.sync-area .sync-context {
   position: relative;
   padding-left: 32px;
   margin-left: 0px;
 }
 
-.app-page .sync-area .sensor {
+.sync-area .sensor {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -31,7 +31,7 @@ Media Syncronization
   height: 100%;
 }
 
-.app-page .sync-area .sensor > .indicator {
+.sync-area .sensor > .indicator {
   position: relative;
   margin: 0px;
   width: 8px;
@@ -40,14 +40,14 @@ Media Syncronization
   border-radius: 3px;
 }
 
-.app-page .sync-area .sensor.active > .indicator {
+.sync-area .sensor.active > .indicator {
   background-color: rgba(0, 136, 248, 0.3);
 }
 
-.app-page .sync-area .sync-context .sync-text mark {
+.sync-context .sync-text mark {
   background-color: transparent;
   padding: 2px 3px;
-  border: transparent 1px solid;
+  border: 1px solid transparent;
   cursor: pointer;
   /* Safari 3.1+ */
   -webkit-user-select: none;
@@ -59,14 +59,15 @@ Media Syncronization
   user-select: none;
 }
 
-.app-page .sync-area .sync-context .sync-text mark.highlighted {
+.sync-context .sync-text mark.highlighted {
   /* background-color: #add8e6; */
   /* background-color:rgba(135, 207, 235, 0.7); */
   /* background-color:rgba(100, 195, 233, 0.5); */
+  border: 1px solid var(--orange);
   background-color: rgba(0, 136, 248, 0.3);
 }
 
-.app-page .sync-area .sync-context .sync-text mark.selected {
+.sync-context .sync-text mark.selected {
   /* border-color: blue; */
   /* я отказался от рамки (при переносе происх. некр. эффект налезания)*/
   /* background-color: #add8e6; */
@@ -76,11 +77,11 @@ Media Syncronization
   background-color: rgba(0, 136, 248, 0.3);
 }
 
-.app-page .sync-area .sync-context .sync-text mark.selected-obj {
+.sync-context .sync-text mark.selected-obj {
   border: rgba(0, 136, 248, 0.3) 2px solid;
 }
 
-.app-page .sync-area .sync-context .sync-text .actor-label {
+.sync-context .sync-text .actor-label {
   font-size: 80%;
   color: #3c5372;
   margin-bottom: 0;
@@ -95,7 +96,7 @@ Media Syncronization
   user-select: none;
 }
 
-.app-page .sync-area .pointer-syncentry {
+.sync-area .pointer-syncentry {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -104,15 +105,15 @@ Media Syncronization
   visibility: hidden;
 }
 
-.app-page .sync-area .pointer-syncentry.entryready {
+.sync-area .pointer-syncentry.entryready {
   fill: #6c757d;
 }
 
-.app-page .sync-area .pointer-syncentry.entrynow {
+.sync-area .pointer-syncentry.entrynow {
   fill: #007bff;
 }
 
-.app-page .sync-area .pointer-syncentry.entryphantom {
+.sync-area .pointer-syncentry.entryphantom {
   fill: #6c757d;
   opacity: 0.5;
 }
@@ -344,9 +345,17 @@ Semantic
 }
 
 .app-page span.signbox {
-  /* padding: 0.1rem 0.5rem; */
-  padding: 0 0.2rem;
+  padding: 0 1px;
   background-color: lightgray;
+}
+
+
+/* ===   === */
+
+.app-page span.sel-u {
+  box-sizing: content-box;
+  padding: 0 1px;
+  border-bottom: 2px solid var(--orange);
 }
 
 /* .app-page .mat-table.text-center {
