@@ -60,19 +60,12 @@ Media Syncronization
 }
 
 .sync-context .sync-text mark.highlighted {
-  /* background-color: #add8e6; */
-  /* background-color:rgba(135, 207, 235, 0.7); */
-  /* background-color:rgba(100, 195, 233, 0.5); */
-  border: 1px solid var(--orange);
+  border: 1px solid var(--orange); /* 2023-10-12 пробую... */
   background-color: rgba(0, 136, 248, 0.3);
 }
 
 .sync-context .sync-text mark.selected {
-  /* border-color: blue; */
   /* я отказался от рамки (при переносе происх. некр. эффект налезания)*/
-  /* background-color: #add8e6; */
-  /* background-color:rgba(135, 207, 235, 0.7); */
-  /* background-color:rgba(100, 195, 233, 0.5); */
   /* я пробовал разн. прозрачность чтобы полностью не перекр. actor-label*/
   background-color: rgba(0, 136, 248, 0.3);
 }
@@ -346,6 +339,7 @@ Semantic
 
 .app-page span.signbox {
   padding: 0 1px;
+  border: 1px solid darkgrey;
   background-color: lightgray;
 }
 
