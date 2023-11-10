@@ -316,7 +316,7 @@ Master content
   position: absolute;
   left: auto;
   right: 0;
-  top: 0;
+  top: 0.25rem;
   display: flex;
   gap: 0.5rem;
 }
